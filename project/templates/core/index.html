@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+{#{% load category_tags %}#}
+
+{% block content %}
+      <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>Мои закупки</h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Главная</a></li>
+                <li class="active">Мои закупки</li>
+            </ol>
+        </section>
+
+        <div>
+            <h1>СТАТИКА</h1>
+        </div>
+
+        <div class="pad margin no-print">
+            <div class="callout callout-info" style="margin-bottom: 0!important;">
+                <h4><i class="fa fa-info"></i> Записочка</h4>
+            </div>
+        </div>
+
+        <section class="invoice">
+            <div class="row">
+
+                <div class="col-xs-12">
+{#                     {% categories_tree request %}#}
+                    {% for page in pages %}
+                        <h3>{{ page.name }}</h3>
+                        <p>{{ page.description }}</p>
+                    {% endfor %}
+
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+
+        </section><!-- /.content -->
+        <div class="clearfix"></div>
+    </div><!-- /.content-wrapper -->
+
+{% endblock %}
+
