@@ -9,6 +9,5 @@ from project import settings
 
 def indexView(request, template_name="core/index.html"):
     pages = Page.objects.all()
-    # dirs = settings.STATICFILES_DIRS
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
