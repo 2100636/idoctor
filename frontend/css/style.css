@@ -139,6 +139,19 @@ ul.lms_list_upper_roman {
   border-color: #ff9933;
   background: #FFA643;
 }
+ul.repair__list {
+  font-size: 15px;
+  padding-top: 70px;
+}
+li.fa.fa-check-circle-o {
+  color: #009fda;
+  float: left;
+  font-size: 29px;
+  margin: 0px 10px 20px 0px;
+}
+.repair__list span{
+	font-weight: bold;
+}
 /*---------------------preloader start---------------------------*/
 #preloader {
 	background-color: #fff;
@@ -2408,7 +2421,7 @@ width: 70%;
 	float: left;
 }
 .lms_experts_team_image img {
-	width: 80%;
+	width: 70%;
 }
 .lms_team_list .lms_cource_list > img {
 	width: 370px;
