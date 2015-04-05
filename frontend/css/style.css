@@ -127,7 +127,18 @@ ul.lms_list_upper_roman {
    font-family: 'Roboto Condensed', sans-serif;;
   border-bottom: 1px solid #E5E5E5;
 }
-
+.btn-default {
+  color: #FFFFFF;
+  background-color: transparent;
+  border-color: #FD8F15;
+  background: #f8992f;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+  color: #fff;
+  background-color: transparent;
+  border-color: #ff9933;
+  background: #FFA643;
+}
 /*---------------------preloader start---------------------------*/
 #preloader {
 	background-color: #fff;
@@ -2007,15 +2018,12 @@ width: 70%;
 	height: 78px;
 	line-height: 85px;
 	text-align: center;
-	border: 1px solid #9ea6b0;
 	border-radius: 3px;
 	display: inline-block;
 	float: left;
 	margin: 0px 21px 21px 0px;
 }
-.lms_service_1:hover > .lms_service_icon {
-	border-color: #1593d1;
-}
+
 .lms_service_1 .lms_service_title {
 	margin-top: 0px;
 }
