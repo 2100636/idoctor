@@ -247,7 +247,7 @@
 		revapi = jQuery('.lms_revslider').revolution({
 			autoPlay:"off", 
 			startwidth:1024,
-			startheight:786,
+			startheight:470,
 			hideThumbs:10,
 			fullWidth:"on",
 			fullScreen:"off",

@@ -2758,7 +2758,6 @@ select[multiple].input-lg {
 }
 .btn:hover,
 .btn:focus {
-  color: #333;
   text-decoration: none;
   -webkit-transition:all 0.2s;
   -moz-transition:all 0.2s;
@@ -2780,7 +2779,7 @@ fieldset[disabled] .btn {
           box-shadow: none;
   opacity: .65;
 }
-.btn-default {
+/*.btn-default {
   color: #ff9933;
   background-color: transparent;
   border-color: #9ea6b0;
@@ -2793,7 +2792,7 @@ fieldset[disabled] .btn {
   color: #ff9933;
   background-color: transparent;
   border-color: #ff9933;
-}
+}*/
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
