@@ -71,6 +71,12 @@ TEMPLATES = [
     },
 ]
 
+# TEMPLATE_LOADERS = (
+#     'django.template.loaders.filesystem.Loader',
+#     'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.Loader',
+# )
+
 WSGI_APPLICATION = 'project.wsgi.application'
 
 
@@ -115,12 +121,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
+STATIC_ROOT = ''
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, "static"),
 # )
+MEDIA_ROOT = '%s/project/media' % BASE_DIR
 
-STATIC_ROOT = ''
+MEDIA_URL = '/media/'
 
 
 try:
