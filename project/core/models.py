@@ -57,6 +57,35 @@ class ArticleImage(models.Model):
     article = models.ForeignKey(Article)
 
 
+class Service(models.Model):
+    name = models.CharField(verbose_name=u'Название статьи', max_length=200)
+    slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
+    description = models.TextField(verbose_name=u'Краткое описание')
+    image = models.ImageField(verbose_name=u'Иконка', upload_to='service')
+
+    def __unicode__(self):
+        return self.name
+
+    def get_url(self):
+        return '/article/%s' % self.slug
+
+    def get_images(self):
+        return ArticleImage.objects.filter(article=self.id)
+
+
+class ServiceStep(models.Model):
+    name = models.CharField(verbose_name=u'Название этапа', max_length=244)
+    description = models.TextField(verbose_name=u'Описание этапа')
+    service = models.ForeignKey(Service)
+
+
+class ServiceStepImage(models.Model):
+    image = models.ImageField(verbose_name=u'Изображение для статьи', upload_to='service')
+    service = models.ForeignKey(Service)
+    service_step = models.ForeignKey(ServiceStep)
+
+
+
 class Faq(models.Model):
     name = models.CharField(verbose_name=u'Вопрос', max_length=240)
     description = models.TextField(verbose_name=u'Ответ')
