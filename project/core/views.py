@@ -3,12 +3,13 @@
 
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.template import RequestContext
-from project.core.models import Page, Service
+from project.core.models import Page, Service, Review
 from project import settings
 
 
 def indexView(request, template_name="core/index.html"):
     pages = Page.objects.all()
+    reviews = Review.objects.all()[:6]
     services = Service.objects.filter(main_check=True)[:6]
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
