@@ -7,7 +7,7 @@
 
 # Common IDEs
 *.swp
-.idea/
+#.idea
 .buildpath
 .project
 .settings
