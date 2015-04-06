@@ -13,6 +13,14 @@ urlpatterns = patterns('project.core.views',
         {'template_name': 'core/articles.html'},
         name='articlesView'),
 
+    url(r'^about$', 'aboutView',
+        {'template_name': 'core/about.html'},
+        name='aboutView'),
+
+    url(r'^contacts$', 'contactView',
+        {'template_name': 'core/contact.html'},
+        name='contactView'),
+
     url(r'^service/(?P<slug>[-\w]+)/$', 'serviceView',
         {'template_name':'core/service.html'},
         name='serviceView'),

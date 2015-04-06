@@ -49,151 +49,133 @@
             <div class="lms_heading_1">
               <h2 class="lms_heading_title">Полезная информация</h2>
             </div>
-            <p>Есть проблемы, которые вы мижите решить сомостоятельно. </p>
+            <p>Есть проблемы, которые вы можите решить сомостоятельно. </p>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="lms_popular_courses">
-            <div id="lms_popular_courses_slider" class="owl-carousel owl-theme">
-              <div class="lms_popular_courses_slider_item">
-                <div class="lms_popular_courses_item">
-                  <div class="lms_hover_section"> <img src="images/courses/courses_small_1.jpg" alt="" />
-                    <div class="lms_hover_overlay"> <a id="1" class="lms_image_link"></a> </div>
-                  </div>
-                  <h3>Multimedia</h3>
-                  <p>Lorem ipsum dolor sit amet</p>
+            <div class="lms_popular_courses">
+                <div id="lms_popular_courses_slider" class="owl-carousel owl-theme">
+
+                    {% for article in articles %}
+                        {% cycle 'first' 'second' as side silent %}
+                        {% if side == 'first' %}
+                            <div class="lms_popular_courses_slider_item">
+                                <div class="lms_popular_courses_item">
+                                    <div class="lms_hover_section"> <img width="263" height="176" src="/media/{{ article.image }}" alt="" />
+                                        <div class="lms_hover_overlay"> <a id="{{ forloop.counter }}" class="lms_image_link"></a> </div>
+                                    </div>
+                                    <h3>{{ article.name|truncatewords:6 }}</h3>
+                                    <p>{{ article.description|truncatewords:8|safe }}</p>
+                                </div>
+                        {% else %}
+                                <div class="lms_popular_courses_item">
+                                    <div class="lms_hover_section"> <img width="263" height="176" src="/media/{{ article.image }}" alt="" />
+                                        <div class="lms_hover_overlay"> <a id="{{ forloop.counter }}" class="lms_image_link"></a> </div>
+                                    </div>
+                                    <h3>{{ article.name|truncatewords:6 }}</h3>
+                                    <p>{{ article.description|truncatewords:8|safe }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
                 </div>
-                <div class="lms_popular_courses_item">
-                  <div class="lms_hover_section"> <img src="images/courses/courses_small_2.jpg" alt="" />
-                    <div class="lms_hover_overlay"> <a id="2" class="lms_image_link"></a> </div>
-                  </div>
-                  <h3>Information Technology</h3>
-                  <p>Lorem ipsum dolor sit amet</p>
-                </div>
-              </div>
-              <div class="lms_popular_courses_slider_item">
-                <div class="lms_popular_courses_item">
-                  <div class="lms_hover_section"> <img src="images/courses/courses_small_3.jpg" alt="" />
-                    <div class="lms_hover_overlay"><a id="3" class="lms_image_link"></a></div>
-                  </div>
-                  <h3>Design</h3>
-                  <p>Lorem ipsum dolor sit amet</p>
-                </div>
-                <div class="lms_popular_courses_item">
-                  <div class="lms_hover_section"> <img src="images/courses/courses_small_4.jpg" alt="" />
-                    <div class="lms_hover_overlay"><a id="4" class="lms_image_link"></a></div>
-                  </div>
-                  <h3>Beauty & Health Care</h3>
-                  <p>Lorem ipsum dolor sit amet</p>
-                </div>
-              </div>
-              <div class="lms_popular_courses_slider_item">
-                <div class="lms_popular_courses_item">
-                  <div class="lms_hover_section"> <img src="images/courses/courses_small_1.jpg" alt="" />
-                    <div class="lms_hover_overlay"><a id="5" class="lms_image_link"></a></div>
-                  </div>
-                  <h3>Multimedia</h3>
-                  <p>Lorem ipsum dolor sit amet</p>
-                </div>
-                <div class="lms_popular_courses_item">
-                  <div class="lms_hover_section"> <img src="images/courses/courses_small_2.jpg" alt="" />
-                    <div class="lms_hover_overlay"><a id="6" class="lms_image_link"></a></div>
-                  </div>
-                  <h3>Information Technology</h3>
-                  <p>Lorem ipsum dolor sit amet</p>
-                </div>
-              </div>
+                <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> <a class="lms_prev_next">+</a> </div>
             </div>
-            <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> <a class="lms_prev_next">+</a> </div>
-          </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="lms_popular_courses_item_detail" id="courses_item_detail1"> <img src="images/courses/courses_big_1.jpg" alt="" />
-            <h3>Multimedia</h3>
-            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>
-            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>
-            <div class="lms_social">
-              <h4>Share This Course</h4>
-              <ul>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="lms_popular_courses_item_detail" id="courses_item_detail2"> <img src="images/courses/courses_big_2.jpg" alt="" />
-            <h3>Information Technology</h3>
-            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>
-            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>
-            <div class="lms_social">
-              <h4>Share This Course</h4>
-              <ul>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="lms_popular_courses_item_detail" id="courses_item_detail3"> <img src="images/courses/courses_big_3.jpg" alt="" />
-            <h3>Design</h3>
-            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>
-            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>
-            <div class="lms_social">
-              <h4>Share This Course</h4>
-              <ul>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="lms_popular_courses_item_detail" id="courses_item_detail4"> <img src="images/courses/courses_big_4.jpg" alt="" />
-            <h3>Beauty & Health Care</h3>
-            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>
-            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>
-            <div class="lms_social">
-              <h4>Share This Course</h4>
-              <ul>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="lms_popular_courses_item_detail" id="courses_item_detail5"> <img src="images/courses/courses_big_1.jpg" alt="" />
-            <h3>Multimedia</h3>
-            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>
-            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>
-            <div class="lms_social">
-              <h4>Share This Course</h4>
-              <ul>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="lms_popular_courses_item_detail" id="courses_item_detail6"> <img src="images/courses/courses_big_2.jpg" alt="" />
-            <h3>Information Technology</h3>
-            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>
-            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>
-            <div class="lms_social">
-              <h4>Share This Course</h4>
-              <ul>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-              </ul>
-            </div>
-          </div>
+
+            {% for article in articles %}
+                <div class="lms_popular_courses_item_detail" id="courses_item_detail{{ forloop.counter }}"> <img width="100%" src="/media/{{ article.image }}" alt="" />
+                    <h3>{{ article.name|safe }}</h3>
+                    <p>{{ article.description|truncatewords:20|safe }}</p>
+                    <a href="{{ article.url }}" class="btn btn-default">Read More</a>
+{#                    <div class="lms_social">#}
+{#                      <h4>Share This Course</h4>#}
+{#                      <ul>#}
+{#                        <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
+{#                        <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
+{#                        <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
+{#                        <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
+{#                      </ul>#}
+{#                    </div>#}
+                </div>
+            {% endfor %}
+
+
+
+{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail2"> <img src="/static/idoctor/images/courses/courses_big_2.jpg" alt="" />#}
+{#            <h3>Information Technology</h3>#}
+{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
+{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
+{#            <div class="lms_social">#}
+{#              <h4>Share This Course</h4>#}
+{#              <ul>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
+{#              </ul>#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail3"> <img src="images/courses/courses_big_3.jpg" alt="" />#}
+{#            <h3>Design</h3>#}
+{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
+{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
+{#            <div class="lms_social">#}
+{#              <h4>Share This Course</h4>#}
+{#              <ul>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
+{#              </ul>#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail4"> <img src="images/courses/courses_big_4.jpg" alt="" />#}
+{#            <h3>Beauty & Health Care</h3>#}
+{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
+{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
+{#            <div class="lms_social">#}
+{#              <h4>Share This Course</h4>#}
+{#              <ul>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
+{#              </ul>#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail5"> <img src="images/courses/courses_big_1.jpg" alt="" />#}
+{#            <h3>Multimedia</h3>#}
+{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
+{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
+{#            <div class="lms_social">#}
+{#              <h4>Share This Course</h4>#}
+{#              <ul>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
+{#              </ul>#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail6"> <img src="images/courses/courses_big_2.jpg" alt="" />#}
+{#            <h3>Information Technology</h3>#}
+{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
+{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
+{#            <div class="lms_social">#}
+{#              <h4>Share This Course</h4>#}
+{#              <ul>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
+{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
+{#              </ul>#}
+{#            </div>#}
+{#          </div>#}
         </div>
       </div>
       <!--Our Popular Courses end-->

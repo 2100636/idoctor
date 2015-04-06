@@ -52,7 +52,7 @@ class Article(models.Model):
     def __unicode__(self):
         return self.name
 
-    def get_url(self):
+    def url(self):
         return '/article/%s' % self.slug
 
     def get_images(self):
