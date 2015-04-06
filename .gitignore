@@ -12,7 +12,6 @@
 .project
 .settings
 atlassian-ide-plugin.xml
-.idea/*
 
 # Project
 settings_local.py
@@ -23,4 +22,3 @@ get_2gis_data.py
 get_2gis_filials.py
 media/
 
-static/
