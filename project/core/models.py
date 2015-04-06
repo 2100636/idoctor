@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
-
 from django.db import models
+from mptt.models import MPTTModel, TreeForeignKey
 
 
-class Menu(models.Model):
+class Menu(MPTTModel):
     name = models.CharField(verbose_name=u'Имя ссылки', max_length=244)
     slug = models.SlugField(verbose_name=u'Ссылка', max_length=50, unique=True)
-    parent = models.ForeignKey('self', verbose_name=u'Родительская категория',
+    parent = TreeForeignKey('self', verbose_name=u'Родительская категория',
                             related_name='children', blank=True,
                             help_text=u'Родительская категория для этой категории', null=True)
 

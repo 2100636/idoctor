@@ -2,237 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c27f562-2452-448a-b4aa-ab76e1c12bd5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/owl-carousel/AjaxLoader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/arrow_left2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/arrow_right2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/arrowleft.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/arrowright.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/mediaelement/background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/bg/bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/mediaelement/bigplay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_cate9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/blog/blog_single1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/boxed_bgtile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/dark_rounded/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/dark_square/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/facebook/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/light_rounded/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/light_square/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/dark_rounded/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/dark_square/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/facebook/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/light_rounded/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/light_square/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/bullet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/bullet_boxed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/bullets.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/bullets2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/icon/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/coloredbg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/comment/comment_user1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/comment/comment_user2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/dark_rounded/contentPattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/facebook/contentPatternBottom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/facebook/contentPatternLeft.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/facebook/contentPatternRight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/facebook/contentPatternTop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/mediaelement/controls.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/bg/count_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/cource1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/cource2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/cource3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/cource4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/cource5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/cource6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/course_syllabus1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/course_syllabus2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/course_syllabus3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/course_syllabus4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/course_syllabus5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/courses_big_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/courses_big_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/courses_big_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/courses_big_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/courses_single1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/courses_small_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/courses_small_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/courses_small_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/courses_small_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/default/default_thumb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/facebook/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/icon/download.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/bg/education-books.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/experts_team1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/experts_team1_smaill.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/experts_team2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/experts_team2_smaill.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/experts_team3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/experts_team3_smaill.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/owl-carousel/grabbing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/gridtile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/gridtile_3x3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/gridtile_3x3_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/gridtile_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/revolution/i-pad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/revolution/i-phone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/revolution/image1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/revolution/image1_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/revolution/image2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/revolution/image2_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/revolution/image3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/icon/image_overlay_play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/icon/image_overlay_plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/revolution/laptop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/dark_rounded/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/dark_square/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/default/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/facebook/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/light_rounded/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/mediaelement/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/member1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/member2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/member3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/member4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/member5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/navigdots.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/navigdots_bgtile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/offered_courses9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/partner/partner1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/partner/partner2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/partner/partner3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/bg/plan_testimonials_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/footer/popular_course1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/footer/popular_course2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/other/recent_achievement1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/other/recent_achievement2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/other/recent_achievement3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/sidebar/recent_post1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/sidebar/recent_post2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/sidebar/recent_post3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/related_courses1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/related_courses2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/related_courses3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/courses/related_courses4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/services/services1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/services/services2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/services/services3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/services/services4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/services/services5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/services/services6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/services/services_image1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/services/services_image2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/services/services_image3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/shadow1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/shadow2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/shadow3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/slider1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/slider2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/slider/slider3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/small_left_boxed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/assets/small_right_boxed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/dark_rounded/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/dark_square/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/default/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/facebook/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/light_rounded/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/light_square/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/default/sprite_next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/default/sprite_prev.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/default/sprite_x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/images/prettyPhoto/default/sprite_y.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/online/student9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/team_list1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/team_list2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/team_list3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/team_list4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/team/team_single.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/testimonial/testimonial1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/testimonial/testimonial2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/bg/testimonials_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/video/thumb1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/video/thumb2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/bg/title.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/images/video/video_single_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/core/templatetags/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/css/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/mediaelement/bigplay.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/mediaelement/controls.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/map-api/google-map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/grid-gallery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/core/templatetags/header_tags.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/jquery-1.11.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/appear/jquery.appear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/count/jquery.countTo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/mixitup/jquery.mixitup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/js/jquery.prettyPhoto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/parallax/jquery.stellar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/revslider/js/jquery.themepunch.plugins.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/revslider/js/jquery.themepunch.revolution.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/mediaelement/mediaelement-and-player.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/mediaelement/mediaelementplayer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/modernizr/modernizr.custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/owl-carousel/owl.carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/owl-carousel/owl.carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/owl-carousel/owl.theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/prettyphoto/css/prettyPhoto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/revslider/css/settings.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/single/single.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/core/tags/slider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/templates/core/tags/top_menu.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/static/idoctor/js/plugin/wow/wow.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/static/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/static/images/none_image.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project/static/js/jquery.cookie.js" afterPath="$PROJECT_DIR$/project/static/idoctor/js/jquery.cookie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/core/admin.py" afterPath="$PROJECT_DIR$/project/core/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/base.html" afterPath="$PROJECT_DIR$/project/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/index.html" afterPath="$PROJECT_DIR$/frontend/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/core/index.html" afterPath="$PROJECT_DIR$/project/templates/core/index.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/media/images/design_details_bottom_xlarge_2x.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/media/images/iP6-1_medium.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/media/images/iP6-2_medium.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/media/images/touch62.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/main.html" afterPath="$PROJECT_DIR$/project/templates/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/core/models.py" afterPath="$PROJECT_DIR$/project/core/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/settings.py" afterPath="$PROJECT_DIR$/project/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/urls.py" afterPath="$PROJECT_DIR$/project/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/core/views.py" afterPath="$PROJECT_DIR$/project/core/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="idoctor.iws" />
@@ -284,8 +59,8 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="645">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="645">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -301,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="top_menu.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="top_menu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/templates/core/tags/top_menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24691358" vertical-offset="30" max-vertical-offset="945">
+            <state vertical-scroll-proportion="-7.5" vertical-offset="30" max-vertical-offset="945">
               <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
               <folding />
             </state>
@@ -326,17 +101,19 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/core/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1185">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#46#74#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.25" vertical-offset="375" max-vertical-offset="17190">
+            <state vertical-scroll-proportion="0.041152265" vertical-offset="375" max-vertical-offset="17190">
               <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#div#3;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -352,14 +129,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/core/admin.py">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-              <folding>
-                <element signature="e#46#78#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-14.4" vertical-offset="0" max-vertical-offset="450">
+              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -393,11 +168,12 @@
         <option value="$PROJECT_DIR$/project/settings.py" />
         <option value="$PROJECT_DIR$/project/templates/core/tags/slider.html" />
         <option value="$PROJECT_DIR$/project/templates/core/index.html" />
-        <option value="$PROJECT_DIR$/project/templates/main.html" />
-        <option value="$PROJECT_DIR$/project/core/models.py" />
         <option value="$PROJECT_DIR$/project/core/admin.py" />
         <option value="$PROJECT_DIR$/project/core/templatetags/header_tags.py" />
         <option value="$PROJECT_DIR$/project/templates/core/tags/top_menu.html" />
+        <option value="$PROJECT_DIR$/project/core/models.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/project/templates/main.html" />
       </list>
     </option>
   </component>
@@ -464,90 +240,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -574,11 +266,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/project/templates/core/tags" />
       <recent name="$PROJECT_DIR$/project/static/idoctor" />
       <recent name="$PROJECT_DIR$/project/static/idoctor/js" />
       <recent name="$PROJECT_DIR$/project/static/js" />
-      <recent name="$PROJECT_DIR$/project/static/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/project/static/idoctor" />
@@ -864,7 +556,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="873" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -877,8 +569,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2609319" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.49964157" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2609319" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.3290653" sideWeight="0.49964157" order="6" side_tool="false" content_ui="tabs" x="0" y="23" width="1440" height="873" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1039,46 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/static/idoctor/css/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119521916" vertical-offset="0" max-vertical-offset="31065">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/static/idoctor/js/plugin/wow/wow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6120">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/static/idoctor/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="31740">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/static/idoctor/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33864543" vertical-offset="0" max-vertical-offset="753">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="23" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/static/idoctor/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9975">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
@@ -1119,53 +771,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="375" max-vertical-offset="17190">
-          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/core/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#46#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/core/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1185">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/templates/core/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5882353" vertical-offset="0" max-vertical-offset="10485">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="645">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1190,9 +799,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/templates/core/tags/top_menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24691358" vertical-offset="30" max-vertical-offset="945">
+        <state vertical-scroll-proportion="-7.5" vertical-offset="30" max-vertical-offset="945">
           <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/core/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06048387" vertical-offset="0" max-vertical-offset="510">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/core/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#46#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.4" vertical-offset="0" max-vertical-offset="450">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="645">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.041152265" vertical-offset="375" max-vertical-offset="17190">
+          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
