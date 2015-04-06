@@ -38,6 +38,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'project.core',
+    'ckeditor',
+    'mptt',
+    'mptt_tree_editor'
 )
 
 MIDDLEWARE_CLASSES = (
