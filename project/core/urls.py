@@ -19,5 +19,5 @@ urlpatterns = patterns('project.core.views',
 
     url(r'^article/(?P<slug>[-\w]+)/$', 'articleView',
         {'template_name':'core/article.html'},
-       name='articleView'),
+        name='articleView'),
 )

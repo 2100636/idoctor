@@ -2,6 +2,7 @@
 #!/usr/bin/env python
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
+from ckeditor.fields import RichTextField
 
 
 class Menu(MPTTModel):
@@ -18,7 +19,7 @@ class Menu(MPTTModel):
 class Page(models.Model):
     name = models.CharField(verbose_name=u'Название страницы', max_length=200)
     slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
-    description = models.TextField(verbose_name=u'Описание')
+    description = RichTextField(verbose_name=u'Описание')
     image = models.ImageField(verbose_name=u'Изображение', upload_to='pages')
 
     def __unicode__(self):
