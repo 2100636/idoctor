@@ -758,8 +758,8 @@ website:   	http://www.themepunch.com
 .tp-caption.medium_bg_orange {
 	font-size: 20px;
 	line-height: 20px;
-	font-weight: 800;
-	font-family: "Open Sans";
+	font-weight: 500;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	background-color: rgb(243, 156, 18);
@@ -778,11 +778,11 @@ website:   	http://www.themepunch.com
 	border-style: none;
 }
 .tp-caption.large_bold_white {
-	font-size: 58px;
+	font-size: 350%!important;
 	line-height: 60px;
-	font-weight: 800;
-	font-family: "Open Sans";
-	color: rgb(255, 255, 255);
+	font-weight: 300;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #333;
 	text-decoration: none;
 	background-color: transparent;
 	border-width: 0px;
@@ -818,9 +818,9 @@ website:   	http://www.themepunch.com
 .tp-caption.mediumlarge_light_white_center {
 	font-size: 40px;
 	line-height: 55px;
-	font-weight: 300;
-	font-family: 'Vollkorn', serif;
-	color: #ffffff;
+	font-weight: 500;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #1D1D1D;
 	text-decoration: none;
 	background-color: transparent;
 	padding: 0px 0px 0px 0px;
@@ -846,7 +846,7 @@ website:   	http://www.themepunch.com
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 300;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: rgb(0, 0, 0);
 	text-decoration: none;
 	background-color: transparent;
@@ -859,7 +859,7 @@ website:   	http://www.themepunch.com
 	font-size: 58px;
 	line-height: 60px;
 	font-weight: 800;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: rgb(0, 0, 0);
 	text-decoration: none;
 	background-color: transparent;
@@ -871,7 +871,7 @@ website:   	http://www.themepunch.com
 	font-size: 34px;
 	line-height: 40px;
 	font-weight: 300;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: rgb(52, 73, 94);
 	text-decoration: none;
 	background-color: transparent;
@@ -884,7 +884,7 @@ website:   	http://www.themepunch.com
 	font-size: 17px;
 	line-height: 28px;
 	font-weight: 300;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	background-color: transparent;
@@ -902,7 +902,7 @@ website:   	http://www.themepunch.com
 	font-size: 40px;
 	line-height: 40px;
 	font-weight: 800;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	background-color: rgb(0, 0, 0);
@@ -915,7 +915,7 @@ website:   	http://www.themepunch.com
 	font-size: 30px;
 	line-height: 30px;
 	font-weight: 300;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: rgb(0, 0, 0);
 	text-decoration: none;
 	background-color: rgb(255, 255, 255);
@@ -929,7 +929,7 @@ website:   	http://www.themepunch.com
 	font-size: 20px;
 	line-height: 20px;
 	font-weight: 800;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	background-color: rgb(243, 156, 18);
@@ -949,7 +949,7 @@ website:   	http://www.themepunch.com
 	font-weight: 300;
 	font-size: 19px;
 	line-height: 19px;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 .tp-caption.noshadow {
 	text-shadow: none;
@@ -960,7 +960,7 @@ website:   	http://www.themepunch.com
 	font-size: 40px;
 	line-height: 55px;
 	font-weight: 300;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	}
 .tp-caption.simple_txt{
 	color:#fff;
