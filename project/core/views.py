@@ -14,8 +14,22 @@ def indexView(request, template_name="core/index.html"):
                               context_instance=RequestContext(request))
 
 
+def articlesView(request, template_name="core/articles.html"):
+    pages = Page.objects.all()
+    services = Service.objects.filter(main_check=True)[:6]
+    return render_to_response(template_name, locals(),
+                              context_instance=RequestContext(request))
+
+
 def serviceView(request, slug, template_name="core/service.html"):
     user = request.user
     service = Service.objects.get(slug=slug)
+    return render_to_response(template_name, locals(),
+                              context_instance=RequestContext(request))
+
+
+def articleView(request, slug, template_name="core/article.html"):
+    user = request.user
+    #service = Service.objects.get(slug=slug)
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
