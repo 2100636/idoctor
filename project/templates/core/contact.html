@@ -1,0 +1,91 @@
+{% extends "main.html" %}
+{% load static from staticfiles %}
+{% load header_tags %}
+
+
+{% block slider %}
+    {% slider_tag request %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="lms_title_center">
+                <div class="lms_heading_1">
+                  <h2 class="lms_heading_title">Контакты</h2>
+                </div>
+                <p>Нас очень легко найти</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="lms_contact_detail">
+        <div class="lms_Contact_address">
+          <h3>Адрес:</h3>
+          <p>г. Томск пер. 1905 года 18</p>
+        </div>
+        <div class="lms_Contact_phone">
+          <h3>Телефон:</h3>
+          <p>332277</p>
+          <p>+61 3 8376 6284</p>
+        </div>
+        <div class="lms_Contact_email">
+          <h3>Email Id :</h3>
+          <a href="mailTo:admin@himanshusofttech.com">admin@idoctor.com</a> </div>
+        <div class="lms_Contact_social">
+          <h3>Мы в соц. сетях:</h3>
+          <div class="lms_social">
+            <ul>
+              <li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google+"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="VK"><i class="fa fa-vk"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-8">
+      <div class="lms_map">
+        <div>
+            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=dT5OLax4mxyvDydTfQoVAXvTKHB8uPU-&width=100%&height=465"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="lms_contact_form">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="form-group">
+          <input type="text" class="form-control" id="uname" placeholder="Your Full Name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="uemail" placeholder="Your Email">
+        </div>
+        <div class="form-group">
+          <input type="url" class="form-control" id="web_site" placeholder="Your Website">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="form-group">
+          <textarea rows="10" class="form-control" id="message" placeholder="Your Message..."></textarea>
+        </div>
+      </div>
+      <div class="col-lg-12">
+      	<a id="em_sub" class="btn btn-default pull-right">Send</a>
+        <p id="err"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block slider2 %}
+{% endblock %}
+
+{% block partners %}
+{% endblock %}
