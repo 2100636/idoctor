@@ -15,105 +15,68 @@
     <div class="col-lg-8 col-lg-offset-2">
       <div class="lms_title_center">
         <div class="lms_heading_1">
-          <h2 class="lms_heading_title">{{ service.name }}</h2>
+          <h2 class="lms_heading_title">LMS - Cource list or grid view page</h2>
         </div>
-        <p>{{ service.description|safe }}</p>
+        <p>Duis tortor lacus, dictum nec augue a, euismod sagittis eros. Aliquam id ligula malesuada, egestas est ultricies, ullamcorper diam.</p>
       </div>
     </div>
   </div>
 
   <div class="row">
-    {% for step in service.get_steps %}
-        {% cycle 'left' 'right' as side silent %}
-        {% if side == 'left' %}
-            <div class="lms_service_left">
-                <div class="col-lg-2 col-md-2 col-sm-3">
-                    <div class="lms_service_count">
-                      <h1>0{{ forloop.counter }}</h1>
-                      <p>этап</p>
-                    </div>
-                </div>
-            <div class="col-lg-10 col-md-10 col-sm-9">
-                <div class="lms_service_detail">
-                    <h3>{{ step.name }}</h3>
-                    <p>{{ step.description|safe }}</p>
-                    <div class="row">
-                    {% for image in step.get_images %}
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="lms_hover_section"> <img src="{{ image.url }}" alt="service image">
-                                <div class="lms_hover_overlay"><a class="lms_image_link" data-gal="prettyPhoto[gallery2]" href="{{ image.url }}"></a></div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                  </div>
-                </div>
-            </div>
-        {% else %}
-            <div class="lms_service_right">
-              <div class="col-lg-10 col-md-10 col-sm-9">
-                <div class="lms_service_detail">
-                    <h3>{{ step.name }}</h3>
-                    <p>{{ step.description|safe }}</p>
-                    <div class="row">
-                    {% for image in step.get_images %}
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="lms_hover_section"> <img src="{{ image.url }}" alt="service image">
-                                <div class="lms_hover_overlay"><a class="lms_image_link" data-gal="prettyPhoto[gallery2]" href="{{ image.url }}"></a></div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                    </div>
-                </div>
-              </div>
-              <div class="col-lg-2 col-md-2 col-sm-3">
-                <div class="lms_service_count">
-                  <h1>0{{ forloop.counter }}</h1>
-                  <p>этап</p>
-                </div>
-              </div>
-            </div>
-        {% endif %}
-
-      {% endfor %}
-
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <div class="lms_title_center">
-        <div class="lms_heading_1">
-          <h2 class="lms_heading_title">Have Any Qustion And Suggestion?<br> Send Message</h2>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+      <div class="lms_cource_shorting">
+        <div class="lms_sortby">
+          <h3>Sort By</h3>
+          <div class="input-group">
+            <select class="form-control">
+              <option value="Newest courses">Newest courses</option>
+              <option value="Recommend for you">Recommend for you</option>
+              <option value="Top courses">Top courses</option>
+            </select>
+            <div class="input-group-addon"><i class="fa fa-angle-down"></i></div>
+          </div>
         </div>
-        <p>Duis tortor lacus, dictum nec augue a, euismod sagittis eros. Aliquam id ligula.</p>
+
+        <div class="lms_sort_skill_level">
+          <h3>Skill Level</h3>
+          <ul>
+            <li><a href="course-detail-list-view.html">Beginner</a><span>(10)</span></li>
+            <li><a href="course-detail-list-view.html">Intermediate</a><span>(31)</span></li>
+            <li><a href="course-detail-list-view.html">Advanced</a><span>(3)</span></li>
+            <li><a href="course-detail-list-view.html">Appropriate for all</a><span>(2)</span></li>
+          </ul>
+        </div>
+
       </div>
     </div>
+
+    <div class="col-lg-9 col-md-9 col-sm-9">
+    	<div class="lms_grid_list_icon">
+        	<a class="active lms_list_view"><i class="fa fa-list"></i></a>
+            <a class="lms_grid_view"><i class="fa fa-th"></i></a>
+        </div>
+
+        <div class="lms_cource">
+
+            <div class="lms_cource_list">
+                <img src="images/courses/cource1.jpg" alt="" />
+                <a href="course-single-page.html"><h3>Multimedia</h3></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas augue ac nisi pharetra sagittis. Pellentesque fringilla li at risus accumsan commodo. Integer suscipit eros sed eros vestibulum ornare nec ac tor.</p>
+
+                <div class="lms_entry_meta">
+                   <span><a href="course-detail-list-view.html"><i class="fa fa-calendar"></i> 30 May 2014</a></span>
+                </div>
+
+                <a href="page.html" class="btn btn-default">Подробне</a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
   </div>
-
-  <div class="row">
-  	<form role="form">
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="form-group">
-              <input type="text" class="form-control" id="suggestion_name" placeholder="Your Full Name">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="suggestion_email" placeholder="Your Email">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="suggestion_no" placeholder="Your Number">
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="form-group">
-              <textarea rows="7" class="form-control" id="suggestion_msg" placeholder="Your Message / Suggestion.."></textarea>
-            </div>
-          </div>
-          <div class="col-lg-12">
-            <button type="submit" class="btn btn-default pull-right">Send</button>
-          </div>
-        </form>
-  </div>
-
-
-
-</div>
 {% endblock %}
 
 {% block slider2 %}
