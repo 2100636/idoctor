@@ -1,0 +1,159 @@
+{% extends "main.html" %}
+{% load static from staticfiles %}
+{% load header_tags %}
+
+
+{% block slider %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="lms_title_center">
+                <div class="lms_heading_1">
+                  <h2 class="lms_heading_title">LMS - About page</h2>
+                </div>
+                <p>Aliquam et venenatis arcu, ac dictum felis. Nulla sapien dolor, tempor sodales mauris et, ultrices tique odio.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+   	  <div class="col-lg-4 col-md-4 col-sm-4">
+      	<div class="lms_service_3">
+            	<div class="lms_service_icon"><img src={% static "idoctor/images/services/services1.png" %} alt="service icon"></div>
+                <a href="about.html"><h3 class="lms_service_title">Learn Anything Online</h3></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adDonec idiam dapibus, sodales odio quis, fgilla maurisorci. Nullam vel laoreet dui. Sed blandit quis sapien sed, </p>
+            </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+      	<div class="lms_service_3">
+            	<div class="lms_service_icon"><img src={% static "idoctor/images/services/services2.png" %} alt="service icon"></div>
+                <a href="about.html"><h3 class="lms_service_title">Talk to Our Expertse</h3></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adDonec idiam dapibus, sodales odio quis, fgilla maurisorci. Nullam vel laoreet dui. Sed blandit quis sapien sed, </p>
+            </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+      	<div class="lms_service_3">
+            	<div class="lms_service_icon"><img src={% static "idoctor/images/services/services3.png" %} alt="service icon"></div>
+                <a href="about.html"><h3 class="lms_service_title">Communicate with People</h3></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adDonec idiam dapibus, sodales odio quis, fgilla maurisorci. Nullam vel laoreet dui. Sed blandit quis sapien sed, </p>
+            </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="lms_title_center">
+                <div class="lms_heading_1">
+                  <h2 class="lms_heading_title">Our Recent Achievements</h2>
+                </div>
+                <p>Aliquam et venenatis arcu, ac dictum felis. Nulla sapien dolor, tempor sodales mauris et, ultrices tique odio. </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+   	  <div class="col-lg-4 col-md-4 col-sm-4">
+      	  <div class="lms_recent_achievement">
+          	  <img src="{% static "idoctor/images/other/recent_achievement1.jpg" %} alt="recent achievement">
+              <h3>Suspendisse eget tortor </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas augue ac nisi pharegittis.</p>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+      	  <div class="lms_recent_achievement">
+          	  <img src={% static "idoctor/images/other/recent_achievement2.jpg" %} alt="recent achievement">
+              <h3>Suspendisse eget tortor </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas augue ac nisi pharegittis.</p>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+      	  <div class="lms_recent_achievement">
+          	  <img src="{% static "idoctor/images/other/recent_achievement3.jpg" %} alt="recent achievement">
+              <h3>Suspendisse eget tortor </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas augue ac nisi pharegittis.</p>
+          </div>
+      </div>
+   </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="lms_our_success">
+    	<div class="lms_our_success_bg" data-stellar-background-ratio="0.5" style="background-position: 0% 120px;">
+        <div class="lms_our_success_bg_overlay">
+        	<div class="container">
+               <!--Our Success in Numbers start-->
+               <div class="row">
+                   <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <div class="lms_our_success_title wow fadeInDown animated" style="visibility: visible;">
+                   	  <h3>Our Success in Numbers</h3>
+                      <p>Aliquam et venenatis arcu, ac dictum felis. Nulla sapien dolor, tempor sodales mauris et,</p>
+                    </div>
+                   </div>
+               </div>
+
+               <div class="row">
+               	<div class="col-lg-3 col-md-3 col-sm-3 wow fadeInLeft animated" style="visibility: visible;">
+                	<div class="lms_count">
+                    	<i class="fa fa-user"></i>
+                    	<div class="lms_progress_value count appear-count" data-from="0" data-to="2848" data-speed="2000" data-refresh-interval="50">2848</div>
+                   <p class="lms_progess_label"> student </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInDown animated" style="visibility: visible;">
+                	<div class="lms_count">
+                    	<i class="fa fa-book"></i>
+                    	<div class="lms_progress_value count appear-count" data-from="0" data-to="1048" data-speed="2000" data-refresh-interval="50">1048</div>
+                   <p class="lms_progess_label"> courses </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInDown animated" style="visibility: visible;">
+                	<div class="lms_count">
+                    	<i class="fa fa-male"></i>
+                    	<div class="lms_progress_value count appear-count" data-from="0" data-to="2866" data-speed="2000" data-refresh-interval="50">2866</div>
+                   <p class="lms_progess_label"> visitor </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInRight animated" style="visibility: visible;">
+                	<div class="lms_count">
+                    	<i class="fa fa-graduation-cap"></i>
+                    	<div class="lms_progress_value count appear-count" data-from="0" data-to="1005" data-speed="2000" data-refresh-interval="50">1005</div>
+                   <p class="lms_progess_label"> experts </p>
+                    </div>
+                </div>
+               </div>
+
+               <!--Our Success in Numbers end-->
+            </div>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+	<div class="row">
+    	<div class="col-lg-8 col-lg-offset-2">
+          <div class="lms_title_center">
+            <div class="lms_heading_1">
+              <h2 class="lms_heading_title">About our Organization</h2>
+            </div>
+            <p>Aliquam et venenatis arcu, ac dictum felis. Nulla sapien dolor, tempor sodales mauris cum ne periculis molestiae pri.</p>
+          </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block slider2 %}
+{% endblock %}
+
+{% block partners %}
+{% endblock %}

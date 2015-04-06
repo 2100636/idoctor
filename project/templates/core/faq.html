@@ -1,0 +1,61 @@
+{% extends "main.html" %}
+{% load static from staticfiles %}
+{% load header_tags %}
+
+
+{% block slider %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="lms_title_center">
+                <div class="lms_heading_1">
+                  <h2 class="lms_heading_title">Ответы почти не все вопросы</h2>
+                </div>
+                <p>Duis tortor lacus, dictum nec augue a, euismod sagittis eros. Aliquam id ligula
+                  malesuada, egestas est ultricies, ullamcorper diam.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+  	<div class="col-lg-12">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading active">
+            <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="faq.html#collapseOne"><i class="fa fa-angle-up"></i>Q: What is LMS (Learning Management System)?</a> </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">LMS is the universal character encoding, maintained by the LMS Consortium. This encoding standard provides the basis for processing, storage and interchange of text data in any language in all modern software and information technology protocols. See "What is LMS?" for a short explanation of what LMS is all about. That page is translated into more than 50 languages, to illustrate the use of the standard. See for yourself!</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="faq.html#collapseTwo"><i class="fa fa-angle-down"></i>Q: What is the scope of LMS?</a> </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">LMS covers all the characters for all the writing systems of the world, modern and ancient. It also includes technical symbols, punctuations, and many other characters used in writing text. The LMS Standard is intended to support the needs of all types of users, whether in business or academia, using mainstream or minority scripts.</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="faq.html#collapseThree"><i class="fa fa-angle-down"></i>What's the connection between LMS and the International Standard, ISO/IEC 10646?</a> </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">Both 10646 and LMS specify the same character encoding: they contain the same characters at the same locations. They remain fully synchronized even as they are extended to cover additional characters. See the LMS and ISO 10646 FAQ and Appendix C of the LMS Standard for a more extensive explanation of their relationship.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block slider2 %}
+{% endblock %}
+
+{% block partners %}
+{% endblock %}

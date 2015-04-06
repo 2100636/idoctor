@@ -1,12 +1,32 @@
 {% extends "main.html" %}
 {% load static from staticfiles %}
 {% load header_tags %}
+{% load sitetree %}
 
 
 {% block slider %}
     {% slider_tag request %}
 {% endblock %}
 
+{% block header %}
+{#            {% top_menu request %}#}
+    <header id="lms_header">
+        <div class="container">
+            <h1 class="logo"> <a href="index.html"> <img alt="Porto" width="184" data-sticky-width="82" data-sticky-height="40" src="{% static "idoctor/images/logo.png" %}"> </a> </h1>
+            <button class="lms_menu_toggle btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse"><i class="fa fa-bars"></i> </button>
+        </div>
+        <div class="navbar-collapse nav-main-collapse collapse">
+            <div class="container">
+                <nav class="nav-main mega-menu">
+                    {% sitetree_menu from "maintree" include 'trunk' %}
+                </nav>
+              <div class="lms_search_toggle"><a><i class="fa fa-search"></i></a></div>
+              <div class="lms_search_wrapper"><input type="search" placeholder="Search..." /></div>
+            </div>
+        </div>
+    </header>
+
+{% endblock %}
 
 {% block content %}
     <div class="container">
@@ -91,127 +111,13 @@
                 <div class="lms_popular_courses_item_detail" id="courses_item_detail{{ forloop.counter }}"> <img width="100%" src="/media/{{ article.image }}" alt="" />
                     <h3>{{ article.name|safe }}</h3>
                     <p>{{ article.description|truncatewords:20|safe }}</p>
-                    <a href="{{ article.url }}" class="btn btn-default">Read More</a>
-{#                    <div class="lms_social">#}
-{#                      <h4>Share This Course</h4>#}
-{#                      <ul>#}
-{#                        <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
-{#                        <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
-{#                        <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
-{#                        <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
-{#                      </ul>#}
-{#                    </div>#}
+                    <a href="{{ article.url }}" class="btn btn-default">Подробнее</a>
                 </div>
             {% endfor %}
 
-
-
-{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail2"> <img src="/static/idoctor/images/courses/courses_big_2.jpg" alt="" />#}
-{#            <h3>Information Technology</h3>#}
-{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
-{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
-{#            <div class="lms_social">#}
-{#              <h4>Share This Course</h4>#}
-{#              <ul>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
-{#              </ul>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail3"> <img src="images/courses/courses_big_3.jpg" alt="" />#}
-{#            <h3>Design</h3>#}
-{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
-{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
-{#            <div class="lms_social">#}
-{#              <h4>Share This Course</h4>#}
-{#              <ul>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
-{#              </ul>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail4"> <img src="images/courses/courses_big_4.jpg" alt="" />#}
-{#            <h3>Beauty & Health Care</h3>#}
-{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
-{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
-{#            <div class="lms_social">#}
-{#              <h4>Share This Course</h4>#}
-{#              <ul>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
-{#              </ul>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail5"> <img src="images/courses/courses_big_1.jpg" alt="" />#}
-{#            <h3>Multimedia</h3>#}
-{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
-{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
-{#            <div class="lms_social">#}
-{#              <h4>Share This Course</h4>#}
-{#              <ul>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
-{#              </ul>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="lms_popular_courses_item_detail" id="courses_item_detail6"> <img src="images/courses/courses_big_2.jpg" alt="" />#}
-{#            <h3>Information Technology</h3>#}
-{#            <p>Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa, malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna, mollis ultrices lacus. </p>#}
-{#            <a href="course-detail-list-view.html" class="btn btn-default">Read More</a>#}
-{#            <div class="lms_social">#}
-{#              <h4>Share This Course</h4>#}
-{#              <ul>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a></li>#}
-{#                <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>#}
-{#              </ul>#}
-{#            </div>#}
-{#          </div>#}
         </div>
       </div>
       <!--Our Popular Courses end-->
-
-      <!--Our Top Experts Team start-->
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="lms_title_center">
-                    <div class="lms_heading_1">
-                    <h2 class="lms_heading_title">Мы ценим ваше время</h2>
-                    </div>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-            </div>
-        </div>
-      <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="lms_experts_team_image" id="lms_experts_team_image11">
-                    <img class="img-responsive" src= "{% static "idoctor/images/remont_iphone_6.jpg" %}"  alt="iphon" />
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="lms_experts_team_detail" id="lms_experts_team_detail11">
-                    <ul class="repair__list">
-                        <li class="fa fa-check-circle-o"></li><p><span>Скорость.</span> Большинство ремонтов мы выполняем в течение часа. На сложные ремонты нам нужно не более 5 дней.</p>
-                        <li class="fa fa-check-circle-o"></li><span>Качество.</span> Все наши инженеры прошли подготовку по программе Apple Technician и имеют необходимые сертификаты.</p>
-                        <li class="fa fa-check-circle-o"></li><p><span>Надежность.</span> На все ремонты распространяется гарантия. Вы всегда знаете к кому обратится.</p>
-                        <li class="fa fa-check-circle-o"></li><p><span>Дружелюбность.</span> Мы любим наших клиентов, вы всегда сможете уточнить любой вопрос у наших сотрудников. А во время ремонта вашего устроуства вам предложат вкусного кофя</p>
-                        <li class="fa fa-check-circle-o"></li><p><span>Оригинальные запчасти.</span> Ваш iPhone будет работать долго и надежно.</p>
-                    </ul>
-                </div>
-            </div>
-      </div>
-
-      <!--Our Top Experts Team end-->
 
     </div>
 {% endblock %}
@@ -258,67 +164,102 @@
 {% endblock %}
 
 {% block partners %}
-    <!--Our Partners start-->
+
+     <!--Our Top Experts Team start-->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <div class="lms_title_center">
-            <div class="lms_heading_1">
-              <h2 class="lms_heading_title">Our Partners</h2>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="lms_title_center">
+                    <div class="lms_heading_1">
+                    <h2 class="lms_heading_title">Мы ценим ваше время</h2>
+                    </div>
+                     <p>Благодаря большому опыту, наши специалисты могут диагностировать проблему в считанные минуты</p>
+                </div>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-          </div>
         </div>
-      </div>
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <div class="lms_our_partner">
-            <div id="lms_our_partner_slider" class="owl-carousel owl-theme">
-              <div class="lms_our_partner_slider_item">
-                <div class="lms_our_partner_item"> <img src="images/partner/partner1.png" alt="partner" />
-                  <hr/>
-                  <p class="quote">"</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Integer et commodo metus. Praesent quis risus
-                    blandit, aliquam diam non, facilisis magna. </p>
-                  <p class="quote">"</p>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="lms_experts_team_image" id="lms_experts_team_image11">
+                    <img class="img-responsive" src= "{% static "idoctor/images/remont_iphone_6.jpg" %}"  alt="iphon" />
                 </div>
-              </div>
-              <div class="lms_our_partner_slider_item">
-                <div class="lms_our_partner_item"> <img src="images/partner/partner2.png" alt="partner" />
-                  <hr/>
-                  <p class="quote">"</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Integer et commodo metus. Praesent quis risus
-                    blandit, aliquam diam non, facilisis magna. </p>
-                  <p class="quote">"</p>
-                </div>
-              </div>
-              <div class="lms_our_partner_slider_item">
-                <div class="lms_our_partner_item"> <img src="images/partner/partner3.png" alt="partner" />
-                  <hr/>
-                  <p class="quote">"</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Integer et commodo metus. Praesent quis risus
-                    blandit, aliquam diam non, facilisis magna. </p>
-                  <p class="quote">"</p>
-                </div>
-              </div>
-              <div class="lms_our_partner_slider_item">
-                <div class="lms_our_partner_item"> <img src="images/partner/partner1.png" alt="partner" />
-                  <hr/>
-                  <p class="quote">"</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Integer et commodo metus. Praesent quis risus
-                    blandit, aliquam diam non, facilisis magna. </p>
-                  <p class="quote">"</p>
-                </div>
-              </div>
             </div>
-            <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> </div>
-          </div>
-        </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="lms_experts_team_detail" id="lms_experts_team_detail11">
+                    <ul class="repair__list">
+                        <li class="fa fa-check-circle-o"></li><p><span>Скорость.</span> Большинство ремонтов мы выполняем в течение часа. На сложные ремонты нам нужно не более 5 дней.</p>
+                        <li class="fa fa-check-circle-o"></li><span>Качество.</span> Все наши инженеры прошли подготовку по программе Apple Technician и имеют необходимые сертификаты.</p>
+                        <li class="fa fa-check-circle-o"></li><p><span>Надежность.</span> На все ремонты распространяется гарантия. Вы всегда знаете к кому обратится.</p>
+                        <li class="fa fa-check-circle-o"></li><p><span>Дружелюбность.</span> Мы любим наших клиентов, вы всегда сможете уточнить любой вопрос у наших сотрудников. А во время ремонта вашего устроуства вам предложат вкусного кофя</p>
+                        <li class="fa fa-check-circle-o"></li><p><span>Оригинальные запчасти.</span> Ваш iPhone будет работать долго и надежно.</p>
+                    </ul>
+                </div>
+            </div>
       </div>
     </div>
-    <!--Our Partners end-->
+      <!--Our Top Experts Team end-->
+
+{#    <!--Our Partners start-->#}
+{#    <div class="container">#}
+{#      <div class="row">#}
+{#        <div class="col-lg-12 col-md-12 col-sm-12">#}
+{#          <div class="lms_title_center">#}
+{#            <div class="lms_heading_1">#}
+{#              <h2 class="lms_heading_title">Our Partners</h2>#}
+{#            </div>#}
+{#            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#      <div class="row">#}
+{#        <div class="col-lg-12 col-md-12 col-sm-12">#}
+{#          <div class="lms_our_partner">#}
+{#            <div id="lms_our_partner_slider" class="owl-carousel owl-theme">#}
+{#              <div class="lms_our_partner_slider_item">#}
+{#                <div class="lms_our_partner_item"> <img src="images/partner/partner1.png" alt="partner" />#}
+{#                  <hr/>#}
+{#                  <p class="quote">"</p>#}
+{#                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing#}
+{#                    elit. Integer et commodo metus. Praesent quis risus#}
+{#                    blandit, aliquam diam non, facilisis magna. </p>#}
+{#                  <p class="quote">"</p>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="lms_our_partner_slider_item">#}
+{#                <div class="lms_our_partner_item"> <img src="images/partner/partner2.png" alt="partner" />#}
+{#                  <hr/>#}
+{#                  <p class="quote">"</p>#}
+{#                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing#}
+{#                    elit. Integer et commodo metus. Praesent quis risus#}
+{#                    blandit, aliquam diam non, facilisis magna. </p>#}
+{#                  <p class="quote">"</p>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="lms_our_partner_slider_item">#}
+{#                <div class="lms_our_partner_item"> <img src="images/partner/partner3.png" alt="partner" />#}
+{#                  <hr/>#}
+{#                  <p class="quote">"</p>#}
+{#                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing#}
+{#                    elit. Integer et commodo metus. Praesent quis risus#}
+{#                    blandit, aliquam diam non, facilisis magna. </p>#}
+{#                  <p class="quote">"</p>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="lms_our_partner_slider_item">#}
+{#                <div class="lms_our_partner_item"> <img src="images/partner/partner1.png" alt="partner" />#}
+{#                  <hr/>#}
+{#                  <p class="quote">"</p>#}
+{#                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing#}
+{#                    elit. Integer et commodo metus. Praesent quis risus#}
+{#                    blandit, aliquam diam non, facilisis magna. </p>#}
+{#                  <p class="quote">"</p>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#    <!--Our Partners end-->#}
 {% endblock %}

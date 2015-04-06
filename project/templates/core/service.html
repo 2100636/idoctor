@@ -4,7 +4,6 @@
 
 
 {% block slider %}
-    {% slider_tag request %}
 {% endblock %}
 
 
@@ -33,19 +32,20 @@
                       <p>этап</p>
                     </div>
                 </div>
-            <div class="col-lg-10 col-md-10 col-sm-9">
-                <div class="lms_service_detail">
-                    <h3>{{ step.name }}</h3>
-                    <p>{{ step.description|safe }}</p>
-                    <div class="row">
-                    {% for image in step.get_images %}
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="lms_hover_section"> <img src="{{ image.url }}" alt="service image">
-                                <div class="lms_hover_overlay"><a class="lms_image_link" data-gal="prettyPhoto[gallery2]" href="{{ image.url }}"></a></div>
+                <div class="col-lg-10 col-md-10 col-sm-9">
+                    <div class="lms_service_detail">
+                        <h3>{{ step.name }}</h3>
+                        <p>{{ step.description|safe }}</p>
+                        <div class="row">
+                        {% for image in step.get_images %}
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="lms_hover_section"> <img src="{{ image.url }}" alt="service image">
+                                    <div class="lms_hover_overlay"><a class="lms_image_link" data-gal="prettyPhoto[gallery2]" href="{{ image.url }}"></a></div>
+                                </div>
                             </div>
-                        </div>
-                    {% endfor %}
-                  </div>
+                        {% endfor %}
+                      </div>
+                    </div>
                 </div>
             </div>
         {% else %}
@@ -80,9 +80,9 @@
     <div class="col-lg-8 col-lg-offset-2">
       <div class="lms_title_center">
         <div class="lms_heading_1">
-          <h2 class="lms_heading_title">Have Any Qustion And Suggestion?<br> Send Message</h2>
+          <h2 class="lms_heading_title">Если у Вас есть вопрос, у нас есть ответ</h2>
         </div>
-        <p>Duis tortor lacus, dictum nec augue a, euismod sagittis eros. Aliquam id ligula.</p>
+        <p>Мы всегда рады ответить не все Ваши вопросы.</p>
       </div>
     </div>
   </div>
@@ -91,28 +91,28 @@
   	<form role="form">
           <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="form-group">
-              <input type="text" class="form-control" id="suggestion_name" placeholder="Your Full Name">
+              <input type="text" class="form-control" id="suggestion_name" placeholder="Ваше имя">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="suggestion_email" placeholder="Your Email">
+              <input type="text" class="form-control" id="suggestion_email" placeholder="Ваш email">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="suggestion_no" placeholder="Your Number">
+              <input type="text" class="form-control" id="suggestion_no" placeholder="Ваш телевон">
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="form-group">
-              <textarea rows="7" class="form-control" id="suggestion_msg" placeholder="Your Message / Suggestion.."></textarea>
+              <textarea rows="7" class="form-control" id="suggestion_msg" placeholder="Введите сообщение"></textarea>
             </div>
           </div>
           <div class="col-lg-12">
-            <button type="submit" class="btn btn-default pull-right">Send</button>
+            <button type="submit" class="btn btn-default pull-right">Отправить</button>
           </div>
         </form>
   </div>
 
 
-
+</div>
 </div>
 {% endblock %}
 
@@ -120,146 +120,4 @@
 {% endblock %}
 
 {% block partners %}
-{% endblock %}
-
-{% block footer %}
-    <div id="lms_footer">
-      <div class="lms_footer_top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="lms_online_user">
-                <h3>Online</h3>
-                <ul>
-                  <li class="online"><a href="index.html"><img src="images/online/member1.jpg" alt="online member"/></a></li>
-                  <li class="online"><a href="index.html"><img src="images/online/member2.jpg" alt="online member"/></a></li>
-                  <li class="online"><a href="index.html"><img src="images/online/member3.jpg" alt="online member"/></a></li>
-                  <li class="online"><a href="index.html"><img src="images/online/member4.jpg" alt="online member"/></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="lms_newsletter">
-                <h3>Newsletter</h3>
-                <div class="form-group">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter email">
-                    <div class="input-group-addon">Ok</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="lms_discussion_form">
-                <h3>Discussion Form</h3>
-                <div class="input-group">
-                  <select class="form-control">
-                    <option value="">Select Category</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                  <div class="input-group-addon"><i class="fa fa-angle-down"></i></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="lms_happening">
-                <h3>Happening Now</h3>
-                <div class="lms_happy_user"> <img src="images/online/member5.jpg" alt="happy user">
-                  <p><span class="lms_theme_color">Sunny Valim</span> Has Unlocked the New badge</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="lms_footer_center">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="lms_footer_logo"> <img src="images/logo.png" alt="footer logo"/> </div>
-              <p>Integer vitae triagna. Praesent bibendum quam tellus, quis rhoncus orci cursus vel. Aenean suscipilacerat elit sit amet lacinia. Phasellus volutt ligula eget urna egestas vehicula. Proinpus est sed mauris viverra, eu congue tellus tempus. e</p>
-              <div class="lms_social">
-                <ul>
-                  <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google+"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="index.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="lms_footer_popular_course">
-                <h3>Popular Course</h3>
-                <div class="lms_footer_course"> <img src="images/footer/popular_course1.jpg" alt="Popular Course"/> <a href="courses-4column.html">
-                  <h4>Donec velit diam</h4>
-                  </a>
-                  <p>Integer triagna. Praesent bibendum quam....</p>
-                </div>
-                <div class="lms_footer_course"> <img src="images/footer/popular_course2.jpg" alt="Popular Course"/> <a href="courses-4column.html">
-                  <h4>Donec velit diam</h4>
-                  </a>
-                  <p>Integer triagna. Praesent bibendum quam....</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="lms_footer_course_category">
-                <h3>Course Categories</h3>
-                <ul>
-                  <li><a href="course-gallery.html">Lorem ipsum dolor sit amet.</a></li>
-                  <li><a href="course-image.html">Integer vitae tristique</a></li>
-                  <li><a href="courses-2column.html">Donec velit diam, fringilla </a></li>
-                  <li><a href="courses-3column.html">Lorem ipsum .</a></li>
-                  <li><a href="courses-4column.html">Korem ipsum dolor </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="lms_footer_contact">
-                <h3>Contacts</h3>
-                <p>Lorem ipit amet, consectetur adipiscing elit. Etiam at ma erat laoreet accumsan. Vivamus id dui nulla. </p>
-                <p class="lms_address"><span class="lms_theme_color">Address :</span> 13/2 Elizabeth Street Melbourne VIC 3000, Australia </p>
-                <p class="lms_phone"><span class="lms_theme_color">Phone no :</span> +61 3 8376 6284</p>
-                <p class="lms_fax"><span class="lms_theme_color">Fax no :</span> +00 1234 56789</p>
-                <p class="lms_email"><span class="lms_theme_color">Email id :</span> <a href="mailTo:lurning@system.com">lurning@system.com</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="lms_footer_bottom">
-        <p>Copyright © 2015 learning system HTML Template All Rights Reserved</p>
-      </div>
-    </div>
-    <a href="index.html#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-    <div class="lms_chat_window">
-        <div class="lms_chat_header">
-            <div class="lms_chat_icon_left"><i class="fa fa-comments"></i></div>
-            <h4>Olivia Liam</h4>
-            <div class="lms_chat_icon_right"><a><img src="images/icon/close.png" alt="close" /></a></div>
-        </div>
-        <div class="lms_chat_body">
-            <div class="lms_group_descusion_main">
-            <div class="lms_group_descusion">
-              <ul>
-                <li><img src="images/online/member1.jpg" alt=""/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></li>
-                <li class="lms_chat_me"><img src="images/online/member2.jpg" alt=""/><span>Lorem ipsit amet, consectetur adipiscing elit. </span></li>
-                <li><img src="images/online/member1.jpg" alt=""/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></li>
-                <li class="lms_chat_me"><img src="images/online/member2.jpg" alt=""/><span>Lorem ipsit amet, consectetur adipiscing elit. </span></li>
-                <li><img src="images/online/member1.jpg" alt=""/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></li>
-              </ul>
-            </div>
-            <div class="form-group">
-              <div class="input-group">
-                <input class="form-control" type="text" placeholder="Type Your Message">
-                <div class="input-group-addon"><i class="fa fa-paper-plane"></i></div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
 {% endblock %}
