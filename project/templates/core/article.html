@@ -1,0 +1,52 @@
+{% extends "main.html" %}
+{% load static from staticfiles %}
+{% load header_tags %}
+
+
+{% block slider %}
+    {% slider_tag request %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+    <!--blog single page start-->
+
+        <div class="col-lg-8 col-md-8 col-sm-7">
+          <div class="lms_blog_single"> <img src="images/blog/blog_single1.jpg" alt="single page image">
+            <h3>Multimedia Course Overview</h3>
+            <div class="lms_entry_meta"> <span><a><i class="fa fa-calendar"></i> 30 May 2014</a></span> </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget magna ac quam volutpat tristique. Pellentesque viverra turpis at libero sodales, in consequat nisl molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vulputate libero in felis eleifend ornare</p>
+          </div>
+        </div>
+        <!--blog single page end-->
+
+        <!--sidebar start-->
+        <div class="col-lg-4 col-md-4 col-sm-5">
+          <div class="lms_sidebar_item">
+            <h3>Категории</h3>
+            <div class="lms_sidebar_category">
+              <ul>
+                <li><a href="blog-right-sidebar.html"><i class="fa fa-angle-right"></i> Game Design</a></li>
+                <li><a href="blog-right-sidebar.html"><i class="fa fa-angle-right"></i> Materials</a></li>
+                <li><a href="blog-right-sidebar.html"><i class="fa fa-angle-right"></i> Modeling</a></li>
+                <li><a href="blog-right-sidebar.html"><i class="fa fa-angle-right"></i> Particles</a></li>
+                <li><a href="blog-right-sidebar.html"><i class="fa fa-angle-right"></i> Product Design</a></li>
+                <li><a href="blog-right-sidebar.html"><i class="fa fa-angle-right"></i> Visual Effects</a></li>
+                <li><a href="blog-right-sidebar.html"><i class="fa fa-angle-right"></i> View all</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    <!--sidebar end-->
+  </div>
+</div>
+
+{% endblock %}
+
+{% block slider2 %}
+{% endblock %}
+
+{% block partners %}
+{% endblock %}
