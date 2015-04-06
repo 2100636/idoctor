@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'project.core',
     'ckeditor',
     'mptt',
-    'mptt_tree_editor'
+    'mptt_tree_editor',
+    'sitetree',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,7 +81,7 @@ TEMPLATES = [
 #     'django.template.loaders.eggs.Loader',
 # )
 
-WSGI_APPLICATION = 'project.wsgi.application'
+# WSGI_APPLICATION = 'project.wsgi.application'
 
 
 # Database
