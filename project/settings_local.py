@@ -16,6 +16,7 @@ DATABASES = {
     }
 }
 
+
 STATICFILES_DIRS = (
     "/Users/greenteamer/Desktop/Django/applications/idoctor/project/static",
 )
