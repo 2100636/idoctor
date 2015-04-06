@@ -335,6 +335,8 @@
 					clear: right;
 					float: left;
 					margin: 3px 10px 0 0;
+					z-index: 9;
+  					position: relative;
 				}
 				
 					.pp_nav p {

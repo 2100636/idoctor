@@ -60,7 +60,7 @@
 												<a href="#" class="pp_arrow_next">Next</a> \
 											</div> \
 											<p class="pp_description"></p> \
-											<div class="pp_social">{pp_social}</div> \
+											<div class="pp_social"></div> \
 											<a class="pp_close" href="#">Close</a> \
 										</div> \
 									</div> \
@@ -198,11 +198,7 @@
 				setHashtag();
 		
 			// Rebuild Facebook Like Button with updated href
-			if(settings.social_tools){
-				facebook_like_link = settings.social_tools.replace('{location_href}', encodeURIComponent(location.href)); 
-				$pp_pic_holder.find('.pp_social').html(facebook_like_link);
-			}
-			
+
 			// Fade the content in
 			if($ppt.is(':hidden')) $ppt.css('opacity',0).show();
 			$pp_overlay.show().fadeTo(settings.animation_speed,settings.opacity);
@@ -746,11 +742,8 @@
 	
 		function _build_overlay(caller){
 			// Inject Social Tool markup into General markup
-			if(settings.social_tools)
-				facebook_like_link = settings.social_tools.replace('{location_href}', encodeURIComponent(location.href)); 
+			 
 
-			settings.markup = settings.markup.replace('{pp_social}',''); 
-			
 			$('body').append(settings.markup); // Inject the markup
 			
 			$pp_pic_holder = $('.pp_pic_holder') , $ppt = $('.ppt'), $pp_overlay = $('div.pp_overlay'); // Set my global selectors
