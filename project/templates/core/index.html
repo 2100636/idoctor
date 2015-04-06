@@ -253,27 +253,16 @@
             <div class="container">
               <div class="lms_testimonials wow bounce">
                 <div id="lms_testimonials_slider" class="owl-carousel owl-theme">
-                  <div class="lms_testimonials_slider_item">
-                    <p class="lms_testimonial_quote">"</p>
-                    <p class="lms_testimonials_txt">Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa,
-                      malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna,</p>
-                    <img src="images/testimonial/testimonial1.png" alt="Testimonials" />
-                    <h4>Olivia Liam</h4>
-                  </div>
-                  <div class="lms_testimonials_slider_item">
-                    <p class="lms_testimonial_quote">"</p>
-                    <p class="lms_testimonials_txt">Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa,
-                      malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna,</p>
-                    <img src="images/testimonial/testimonial2.jpg" alt="Testimonials" />
-                    <h4>Noaln jude</h4>
-                  </div>
-                  <div class="lms_testimonials_slider_item">
-                    <p class="lms_testimonial_quote">"</p>
-                    <p class="lms_testimonials_txt">Suspendisse posuere consectetur sodales. Etiam faucibus rhoncus nunc et pretium. Praesent tortor massa,
-                      malesuada sed ornare in, dignissim adipiscing felis. Donec eget hendrerit magna,</p>
-                    <img src="images/testimonial/testimonial1.png" alt="Testimonials" />
-                    <h4>Olivia Liam</h4>
-                  </div>
+                  
+                    {% for review in reviews %}
+                        <div class="lms_testimonials_slider_item">
+                            <p class="lms_testimonial_quote">"</p>
+                            <p class="lms_testimonials_txt">{{ review.description|safe }}</p>
+                            <img src="/media/{{ review.image }}" alt="Testimonials" />
+                            <h4>{{ review.name }}</h4>
+                        </div>
+                    {% endfor %}
+
                 </div>
                 <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> </div>
               </div>
