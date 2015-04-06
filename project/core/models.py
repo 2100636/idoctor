@@ -15,6 +15,12 @@ class Menu(MPTTModel):
     def __unicode__(self):
         return self.name
 
+    def url(self):
+        if self.slug == 'home':
+            return '/'
+        else:
+            return "/%s" % self.slug
+
 
 class Page(models.Model):
     name = models.CharField(verbose_name=u'Название страницы', max_length=200)

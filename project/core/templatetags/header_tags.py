@@ -19,14 +19,12 @@ def top_menu(context, request):
     for item in items:
         if not item.parent:
             dict[item] = [item]
-
     for item in items:
         if item.parent:
             tmp = ['', ]
             for ch in Menu.objects.filter(parent=item.parent_id):
                 tmp.append(ch)
             dict[Menu.objects.get(id=item.parent_id)] = tmp
-
     return {
         'user': request.user,
         'dict': dict

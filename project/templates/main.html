@@ -1,12 +1,51 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
 {% load header_tags %}
+{% load sitetree %}
 
         {% block slider %}
         {% endblock %}
 
         {% block header %}
-            {% top_menu request %}
+
+
+
+{#            {% top_menu request %}#}
+            <header id="lms_header">
+                <div class="container">
+                    <h1 class="logo"> <a href="index.html"> <img alt="Porto" width="184" data-sticky-width="82" data-sticky-height="40" src="{% static "idoctor/images/logo.png" %}"> </a> </h1>
+                    <button class="lms_menu_toggle btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse"><i class="fa fa-bars"></i> </button>
+                </div>
+                <div class="navbar-collapse nav-main-collapse collapse">
+                    <div class="container">
+                        <nav class="nav-main mega-menu">
+{#                            <ul class="nav nav-pills nav-main" id="mainMenu">#}
+{##}
+{#                                {% sitetree_menu from "maintree" include "trunk" %}#}
+{##}
+{#                            {% for key, value in dict.items %}#}
+{#                                <li class="dropdown"> <a class="dropdown-toggle" href="{% for item in value %}{% if forloop.first %}{{ item.url }}{% endif %}{% endfor %}">{{ key }}</a>#}
+{#                                {% if value|length > 1 %}#}
+{#                                    <ul class="dropdown-menu">#}
+{#                                        {% for ch in value %}#}
+{#                                            {% if forloop.counter0 != 0 %}#}
+{#                                                <li><a href="">{{ ch.url }}</a></li>#}
+{#                                            {% endif %}#}
+{#                                        {% endfor %}#}
+{#                                    </ul>#}
+{#                                {% endif %}#}
+{#                            {% endfor %}#}
+{#                            </ul>#}
+
+                            {% sitetree_menu from "maintree" include 'trunk' %}
+
+                        </nav>
+                      <div class="lms_search_toggle"><a><i class="fa fa-search"></i></a></div>
+                      <div class="lms_search_wrapper"><input type="search" placeholder="Search..." /></div>
+                    </div>
+                </div>
+
+            </header>
         {% endblock %}
 
 {#        {% block body_sidebar %}#}
