@@ -8,4 +8,8 @@ urlpatterns = patterns('project.core.views',
     url(r'^$', 'indexView',
         {'template_name': 'core/index.html'},
         name='indexView'),
+
+    url(r'^service/(?P<slug>[-\w]+)/$', 'serviceView',
+        {'template_name':'core/service.html'},
+        name='serviceView'),
 )

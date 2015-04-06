@@ -12,78 +12,34 @@
     <div class="container">
 
         <!--Our Best Services start-->
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12">
-      <div class="lms_title_center">
-        <div class="lms_heading_1">
-          <h2 class="lms_heading_title">Сервесный центр Idoctor</h2>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="lms_title_center">
+            <div class="lms_heading_1">
+              <h2 class="lms_heading_title">Сервесный центр Idoctor</h2>
+            </div>
+            <p>Мы не калечим, мы лечим </p>
+          </div>
         </div>
-        <p>Мы не калечим, мы лечим </p>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-6">
-      <div class="lms_service_1">
-        <div class="lms_service_icon"><img src="images/icon/modul.png" alt="service icon"/></div>
-        <a href="services.html">
-        <h3 class="lms_service_title">Модульный ремонт iPhone (замена)</h3>
-        </a>
-        <p>Замена кнопок, разъемов, динамиков, шлейфов</p>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6">
-      <div class="lms_service_1">
-        <div class="lms_service_icon"><img src="images/icon/shema2.png" alt="service icon"/></div>
-        <a href="services.html">
-        <h3 class="lms_service_title">Простой ремонт с применением пайки iPhone</h3>
-        </a>
-        <p>Замена коннекторов, разъемов, контактных групп, контактов SIM</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-6">
-      <div class="lms_service_1">
-        <div class="lms_service_icon"><img src="images/icon/shema.png" alt="service icon"/></div>
-        <a href="services.html">
-        <h3 class="lms_service_title">Сложный ремонт с применением пайки iPhone</h3>
-        </a>
-        <p>Замена микросхем и контроллеров</p>
-      </div>
+    <div class="row">
+    {% for service in services %}
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="lms_service_1">
+            <div class="lms_service_icon"><img src="{{ service.get_icon }}" alt="service icon"/></div>
+            <a href="{{ service.get_url }}">
+            <h3 class="lms_service_title">{{ service.name }}</h3>
+            </a>
+            <p>{{ service.description }}</p>
+          </div>
+        </div>
+    {% endfor %}
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6">
-      <div class="lms_service_1">
-        <div class="lms_service_icon"><img src="images/icon/chstka.png" alt="service icon"/></div>
-        <a href="services.html">
-        <h3 class="lms_service_title">Чистка после попадания влаги, устранение коррозии iPhone </h3>
-        </a>
-        <p>Удаление окислов, коррозии после попадания жидкости, без последующего ремонта</p>
-      </div>
-    </div>
-   </div>
 
-   <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-6">
-      <div class="lms_service_1">
-        <div class="lms_service_icon"><img src="images/icon/vostonovlenie.png" alt="service icon"/></div>
-        <a href="services.html">
-        <h3 class="lms_service_title">Восстановление программного обеспечения (прошивка) iPhone</h3>
-        </a>
-        <p>После неудачной прошивки, технического сбоя</p>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6">
-      <div class="lms_service_1">
-        <div class="lms_service_icon"><img src="images/icon/akom.png" alt="service icon"/></div>
-        <a href="services.html">
-        <h3 class="lms_service_title">Замена аккумуляторной батареи iPhone</h3>
-        </a>
-        <p></p>
-      </div>
-    </div>
-  </div>
+
+
+
   <!--Our Best Services end-->
 
       <!--Our Popular Courses start-->

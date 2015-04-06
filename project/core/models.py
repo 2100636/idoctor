@@ -62,15 +62,19 @@ class Service(models.Model):
     slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
     description = models.TextField(verbose_name=u'Краткое описание')
     image = models.ImageField(verbose_name=u'Иконка', upload_to='service')
+    main_check = models.BooleanField(verbose_name=u'Отображать на главной', default=False)
 
     def __unicode__(self):
         return self.name
 
     def get_url(self):
-        return '/article/%s' % self.slug
+        return '/service/%s' % self.slug
 
-    def get_images(self):
-        return ArticleImage.objects.filter(article=self.id)
+    def get_icon(self):
+        return "/media/%s" % self.image
+
+    def get_steps(self):
+        return ServiceStep.objects.filter(service=self.id)
 
 
 class ServiceStep(models.Model):
@@ -78,12 +82,20 @@ class ServiceStep(models.Model):
     description = models.TextField(verbose_name=u'Описание этапа')
     service = models.ForeignKey(Service)
 
+    def __unicode__(self):
+        return "%s - %s" % (self.service.name, self.name)
+
+    def get_images(self):
+        return ServiceStepImage.objects.filter(service_step=self.id)
+
 
 class ServiceStepImage(models.Model):
     image = models.ImageField(verbose_name=u'Изображение для статьи', upload_to='service')
     service = models.ForeignKey(Service)
     service_step = models.ForeignKey(ServiceStep)
 
+    def url(self):
+        return "/media/%s" % self.image
 
 
 class Faq(models.Model):
