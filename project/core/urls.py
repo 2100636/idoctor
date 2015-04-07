@@ -13,6 +13,10 @@ urlpatterns = patterns('project.core.views',
         {'template_name': 'core/articles.html'},
         name='articlesView'),
 
+    url(r'^faq', 'faqView',
+        {'template_name': 'core/faq.html'},
+        name='faqView'),
+
     url(r'^about$', 'aboutView',
         {'template_name': 'core/about.html'},
         name='aboutView'),

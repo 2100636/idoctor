@@ -5,6 +5,7 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^ckeditor/', include('ckeditor.urls')),
     url(r'^', include('project.core.urls')),
 ]
 

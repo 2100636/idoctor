@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'mptt',
     'mptt_tree_editor',
     'sitetree',
+    'image_cropping',
+    'easy_thumbnails',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -133,6 +135,7 @@ MEDIA_ROOT = '%s/project/media' % BASE_DIR
 
 MEDIA_URL = '/media/'
 
+CKEDITOR_UPLOAD_PATH = '/media/uploads'
 
 try:
     from settings_local import *

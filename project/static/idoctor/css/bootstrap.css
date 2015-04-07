@@ -3157,16 +3157,7 @@ tbody.collapse.in {
           background-clip: padding-box;
   border-bottom: 2px solid #ff9933;
 }
-.dropdown-menu:before{
-	position:absolute;
-	content:"";
-	top:-2px;
-	left:0;
-	width:100%;
-	height:1px;
-	margin-bottom:2px !important;
-	border-top:1px solid #000;
-	}
+
 .dropdown-menu.pull-right {
   right: 0;
   left: auto;
@@ -3197,7 +3188,7 @@ tbody.collapse.in {
 .dropdown-menu > .active > a:focus {
   color: #fff;
   text-decoration: none;
-  background-color: #428bca;
+  background-color: #fff;
   outline: 0;
 }
 .dropdown-menu > .disabled > a,

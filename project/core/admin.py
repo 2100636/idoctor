@@ -2,6 +2,7 @@
 #!/usr/bin/env python
 from django.contrib import admin
 from project.core.models import Page, PageImage, Article, ArticleImage, Faq, Review, Menu, Service, ServiceStep, ServiceStepImage
+from image_cropping import ImageCroppingMixin
 # from mptt_tree_editor.admin import TreeEditor
 
 
@@ -37,8 +38,9 @@ class ArticleAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name', )}
 
 
-class ServiseImageInline(admin.StackedInline):
+class ServiseImageInline(ImageCroppingMixin, admin.StackedInline):
     model = ServiceStepImage
+    fields = ('service_step', 'image', 'cropping')
 
 
 class ServiceStepInline(admin.StackedInline):
