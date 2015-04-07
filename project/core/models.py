@@ -3,6 +3,7 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 from ckeditor.fields import RichTextField
+from image_cropping import ImageRatioField
 
 
 class Menu(MPTTModel):
@@ -46,7 +47,7 @@ class PageImage(models.Model):
 class Article(models.Model):
     name = models.CharField(verbose_name=u'Название статьи', max_length=200)
     slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
-    description = models.TextField(verbose_name=u'Описание')
+    description = RichTextField(verbose_name=u'Описание')
     image = models.ImageField(verbose_name=u'Изображение', upload_to='pages')
 
     def __unicode__(self):
@@ -67,7 +68,7 @@ class ArticleImage(models.Model):
 class Service(models.Model):
     name = models.CharField(verbose_name=u'Название статьи', max_length=200)
     slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
-    description = models.TextField(verbose_name=u'Краткое описание')
+    description = RichTextField(verbose_name=u'Краткое описание')
     image = models.ImageField(verbose_name=u'Иконка', upload_to='service')
     main_check = models.BooleanField(verbose_name=u'Отображать на главной', default=False)
 
@@ -86,7 +87,7 @@ class Service(models.Model):
 
 class ServiceStep(models.Model):
     name = models.CharField(verbose_name=u'Название этапа', max_length=244)
-    description = models.TextField(verbose_name=u'Описание этапа')
+    description = RichTextField(verbose_name=u'Описание этапа')
     service = models.ForeignKey(Service)
 
     def __unicode__(self):
@@ -98,6 +99,7 @@ class ServiceStep(models.Model):
 
 class ServiceStepImage(models.Model):
     image = models.ImageField(verbose_name=u'Изображение для статьи', upload_to='service')
+    cropping = ImageRatioField('image', '281x171', verbose_name=u'Обрезка фото')
     service = models.ForeignKey(Service)
     service_step = models.ForeignKey(ServiceStep)
 
@@ -107,7 +109,7 @@ class ServiceStepImage(models.Model):
 
 class Faq(models.Model):
     name = models.CharField(verbose_name=u'Вопрос', max_length=240)
-    description = models.TextField(verbose_name=u'Ответ')
+    description = RichTextField(verbose_name=u'Ответ')
 
     def __unicode__(self):
         return self.name

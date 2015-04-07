@@ -3,7 +3,7 @@
 
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.template import RequestContext
-from project.core.models import Page, Service, Review, Article
+from project.core.models import Page, Service, Review, Article, Faq
 from project import settings
 
 
@@ -28,6 +28,13 @@ def articleView(request, slug, template_name="core/article.html"):
     user = request.user
     article = Article.objects.get(slug=slug)
     title = article.name
+    return render_to_response(template_name, locals(),
+                              context_instance=RequestContext(request))
+
+
+def faqView(request, template_name="core/faq.html"):
+    title = 'faq'
+    faqs = Faq.objects.all()
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
 

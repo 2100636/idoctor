@@ -123,9 +123,9 @@ ul.lms_list_upper_roman {
 
 
 .navbar-collapse.nav-main-collapse.collapse {
-  background: #fff;
-   font-family: 'Roboto Condensed', sans-serif;;
-  border-bottom: 1px solid #E5E5E5;
+    background: #fff;
+    font-family: 'Roboto Condensed', sans-serif;;
+    border-bottom: 2px solid #6199D2;
 }
 .btn-default {
   color: #FFFFFF;
