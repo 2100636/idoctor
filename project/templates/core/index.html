@@ -51,7 +51,7 @@
             <a href="{{ service.get_url }}">
             <h3 class="lms_service_title">{{ service.name }}</h3>
             </a>
-            <p>{{ service.description }}</p>
+            <p>{{ service.description|safe }}</p>
           </div>
         </div>
     {% endfor %}
