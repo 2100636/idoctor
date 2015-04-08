@@ -137,6 +137,8 @@ MEDIA_URL = '/media/'
 
 CKEDITOR_UPLOAD_PATH = '/media/uploads'
 
+THUMBNAIL_DEBUG = True
+
 try:
     from settings_local import *
 except ImportError:
