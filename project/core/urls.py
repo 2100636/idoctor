@@ -32,4 +32,13 @@ urlpatterns = patterns('project.core.views',
     url(r'^article/(?P<slug>[-\w]+)/$', 'articleView',
         {'template_name':'core/article.html'},
         name='articleView'),
+
+    # Просмотр категории
+    url(r'^category/(?P<category_slug>[-\w]+)/$', 'category_view',
+       {'template_name':'category/category.html'},
+       name='category_view'),
+
+    url(r'^price/(?P<slug>[-\w]+)/$', 'price_view',
+       {'template_name':'category/price.html'},
+       name='price_view'),
 )
