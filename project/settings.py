@@ -25,7 +25,7 @@ SECRET_KEY = '7j09%e0uap(m5o=3967!k7$vp*kvg7-vr8jmslft_53g$5i@%+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+ADMIN_EMAIL = 'greenteamer@bk.ru'
 ALLOWED_HOSTS = []
 
 

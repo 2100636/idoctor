@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 from django.shortcuts import get_object_or_404, render_to_response, redirect
+from django.http import HttpResponseRedirect
+from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template import RequestContext
 from project.core.models import Page, Service, Review, Article, Faq, Category, Price
+from project.core.forms import ContactForm
+from project.settings import ADMIN_EMAIL
 from project import settings
 
 
@@ -48,6 +52,17 @@ def serviceView(request, slug, template_name="core/service.html"):
 
 def contactView(request, template_name="core/contact.html"):
     user = request.user
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = u'id70.ru форма'
+            message = u'Имя: %s \n Телефон: %s \n Описание проблемы: %s' % (request.POST['name'], request.POST['phone'], request.POST['text'])
+            send_mail(subject, message, 'teamer777@gmail.com', [ADMIN_EMAIL], fail_silently=False)
+            return redirect('/contacts')
+        else:
+            form = ContactForm(request.POST)
+    else:
+        form = ContactForm()
     #service = Service.objects.get(slug=slug)
     title = 'Контакты'
     return render_to_response(template_name, locals(),

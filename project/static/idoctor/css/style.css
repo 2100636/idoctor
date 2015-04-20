@@ -152,6 +152,9 @@ li.fa.fa-check-circle-o {
 .repair__list span{
 	font-weight: bold;
 }
+.errorlist {
+    color:red;
+}
 /*---------------------preloader start---------------------------*/
 #preloader {
 	background-color: #fff;
