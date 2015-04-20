@@ -152,6 +152,28 @@ li.fa.fa-check-circle-o {
 .repair__list span{
 	font-weight: bold;
 }
+.prase_bloc_categ img{
+    height:200px;
+    margin-top: 7px;
+}
+.prase_bloc_categ{
+    margin-top: 30px;
+}
+.prise_page td, th {
+  padding: 0;
+  border: 1px solid #B3B3B3;
+  padding: 6px 7px 6px 10px;
+}
+.prise_page{
+    margin-top: 80px;
+}
+.prase_bloc_categ h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.prase_categ{
+    text-align: center;
+    margin-top: 80px;
+}
 /*---------------------preloader start---------------------------*/
 #preloader {
 	background-color: #fff;
