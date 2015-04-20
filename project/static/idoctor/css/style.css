@@ -174,6 +174,9 @@ li.fa.fa-check-circle-o {
     text-align: center;
     margin-top: 80px;
 }
+.errorlist {
+    color:red;
+}
 /*---------------------preloader start---------------------------*/
 #preloader {
 	background-color: #fff;
@@ -317,6 +320,7 @@ li.fa.fa-check-circle-o {
     text-align: right;
     font-size: 15px;
 }
+>>>>>>> origin/master
 
 .phone_cont i.fa.fa-map-marker {
   padding: 0px 6px 0px 10px;
