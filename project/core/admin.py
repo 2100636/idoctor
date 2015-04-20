@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 from django.contrib import admin
-from project.core.models import Page, PageImage, Article, ArticleImage, Faq, Review, Menu, Service, ServiceStep, ServiceStepImage
+from project.core.models import Page, PageImage, Article, ArticleImage, Faq, Review, Menu, Service, ServiceStep, \
+    ServiceStepImage, Category, Price
 from image_cropping import ImageCroppingMixin
 # from mptt_tree_editor.admin import TreeEditor
 
@@ -54,9 +55,17 @@ class ServiceAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 
+class PriceAdmin(admin.ModelAdmin):
+    model = Price
+    prepopulated_fields = {'slug': ('name',)}
+
+
 admin.site.register(Page, PageAdmin)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Faq)
 admin.site.register(Review)
 # admin.site.register(Menu, MenuAdmin)
 admin.site.register(Service, ServiceAdmin)
+admin.site.register(Price, PriceAdmin)
+admin.site.register(Category)
+
