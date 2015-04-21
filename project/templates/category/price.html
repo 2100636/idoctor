@@ -7,53 +7,13 @@
 {% block slider %}
 {% endblock %}
 
-
-{% block header %}
-{#            {% top_menu request %}#}
-    <header id="lms_header">
-        <div class="container">
-            <h1 class="logo"> <a href="index.html"> <img alt="Porto" width="184" data-sticky-width="82" data-sticky-height="40" src="{% static "idoctor/images/logo.png" %}"> </a> </h1>
-            <button class="lms_menu_toggle btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse"><i class="fa fa-bars"></i> </button>
-        </div>
-        <div class="navbar-collapse nav-main-collapse collapse">
-            <div class="container">
-                <nav class="nav-main mega-menu">
-                    {% sitetree_menu from "maintree" include 'trunk' %}
-                </nav>
-              <div class="lms_search_toggle"><a><i class="fa fa-search"></i></a></div>
-              <div class="lms_search_wrapper"><input type="search" placeholder="Search..." /></div>
-            </div>
-        </div>
-    </header>
-
-    <!-- page title Start -->
-    <div class="lms_page_title">
-      <div class="lms_page_title_bg" data-stellar-background-ratio="0.5"></div>
-      <div class="lms_page_title_bg_overlay">
-        <div class="container">
-          <div class="lms_title">{{ title }}</div>
-          <div class="pull-right">
-{#            <ol class="breadcrumb">#}
-{#              <li><a href="/">Главная</a></li>#}
-{#              <li class="active">{{ title }}</li>#}
-{#            </ol>#}
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- page title end -->
-
-{% endblock %}
-
-
 {% block content %}
 <div class="container">
     <div class="row">
     <!--blog single page start-->
 
-        <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 prise_page">
             <div>
-                <img src="{{ price.image_url }}" alt=""/>
                 <h3>{{ price.name }}</h3>
                 <p>{{ price.description | safe }}</p>
             </div>

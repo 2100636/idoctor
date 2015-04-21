@@ -152,9 +152,37 @@ li.fa.fa-check-circle-o {
 .repair__list span{
 	font-weight: bold;
 }
+.prase_bloc_categ img{
+    height:200px;
+    margin-top: 7px;
+}
+.prase_bloc_categ{
+    margin-top: 30px;
+}
+.prise_page td, th {
+  padding: 0;
+  border: 1px solid #B3B3B3;
+  padding: 6px 7px 6px 10px;
+}
+.prise_page{
+    margin-top: 80px;
+}
+.prase_bloc_categ h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.prase_categ{
+    text-align: center;
+    margin-top: 80px;
+}
 .errorlist {
     color:red;
 }
+.block_uslug{
+    background: #F2F2F2;
+     padding-bottom: 20px;
+    padding-top: 40px;
+}
+
 /*---------------------preloader start---------------------------*/
 #preloader {
 	background-color: #fff;
@@ -216,43 +244,11 @@ li.fa.fa-check-circle-o {
 	-ms-transition: all 0.3s;
 	-o-transition: all 0.3s;
 }
-.lms_fixed_header .logo img {
-	margin-bottom: 6px;
-}
-.lms_fixed_header > .container {
-	height: 65px !important;
-	margin-bottom: -66px !important;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-}
-.lms_fixed_header nav > ul.nav-main > li > a {
-	padding: 33px 13px 7px !important;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-}
-.lms_fixed_header .lms_search_toggle {
-	top: 20px !important;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-}
-.lms_fixed_header .lms_search_toggle a {
-	width: 30px;
-	height: 30px;
-	line-height: 30px;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-}
+
 .lms_search_toggle {
 	position: absolute;
 	top: 30px;
+      width: 110px;
 	right: 10px;
 	cursor: pointer;
 	-webkit-transition: all 0.3s;
@@ -261,19 +257,21 @@ li.fa.fa-check-circle-o {
 	-o-transition: all 0.3s;
 }
 .lms_search_toggle a {
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	color: #1D1D1D;
+	 width: 84px;
+  height: 22px;
+  line-height: 23px;
+  color: #fff;
 	display: inline-block;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
 	-o-transition: all 0.3s;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
 }
 .lms_search_toggle a:hover {
 	border-color: #1593d1;
+    color:#fff;
 }
 .lms_search_wrapper {
 	display: none;
@@ -320,12 +318,29 @@ li.fa.fa-check-circle-o {
 	-ms-transition: all 0.3s;
 	-o-transition: all 0.3s;
 }
+.prise_im_block .prise_im{
+   text-align: center;
+}
+.prise_im_block .prise_im h3{
+  font-family: 'Roboto Condensed', sans-serif;
+}
 #lms_header > .navbar-collapse > .container {
 	position: relative;
 }
+.phone_cont {
+    padding: 20px 18px 0px 0px;
+    text-align: right;
+    font-size: 15px;
+}
+.phone_cont i.fa.fa-map-marker {
+  padding: 0px 6px 0px 10px;
+}
+.phone_cont i.fa.fa-phone {
+  padding-right: 7px;
+}
 #lms_header nav {
 	float: right;
-	margin-right: 50px;
+	margin-right: 126px;
 }
 .one_page_nav {
 	margin-right: 0px !important;
@@ -341,7 +356,7 @@ li.fa.fa-check-circle-o {
 	font-weight: 400;
 	cursor: pointer;
 	  margin-bottom: 8px;
-  	padding: 60px 13px 7px;
+  	padding: 12px 13px 7px;
 	border-bottom: 3px solid rgba(255,255,255,0);
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -489,13 +504,6 @@ li.fa.fa-check-circle-o {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-.lms_fixed_header .logo{
-	line-height: 58px !important;
-	  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-	}
 #lms_header .logo a {
 	/* [disabled]position: relative;
 */
@@ -518,28 +526,7 @@ li.fa.fa-check-circle-o {
 .lms_search_toggle {
 	display: none;
 }
-.lms_fixed_header {
-	width: 100% !important;
-	float: left !important;
-}
-.lms_fixed_header > .container {
-	height: 65px !important;
-	margin-bottom: -10px !important;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-}
-.lms_fixed_header nav > ul.nav-main > li > a {
-	padding: 9px 8px !important;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-}
-.lms_fixed_header .lms_menu_toggle {
-	top: 20px !important;
-}
+
 /* Header */
 #lms_header {
 	clear: both;

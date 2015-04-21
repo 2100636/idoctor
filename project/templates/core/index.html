@@ -18,10 +18,14 @@
         <div class="navbar-collapse nav-main-collapse collapse">
             <div class="container">
                 <nav class="nav-main mega-menu">
+                    <div class="phone_cont"><i class="fa fa-phone"></i>332277<i class="fa fa-map-marker"></i>г. Томск пер. 1905 г. 18, оф. 3</div>
                     {% sitetree_menu from "maintree" include 'trunk' %}
                 </nav>
-              <div class="lms_search_toggle"><a><i class="fa fa-search"></i></a></div>
-              <div class="lms_search_wrapper"><input type="search" placeholder="Search..." /></div>
+              <div class="lms_search_toggle btn btn-primary"><a>Статус заказа</a></div>
+              <div class="lms_search_wrapper">
+                  <div style=" text-align: center; padding-bottom: 10px; ">Формат ввода номера +7 </div>
+                  <div id="remonline-widget" data-ro-key="868ad583e39616096abe89d473953a37"></div>
+              </div>
             </div>
         </div>
     </header>
@@ -36,23 +40,43 @@
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="lms_title_center">
                     <div class="lms_heading_1">
-                        <h2 class="lms_heading_title">Прайсы</h2>
+                        <h2 class="lms_heading_title">Стоимость ремонта</h2>
                     </div>
-                    <p>Выберите категорию</p>
+                    <p>Выберите устройство</p>
                 </div>
             </div>
         </div>
 
-        <div class="row">
+
+        <div class="row prise_im_block">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <a href="/category/iphone">iphone</a>
-                <a href="/category/iphone">ipod</a>
-                <a href="/category/iphone">ipad</a>
-                <a href="/category/iphone">macbook</a>
+                <div class="col-md-3 col-md-6 prise_im">
+                    <img  src="{% static "idoctor/images/iphone_6.png" %}">
+                    <h3><a href="/category/iphone">iPhone</a></h3>
+                </div>
+
+                <div class="col-md-3 col-md-6 prise_im">
+                    <img  src="{% static "idoctor/images/ipod.jpg" %}">
+                    <h3><a href="/category/ipod">iPod</a></h3>
+                </div>
+
+                <div class="col-md-3 col-md-6 prise_im">
+                    <img  src="{% static "idoctor/images/ipad.png" %}">
+                    <h3><a href="/category/ipad">iPad</a></h3>
+                </div>
+
+                 <div class="col-md-3 col-md-6 prise_im">
+                    <img  src="{% static "idoctor/images/macBook.png" %}">
+                    <h3><a href="/category/macbook">Macbook</a></h3>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!--Our Best Services start-->
+
+
+
+    <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="lms_title_center">
@@ -63,23 +87,28 @@
           </div>
         </div>
       </div>
-
-    <div class="row">
-    {% for service in services %}
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="lms_service_1">
-            <div class="lms_service_icon"><img src="{{ service.get_icon }}" alt="service icon"/></div>
-            <a href="{{ service.get_url }}">
-            <h3 class="lms_service_title">{{ service.name }}</h3>
-            </a>
-            <p>{{ service.description|safe }}</p>
-          </div>
-        </div>
-    {% endfor %}
     </div>
+ <div class="block_uslug">
+    <div class="container">
+        <div class="row">
+        {% for service in services %}
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="lms_service_1">
+                <div class="lms_service_icon"><img src="{{ service.get_icon }}" alt="service icon"/></div>
+                <a href="{{ service.get_url }}">
+                <h3 class="lms_service_title">{{ service.name }}</h3>
+                </a>
+                <p>{{ service.description|safe }}</p>
+              </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+ </div>
   <!--Our Best Services end-->
 
       <!--Our Popular Courses start-->
+    <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="lms_title_center">
@@ -134,9 +163,9 @@
 
         </div>
       </div>
+    </div>
       <!--Our Popular Courses end-->
 
-    </div>
 {% endblock %}
 
 {% block slider2 %}
@@ -181,6 +210,49 @@
 {% endblock %}
 
 {% block partners %}
+
+
+{#    blok princip#}
+
+     <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="lms_title_center">
+                    <div class="lms_heading_1">
+                        <h2 class="lms_heading_title">Как мы работаем</h2>
+                    </div>
+                    <p>Этапы ремонта вашего устройств</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row prise_im_block">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="col-md-3 col-md-6 prise_im">
+                    <img  src="{% static "idoctor/images/icon/priem.png" %}">
+                    <h4>Принимаем технику</h4>
+                    <p>Вы приносите к нам Ваше устройство</p>
+                </div>
+
+                <div class="col-md-3 col-md-6 prise_im">
+                    <img  src="{% static "idoctor/images/icon/diagnost.png" %}">
+                    <h4>Проводим бесплатную диагностику</h4>
+                    <p>Инженеры диагностируют поломку совершенно бесплатно и сообщают вам по телефону причину неисправности.</p>
+                </div>
+
+                <div class="col-md-3 col-md-6 prise_im">
+                    <img  src="{% static "idoctor/images/icon/soglas.png" %}">
+                    <h4>Согласовываем с вами стоимость и сроки ремонта</h4>
+                    <p>Вы самостоятельно принимаете решение о необходимости ремонта.</p>
+                </div>
+
+                 <div class="col-md-3 col-md-6 prise_im">
+                    <img  src="{% static "idoctor/images/icon/tick.png" %}">
+                    <h4>Устройство готово</h4>
+                     <p>Также вы получаете гарантию на нашу работу — 1 месяц.</p>
+                </div>
+            </div>
+        </div>
+
 
      <!--Our Top Experts Team start-->
     <div class="container">

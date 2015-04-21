@@ -79,6 +79,7 @@ def aboutView(request, template_name="core/about.html"):
 def category_view(request, category_slug, template_name="category/category.html"):
     """Представление для просмотра конкретной категории"""
     c = get_object_or_404(Category, slug=category_slug)
+    title = c.name
     prices = set()
     if c.level == 0:
         loop_category = Category.objects.filter(tree_id=c.tree_id)
@@ -93,5 +94,6 @@ def category_view(request, category_slug, template_name="category/category.html"
 
 def price_view(request, slug, template_name="category/price.html"):
     price = Price.objects.get(slug=slug)
+    title = price.name
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
