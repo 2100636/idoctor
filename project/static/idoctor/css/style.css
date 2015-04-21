@@ -177,6 +177,12 @@ li.fa.fa-check-circle-o {
 .errorlist {
     color:red;
 }
+.block_uslug{
+    background: #F2F2F2;
+     padding-bottom: 20px;
+    padding-top: 40px;
+}
+
 /*---------------------preloader start---------------------------*/
 #preloader {
 	background-color: #fff;
@@ -312,6 +318,12 @@ li.fa.fa-check-circle-o {
 	-ms-transition: all 0.3s;
 	-o-transition: all 0.3s;
 }
+.prise_im_block .prise_im{
+   text-align: center;
+}
+.prise_im_block .prise_im h3{
+  font-family: 'Roboto Condensed', sans-serif;
+}
 #lms_header > .navbar-collapse > .container {
 	position: relative;
 }
@@ -320,8 +332,6 @@ li.fa.fa-check-circle-o {
     text-align: right;
     font-size: 15px;
 }
->>>>>>> origin/master
-
 .phone_cont i.fa.fa-map-marker {
   padding: 0px 6px 0px 10px;
 }
