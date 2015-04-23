@@ -7,20 +7,18 @@
 {% block slider %}
 {% endblock %}
 
-
-
-
 {% block content %}
 <div class="container">
     <div class="row">
     <!--blog single page start-->
 
-        <div class="col-lg-8 col-md-8 col-sm-7">
-          <div class="lms_blog_single"> <img src="/media/{{ article.image }}" alt="single page image">
-            <h3>{{ article.name }}</h3>
-            <div class="lms_entry_meta"> <span><a><i class="fa fa-calendar"></i> 30 May 2014</a></span> </div>
-            <p>{{ article.description|safe }}</p>
-          </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 prase_categ">
+            {% for price in prices %}
+                <div class="prase_bloc_categ col-lg-3 col-md-3 col-sm-3">
+                    <img src="{{ price.image_url }}" alt=""/>
+                    <a href="{{ price.url }}"><h3>{{ price.name }}</h3></a>
+                </div>
+            {% endfor %}
         </div>
         <!--blog single page end-->
 
