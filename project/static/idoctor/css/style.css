@@ -121,6 +121,9 @@ ul.lms_list_upper_roman {
 }
 /*---------------------NeW stail---------------------------*/
 
+a:hover h3 {
+    color: #FD8F15;
+}
 
 .navbar-collapse.nav-main-collapse.collapse {
     background: #fff;

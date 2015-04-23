@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 from django import template
-from project.core.models import Menu
+from project.core.models import Menu, Slider
 register = template.Library()
 
 
 def slider_tag(context, request):
+    slides = Slider.objects.all()
     return {
-        'menu_objects': 'slider',
+        'slider': slides,
+        'hello': 'hello'
     }
 register.inclusion_tag('core/tags/slider.html', takes_context=True)(slider_tag)
 

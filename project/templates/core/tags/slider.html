@@ -4,8 +4,9 @@
 <!--slider start-->
  <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{% static "idoctor/images/slider/slider1.jpg" %}"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"></div>
-            <div class="swiper-slide"><img src="{% static "idoctor/images/slider/slider3.jpg" %}"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"></div>
+            {% for slide in slider %}
+                <div class="swiper-slide"><img src="/media/{{ slide.image }}"   alt="{{ slide.name }}"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"></div>
+            {% endfor %}
         </div>
             <!-- Add Pagination -->
         <div class="swiper-pagination"></div>

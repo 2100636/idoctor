@@ -2,7 +2,7 @@
 #!/usr/bin/env python
 from django.contrib import admin
 from project.core.models import Page, PageImage, Article, ArticleImage, Faq, Review, Menu, Service, ServiceStep, \
-    ServiceStepImage, Category, Price
+    ServiceStepImage, Category, Price, Slider
 from image_cropping import ImageCroppingMixin
 # from mptt_tree_editor.admin import TreeEditor
 
@@ -68,4 +68,5 @@ admin.site.register(Review)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Price, PriceAdmin)
 admin.site.register(Category)
+admin.site.register(Slider)
 

@@ -194,3 +194,15 @@ class Price(models.Model):
 
     def url(self):
         return "/price/%s" % self.slug
+
+
+class Slider(models.Model):
+    name = models.CharField(verbose_name=u"Названия слайда", max_length=100)
+    image = models.ImageField(verbose_name=u"Добавить изображение слайда", upload_to="slider")
+
+    class Meta:
+        verbose_name = u'Слайд'
+        verbose_name_plural = u'Слайды'
+
+    def __unicode__(self):
+        return self.name
