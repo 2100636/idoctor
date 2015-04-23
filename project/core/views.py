@@ -46,6 +46,17 @@ def serviceView(request, slug, template_name="core/service.html"):
     user = request.user
     service = Service.objects.get(slug=slug)
     title = service.name
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = u'id70.ru форма'
+            message = u'Имя: %s \n Телефон: %s \n Описание проблемы: %s' % (request.POST['name'], request.POST['phone'], request.POST['text'])
+            send_mail(subject, message, 'teamer777@gmail.com', [ADMIN_EMAIL], fail_silently=False)
+            return redirect('/contacts')
+        else:
+            form = ContactForm(request.POST)
+    else:
+        form = ContactForm()
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
 
