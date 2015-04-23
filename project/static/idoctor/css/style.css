@@ -161,7 +161,7 @@ li.fa.fa-check-circle-o {
 }
 .prise_page td, th {
   padding: 0;
-  border: 1px solid #B3B3B3;
+  border: 1px solid #D8D8D8;
   padding: 6px 7px 6px 10px;
 }
 .prise_page{
@@ -182,6 +182,48 @@ li.fa.fa-check-circle-o {
      padding-bottom: 20px;
     padding-top: 40px;
 }
+th {
+  background-color: #D8D6D6;
+  font-weight: normal;
+  font-size: 15px;
+  padding: 0 10px;
+  color: #565656;
+  line-height: 40px;
+}
+table.table.table-striped {
+  margin-top: 40px;
+}
+
+/*----------------------------Slaider start------------------------*/
+.swiper-container {
+        width: 100%;
+        height: auto;
+
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-container-horizontal>.swiper-pagination{
+        bottom: 20px!important;
+    }
+/*_________________________________________________________*/
+
 
 /*---------------------preloader start---------------------------*/
 #preloader {
