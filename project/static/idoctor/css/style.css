@@ -190,6 +190,9 @@ th {
   color: #565656;
   line-height: 40px;
 }
+table.table.table-striped {
+  margin-top: 40px;
+}
 /*---------------------preloader start---------------------------*/
 #preloader {
 	background-color: #fff;
