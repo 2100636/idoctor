@@ -21,9 +21,9 @@
 17. Our recent achievement / .lms_recent_achievement
 18. Success in number / .lms_our_success
 19. Typography Button / .lms-btn-fill
-20. Blog categories / .lms_blog_cat > section > ul 
+20. Blog categories / .lms_blog_cat > section > ul
 21. Comment / .lms_comment
-22. Sidebar / .lms_sidebar_item 
+22. Sidebar / .lms_sidebar_item
 23. Courses detail list view / .lms_cource_shorting
 24. Course single page / .lms_course_image img
 25. course video page / .lms_video_player
@@ -1074,7 +1074,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_title_right h2 {
 	font-size: 34px;
 }
-/*heading 1*/		
+/*heading 1*/
 .lms_heading_1 {
 	text-align: center;
 	display: inline-block;
@@ -1103,7 +1103,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	-ms-transform: rotate(20deg);
 	-o-transform: rotate(20deg);
 }
-/*heading 2*/		
+/*heading 2*/
 .lms_heading_2 {
 	text-align: center;
 	display: inline-block;
@@ -1126,7 +1126,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	height: 3px;
 	background: #1593d1;
 }
-/*heading 3*/		
+/*heading 3*/
 .lms_heading_3 {
 	text-align: center;
 	display: inline-block;
@@ -1165,7 +1165,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	-ms-transform: rotate(20deg);
 	-o-transform: rotate(20deg);
 }
-/*heading text left*/		
+/*heading text left*/
 .lms_heading_left {
 	text-align: left;
 	display: inline-block;
@@ -1188,7 +1188,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	height: 3px;
 	background: #1593d1;
 }
-/*heading text right*/		
+/*heading text right*/
 .lms_heading_right {
 	text-align: right;
 	display: inline-block;
@@ -1211,7 +1211,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	height: 3px;
 	background: #1593d1;
 }
-/*heading 1 full*/		
+/*heading 1 full*/
 .lms_heading_1_full {
 	text-align: center;
 }
@@ -1239,7 +1239,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	-ms-transform: rotate(20deg);
 	-o-transform: rotate(20deg);
 }
-/*heading 2 full */		
+/*heading 2 full */
 .lms_heading_2_full {
 	text-align: center;
 }
@@ -1261,7 +1261,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	height: 3px;
 	background: #1593d1;
 }
-/*heading text left full*/		
+/*heading text left full*/
 .lms_heading_left_full {
 	text-align: left;
 }
@@ -1283,7 +1283,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	height: 3px;
 	background: #1593d1;
 }
-/*heading text right full*/		
+/*heading text right full*/
 .lms_heading_right_full {
 	text-align: right;
 }
@@ -1517,7 +1517,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #3b5999;
 }
-/*twitter*/		
+/*twitter*/
 .lms_social6 ul li a.twitter {
 	border: 1px solid #5ec5e4;
 	color: #5ec5e4;
@@ -1527,7 +1527,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #5ec5e4;
 }
-/*google*/		
+/*google*/
 .lms_social6 ul li a.google {
 	border: 1px solid #3a81f7;
 	color: #3a81f7;
@@ -1537,7 +1537,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #3a81f7;
 }
-/*google-plus*/		
+/*google-plus*/
 .lms_social6 ul li a.google-plus {
 	border: 1px solid #b92f13;
 	color: #b92f13;
@@ -1547,7 +1547,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #b92f13;
 }
-/*pinterest*/		
+/*pinterest*/
 .lms_social6 ul li a.pinterest {
 	border: 1px solid #e33942;
 	color: #e33942;
@@ -1557,7 +1557,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #e33942;
 }
-/*linkedin*/		
+/*linkedin*/
 .lms_social6 ul li a.linkedin {
 	border: 1px solid #007bb6;
 	color: #007bb6;
@@ -1567,7 +1567,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #007bb6;
 }
-/*skype*/		
+/*skype*/
 .lms_social6 ul li a.skype {
 	border: 1px solid #00aff0;
 	color: #00aff0;
@@ -1577,7 +1577,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #00aff0;
 }
-/*youtube*/		
+/*youtube*/
 .lms_social6 ul li a.youtube {
 	border: 1px solid #c41221;
 	color: #c41221;
@@ -1587,7 +1587,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #c41221;
 }
-/*vine*/		
+/*vine*/
 .lms_social6 ul li a.vine {
 	border: 1px solid #00d39c;
 	color: #00d39c;
@@ -1597,7 +1597,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #00d39c;
 }
-/*behance*/		
+/*behance*/
 .lms_social6 ul li a.behance {
 	border: 1px solid #4594d1;
 	color: #4594d1;
@@ -1651,7 +1651,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #3b5999;
 }
-/*twitter*/		
+/*twitter*/
 .lms_social7 ul li a.twitter {
 	border: 1px solid #5ec5e4;
 	color: #5ec5e4;
@@ -1661,7 +1661,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #5ec5e4;
 }
-/*google*/		
+/*google*/
 .lms_social7 ul li a.google {
 	border: 1px solid #3a81f7;
 	color: #3a81f7;
@@ -1671,7 +1671,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #3a81f7;
 }
-/*google-plus*/		
+/*google-plus*/
 .lms_social7 ul li a.google-plus {
 	border: 1px solid #b92f13;
 	color: #b92f13;
@@ -1681,7 +1681,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #b92f13;
 }
-/*pinterest*/		
+/*pinterest*/
 .lms_social7 ul li a.pinterest {
 	border: 1px solid #e33942;
 	color: #e33942;
@@ -1691,7 +1691,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #e33942;
 }
-/*linkedin*/		
+/*linkedin*/
 .lms_social7 ul li a.linkedin {
 	border: 1px solid #007bb6;
 	color: #007bb6;
@@ -1701,7 +1701,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #007bb6;
 }
-/*skype*/		
+/*skype*/
 .lms_social7 ul li a.skype {
 	border: 1px solid #00aff0;
 	color: #00aff0;
@@ -1711,7 +1711,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #00aff0;
 }
-/*youtube*/		
+/*youtube*/
 .lms_social7 ul li a.youtube {
 	border: 1px solid #c41221;
 	color: #c41221;
@@ -1721,7 +1721,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #c41221;
 }
-/*vine*/		
+/*vine*/
 .lms_social7 ul li a.vine {
 	border: 1px solid #00d39c;
 	color: #00d39c;
@@ -1731,7 +1731,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 	color: #fff;
 	background-color: #00d39c;
 }
-/*behance*/		
+/*behance*/
 .lms_social7 ul li a.behance {
 	border: 1px solid #4594d1;
 	color: #4594d1;
@@ -1789,7 +1789,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.facebook .tooltip.top .tooltip-arrow {
 	border-top-color: #3b5999;
 }
-/*twitter*/	
+/*twitter*/
 .lms_social8 ul li.twitter a {
 	border: 1px solid #5ec5e4;
 	background-color: #5ec5e4;
@@ -1802,7 +1802,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.twitter .tooltip.top .tooltip-arrow {
 	border-top-color: #5ec5e4;
 }
-/*google*/		
+/*google*/
 .lms_social8 ul li.google a {
 	border: 1px solid #3a81f7;
 	background-color: #3a81f7;
@@ -1815,7 +1815,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.google .tooltip.top .tooltip-arrow {
 	border-top-color: #3a81f7;
 }
-/*google-plus*/		
+/*google-plus*/
 .lms_social8 ul li.google-plus a {
 	border: 1px solid #b92f13;
 	background-color: #b92f13;
@@ -1828,7 +1828,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.google-plus .tooltip.top .tooltip-arrow {
 	border-top-color: #b92f13;
 }
-/*pinterest*/		
+/*pinterest*/
 .lms_social8 ul li.pinterest a {
 	border: 1px solid #e33942;
 	background-color: #e33942;
@@ -1841,7 +1841,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.pinterest .tooltip.top .tooltip-arrow {
 	border-top-color: #e33942;
 }
-/*linkedin*/		
+/*linkedin*/
 .lms_social8 ul li.linkedin a {
 	border: 1px solid #007bb6;
 	background-color: #007bb6;
@@ -1854,7 +1854,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.linkedin .tooltip.top .tooltip-arrow {
 	border-top-color: #007bb6;
 }
-/*skype*/		
+/*skype*/
 .lms_social8 ul li.skype a {
 	border: 1px solid #00aff0;
 	background-color: #00aff0;
@@ -1867,7 +1867,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.skype .tooltip.top .tooltip-arrow {
 	border-top-color: #00aff0;
 }
-/*youtube*/		
+/*youtube*/
 .lms_social8 ul li.youtube a {
 	border: 1px solid #c41221;
 	background-color: #c41221;
@@ -1880,7 +1880,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.youtube .tooltip.top .tooltip-arrow {
 	border-top-color: #c41221;
 }
-/*vine*/		
+/*vine*/
 .lms_social8 ul li.vine a {
 	border: 1px solid #00d39c;
 	background-color: #00d39c;
@@ -1893,7 +1893,7 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.vine .tooltip.top .tooltip-arrow {
 	border-top-color: #00d39c;
 }
-/*behance*/		
+/*behance*/
 .lms_social8 ul li.behance a {
 	border: 1px solid #4594d1;
 	background-color: #4594d1;
@@ -1906,9 +1906,9 @@ body.boxed #lms_header.single-menu nav ul.nav-main > li > a, body.boxed #lms_hea
 .lms_social8 ul li.behance .tooltip.top .tooltip-arrow {
 	border-top-color: #4594d1;
 }
-/*---------------------social icon end---------------------------*/					
+/*---------------------social icon end---------------------------*/
 
-/*---------------------skills start---------------------------*/					
+/*---------------------skills start---------------------------*/
 
 .lms_skill_photoshop {
 	-webkit-animation: lms_skill_photoshop 4s ease-out;
@@ -3045,10 +3045,10 @@ background-color: #1593d1;
 	z-index: 9999;
 	position: relative;
 }
-/******************** Comment end ***********************/	
-	
-	
-	
+/******************** Comment end ***********************/
+
+
+
 /*---------------------sidebar start---------------------------*/
 .lms_sidebar_item {
 	width: 100%;
@@ -3273,7 +3273,7 @@ background-color: #1593d1;
 	width: auto;
 	float: none;
 }
-/*cource list view end*/	
+/*cource list view end*/
 
 
 
@@ -3298,9 +3298,9 @@ background-color: #1593d1;
 	height: 20px;
 	overflow: hidden;
 }
-/*cource grid view end*/			
-	
-		
+/*cource grid view end*/
+
+
 /*---------------------course detail list view end---------------------------*/
 
 /*---------------------course single page start---------------------------*/
@@ -3524,7 +3524,7 @@ background-color: #1593d1;
 	float: left;
 	background-size: cover;
 }
-/*---------------------price table end---------------------------*/	
+/*---------------------price table end---------------------------*/
 
 .lms_sitemap {
 	width: 100%;
@@ -3551,7 +3551,7 @@ background-color: #1593d1;
 100% {
 	opacity:1;
 	-webkit-transform:scale(1);
-	}	
+	}
 }
 @-moz-keyframes myanimation {
  0% {
@@ -3940,6 +3940,9 @@ opacity:0;
 .lms_right_tab .tab-content {
 	padding: 0px;
 }
+.service-description {
+	text-align: left;
+}
 .lms_right_tab .nav-tabs {
 	float: right;
 	margin-left: 15px;
@@ -4143,7 +4146,7 @@ iframe {
 .lms_chat_body .lms_group_descusion {
 	border-top: none;
 }
-/*---------------------chat window end---------------------*/	
+/*---------------------chat window end---------------------*/
 
 
 /*---------------------other start---------------------------*/
@@ -4289,7 +4292,7 @@ iframe {
 	}
 .lms_comming_soon_wrapper > img{
 	width:100%;
-	}	
+	}
 .lms_comming_soon{
 	position:absolute;
 	top:50%;
@@ -4300,14 +4303,14 @@ iframe {
 	margin-top:-100px;
 	text-align:center;
 	color:#fff;
-	}	
+	}
 .lms_comming_soon h1{
 	color: rgba(255, 255, 255, 0.61);
   	font-size: 4em;
 	}
 .lms_comming_soon_wrapper .lms_social5{
 	margin-top:20px;
-	}	
+	}
 /*---------------------other end---------------------------*/
 
 /*---------------------footer start---------------------------*/
@@ -4404,7 +4407,7 @@ iframe {
 	display: inline-block;
 	margin-right: 10px;
 }
-/* footer center*/	
+/* footer center*/
 .lms_footer_center {
 	width: 100%;
 	float: left;
@@ -4492,7 +4495,7 @@ iframe {
 	width: 280px !important;
 }
 }
- 
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 .lms_cource_grid {
@@ -4546,11 +4549,11 @@ iframe {
 	width: 100% !important;
 }
 }
- 
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-	
+
 }
 .lms_view_learn .lms_view_learn_tab ul li {
 	width: 100%;
@@ -4711,7 +4714,7 @@ iframe {
 	width: 100% !important;
 }
 }
- 
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
 .lms_blog_cat_grid figure{
@@ -4748,10 +4751,10 @@ iframe {
 .scrollToTop{
 	bottom: 20px;
   	left: 20px;
-	}	
+	}
 .lms_chat_window{
 	display:none !important;
-	}	
+	}
 .lms_service_1 > .lms_service_icon {
 	width: 100%;
 	height: 178px;

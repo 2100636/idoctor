@@ -11,24 +11,24 @@
       <nav class="nav-main mega-menu">
         <ul class="nav nav-pills nav-main" id="mainMenu">
 
-            {% for key, value in dict.items %}
-{#                {% if value|length == 1 %}#}
-                    <li class="dropdown"> <a class="dropdown-toggle" href="{% for item in value %}{% if forloop.first %}{{ item.url }}{% endif %}{% endfor %}">{{ key }}</a>
-{#                {% endif %}#}
-                {% if value|length > 1 %}
-                    <ul class="dropdown-menu">
-                        {% for ch in value %}
-                            {% if forloop.counter0 != 0 %}
-                                <li><a href="">{{ ch.url }}</a></li>
-{#                            {% else %}#}
+            {#{% for key, value in dict.items %}#}
+{#[>                {% if value|length == 1 %}<]#}
+                    {#<li class="dropdown"> <a class="dropdown-toggle" href="{% for item in value %}{% if forloop.first %}{{ item.url }}{% endif %}{% endfor %}">{{ key }}</a>#}
+{#[>                {% endif %}<]#}
+                {#{% if value|length > 1 %}#}
+                    {#<ul class="dropdown-menu">#}
+                        {#{% for ch in value %}#}
+                            {#{% if forloop.counter0 != 0 %}#}
+                                {#<li><a href="">{{ ch.url }}</a></li>#}
+{#[>                            {% else %}<]#}
 
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                {% endif %}
+                            {#{% endif %}#}
+                        {#{% endfor %}#}
+                    {#</ul>#}
+                {#{% endif %}#}
 
 {#                <p>{{ key }}: {{ value }}</p>#}
-            {% endfor %}
+            {#{% endfor %}#}
 
 {#          <li class="dropdown active"> <a class="dropdown-toggle" href="index.html">Главная</a>#}
 {#          </li>#}
@@ -53,9 +53,9 @@
   </div>
 
 
-{% for key, value in dict.items %}
-    <p>{{ key }}: {{ value }}</p>
-{% endfor %}
+{#{% for key, value in dict.items %}#}
+    {#<p>{{ key }}: {{ value }}</p>#}
+{#{% endfor %}#}
 
 
 </header>

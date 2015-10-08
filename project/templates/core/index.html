@@ -81,9 +81,9 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="lms_title_center">
             <div class="lms_heading_1">
-              <h2 class="lms_heading_title">Сервесный центр iDoctor</h2>
+              <h2 class="lms_heading_title">Сервисный центр iDoctor</h2>
             </div>
-            <p>Мы не калечим, мы лечим </p>
+            <p>Все гениальное для нас ПРОСТО</p>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@
                 <a href="{{ service.get_url }}">
                 <h3 class="lms_service_title">{{ service.name }}</h3>
                 </a>
-                <p>{{ service.description|safe }}</p>
+                <p>{{ service.description|safe|truncatewords:10 }}</p>
               </div>
             </div>
         {% endfor %}
@@ -187,7 +187,7 @@
             <div class="container">
               <div class="lms_testimonials wow bounce">
                 <div id="lms_testimonials_slider" class="owl-carousel owl-theme">
-                  
+
                     {% for review in reviews %}
                         <div class="lms_testimonials_slider_item">
                             <p class="lms_testimonial_quote">"</p>
@@ -276,10 +276,10 @@
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="lms_experts_team_detail" id="lms_experts_team_detail11">
                     <ul class="repair__list">
-                        <li class="fa fa-check-circle-o"></li><p><span>Скорость.</span> Большинство ремонтов мы выполняем в течение часа. На сложные ремонты нам нужно не более 5 дней.</p>
+                        <li class="fa fa-check-circle-o"></li><p><span>Скорость.</span> Большинство ремонтов мы выполняем в течение часа. На сложные ремонты нам нужно более 5 дней.</p>
                         <li class="fa fa-check-circle-o"></li><span>Качество.</span> Все наши инженеры прошли подготовку по программе Apple Technician и имеют необходимые сертификаты.</p>
                         <li class="fa fa-check-circle-o"></li><p><span>Надежность.</span> На все ремонты распространяется гарантия. Вы всегда знаете к кому обратится.</p>
-                        <li class="fa fa-check-circle-o"></li><p><span>Дружелюбность.</span> Мы любим наших клиентов, вы всегда сможете уточнить любой вопрос у наших сотрудников. А во время ремонта вашего устроуства вам предложат вкусного кофя</p>
+                        <li class="fa fa-check-circle-o"></li><p><span>Дружелюбность.</span> Мы любим наших клиентов, вы всегда сможете уточнить любой вопрос у наших сотрудников.</p>
                         <li class="fa fa-check-circle-o"></li><p><span>Оригинальные запчасти.</span> Ваш iPhone будет работать долго и надежно.</p>
                     </ul>
                 </div>
