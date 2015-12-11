@@ -17,7 +17,7 @@ def indexView(request, template_name="core/index.html"):
     title = homepage.meta_title  #'Ремонт Iphone в Томске'
     description = homepage.meta_description #'sfsfdsf';
     keywords = homepage.meta_keywords
-    # все страницы..
+
     pages = Page.objects.all()
     reviews = Review.objects.filter(active=True)[:6]
     articles = Article.objects.all()[:6]
