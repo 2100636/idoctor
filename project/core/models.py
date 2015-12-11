@@ -83,7 +83,8 @@ class ArticleImage(models.Model):
         verbose_name = u'Изображение для статьи'
         verbose_name_plural = u'Изображения для статьи'
 
-# услуги
+
+
 class Service(models.Model):
     name = models.CharField(verbose_name=u'Название', max_length=200)
     slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
