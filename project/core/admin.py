@@ -2,7 +2,7 @@
 #!/usr/bin/env python
 from django.contrib import admin
 from project.core.models import Page, PageImage, Article, ArticleImage, Faq, Review, Menu, Service, ServiceStep, \
-    ServiceStepImage, Category, Price, Slider
+    ServiceStepImage, Category, Price, Slider, Video
 from image_cropping import ImageCroppingMixin
 # from mptt_tree_editor.admin import TreeEditor
 
@@ -59,14 +59,34 @@ class PriceAdmin(admin.ModelAdmin):
     model = Price
     prepopulated_fields = {'slug': ('name',)}
 
+#
+class ReviewAdmin(admin.ModelAdmin):
+    model = Review
+    list_display = ('name', 'description', 'active')
+    list_display_links = ('name',)
+    list_per_page = 50
+    search_fields = ['description']
+
+
+class VideoAdmin(admin.ModelAdmin):
+    model = Video
+    prepopulated_fields = {'slug': ('name', )}
+    list_display = ('name', 'description', 'isbig')
+    list_display_links = ('name',)
+    list_per_page = 50
+    search_fields = ['description']
+
 
 admin.site.register(Page, PageAdmin)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Faq)
-admin.site.register(Review)
+admin.site.register(Review, ReviewAdmin)
+admin.site.register(Video, VideoAdmin)
 # admin.site.register(Menu, MenuAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Price, PriceAdmin)
 admin.site.register(Category)
 admin.site.register(Slider)
+
+
 

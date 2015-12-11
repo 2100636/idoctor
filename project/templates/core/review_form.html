@@ -1,0 +1,39 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link rel="stylesheet" href="{% static "idoctor/css/bootstrap.css" %}" media="screen"/>
+    <link rel="stylesheet" href="{% static "idoctor/css/font-awesome.css" %}" media="screen"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&amp;subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    <title>{{ title }}</title>
+    <meta name="description"  content="{{ description }}"/>
+    <meta name="keywords" content="{{ keywords }}">
+
+
+    <link rel="stylesheet" href="{% static "idoctor/css/style.css" %}" media="screen"/>
+  </head>
+  <body>
+
+    {% if review_message %}
+      <div class="review_message">
+        {{ review_message }}
+      </div>
+    {% else %}
+      <form id="send_review_form" action="" method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+        {{ review_form }}
+        <div class="box-footer">
+          <button type="submit" id="review_submit" class="btn btn-primary">Отправить</button>
+        </div>
+      </form>
+    {% endif %}
+
+  </body>
+</html>

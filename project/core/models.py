@@ -26,6 +26,9 @@ class Menu(MPTTModel):
 class Page(models.Model):
     name = models.CharField(verbose_name=u'Название страницы', max_length=200)
     slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
+    meta_title = models.CharField(verbose_name=u'Заголовок', max_length=255, help_text=u'<title>Заголовок</title>', blank=True)
+    meta_keywords = models.CharField(verbose_name=u'Мета ключевые слова', max_length=255, blank=True)
+    meta_description = models.CharField(verbose_name=u'Мета описание', max_length=255, help_text=u'Нужно для СЕО', blank=True)
     description = RichTextField(verbose_name=u'Описание')
     image = models.ImageField(verbose_name=u'Изображение', upload_to='pages')
 
@@ -80,10 +83,12 @@ class ArticleImage(models.Model):
         verbose_name = u'Изображение для статьи'
         verbose_name_plural = u'Изображения для статьи'
 
-
+# услуги
 class Service(models.Model):
-    name = models.CharField(verbose_name=u'Название статьи', max_length=200)
+    name = models.CharField(verbose_name=u'Название', max_length=200)
     slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
+    meta_keywords = models.CharField(verbose_name=u'Мета ключевые слова', max_length=255, blank=True)
+    meta_description = models.CharField(verbose_name=u'Мета описание', max_length=255,help_text=u'Нужно для СЕО', blank=True)
     description = RichTextField(verbose_name=u'Краткое описание')
     image = models.ImageField(verbose_name=u'Иконка', upload_to='service')
     main_check = models.BooleanField(verbose_name=u'Отображать на главной', default=False)
@@ -144,9 +149,11 @@ class Faq(models.Model):
 
 
 class Review(models.Model):
-    name = models.CharField(verbose_name=u'Название статьи', max_length=200)
+    title = models.CharField(verbose_name=u'Заголовок', max_length=200, default='')
+    name = models.CharField(verbose_name=u'Автор отзыва', max_length=200)
     description = models.TextField(verbose_name=u'Описание')
     image = models.ImageField(verbose_name=u'Фото', upload_to='reviews')
+    active = models.BooleanField(verbose_name=u'Отображать на главной', default=False)
 
     class Meta:
         verbose_name = u'Отзыв'
@@ -156,10 +163,36 @@ class Review(models.Model):
         return self.name
 
 
+
+class Video(models.Model):
+    name = models.CharField(verbose_name=u'Название видео', max_length=200)
+    slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
+    videoyoutube = models.CharField(verbose_name=u'ID Ролика Youtube', max_length=100, default='')
+    description = RichTextField(verbose_name=u'Описание')
+    image = models.ImageField(verbose_name=u'Изображение', upload_to='videos')
+    isbig = models.BooleanField(verbose_name=u'Большой блок', default=False)
+
+    class Meta:
+        verbose_name = u'Видео'
+        verbose_name_plural = u'Видео'
+
+    def __unicode__(self):
+        return self.name
+    #
+    # def url(self):
+    #     return '/article/%s' % self.slug
+
+
+
+
+
 class Category(MPTTModel):
     name = models.CharField(verbose_name=u'Название категории', max_length=244)
     slug = models.SlugField(verbose_name=u'Ссылка', max_length=50, unique=True)
+    meta_keywords = models.CharField(verbose_name=u'Мета ключевые слова', max_length=255, blank=True)
+    meta_description = models.CharField(verbose_name=u'Мета описание', max_length=255, help_text=u'Нужно для СЕО', blank=True)
     image = models.ImageField(verbose_name=u'Изображение категории', upload_to="category", blank=True)
+    description = RichTextField(verbose_name=u'Описание', default='')
     parent = TreeForeignKey('self', verbose_name=u'Родительская категория',
                             related_name='children', blank=True,
                             help_text=u'Родительская категория для этой категории', null=True)
@@ -178,6 +211,8 @@ class Category(MPTTModel):
 class Price(models.Model):
     name = models.CharField(verbose_name=u'Название прайса', max_length=200)
     slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
+    meta_keywords = models.CharField(verbose_name=u'Мета ключевые слова', max_length=255, blank=True)
+    meta_description = models.CharField(verbose_name=u'Мета описание', max_length=255, help_text=u'Нужно для СЕО', blank=True)
     description = RichTextField(verbose_name=u'Описание')
     image = models.ImageField(verbose_name=u'Изображение', upload_to="category")
     category = models.ForeignKey(Category, verbose_name=u'Категория устройства')
@@ -206,3 +241,5 @@ class Slider(models.Model):
 
     def __unicode__(self):
         return self.name
+
+

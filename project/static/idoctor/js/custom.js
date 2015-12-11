@@ -561,7 +561,7 @@
 		owl2.trigger('owl.prev');
 		});
 		
-		//Our testimonials slider
+		// отзывы
 		var owl3 = $("#lms_testimonials_slider");
 		owl3.owlCarousel({
 		  itemsCustom : [
@@ -575,15 +575,16 @@
 			[1600, 1]
 		  ],
 		  autoPlay : true,
-		  pagination:false
+		  nav:false,
+		  pagination:true
 		});
-		// Custom Navigation Events
+/*		// Custom Navigation Events
 		$(".lms_testimonials .next").on("click",function(){
 		owl3.trigger('owl.next');
 		});
 		$(".lms_testimonials .prev").on("click",function(){
 		owl3.trigger('owl.prev');
-		});
+		});*/
 		
 		
 		//Our Partners slider

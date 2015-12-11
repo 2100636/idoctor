@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'mptt',
     'mptt_tree_editor',
     'sitetree',
+    'sorl.thumbnail',
     'image_cropping',
     'easy_thumbnails',
 )

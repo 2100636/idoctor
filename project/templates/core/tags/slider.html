@@ -1,18 +1,24 @@
 {#{% load menu_tags %}#}
 {% load static from staticfiles %}
 
-<!--slider start-->
- <div class="swiper-container">
-        <div class="swiper-wrapper">
-            {% for slide in slider %}
-                <div class="swiper-slide"><img src="/media/{{ slide.image }}"   alt="{{ slide.name }}"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"></div>
-            {% endfor %}
-        </div>
-            <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
- </div>
-<!--slider end-->
+{#<!--slider start-->#}
+{# <div class="swiper-container">#}
+{#        <div class="swiper-wrapper">#}
+{#            {% for slide in slider %}#}
+{#                <div class="swiper-slide"><img src="/media/{{ slide.image }}"   alt="{{ slide.name }}"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"></div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#            <!-- Add Pagination -->#}
+{#        <div class="swiper-pagination"></div>#}
+{#        <!-- Add Arrows -->#}
+{#        <div class="swiper-button-next"></div>#}
+{#        <div class="swiper-button-prev"></div>#}
+{#    </div>#}
+{# </div>#}
+{#<!--slider end-->#}
+
+<div id="mainslider" class="owl-carousel">
+  {% for slide in slider %}
+    <div><img src="/media/{{ slide.image }}"   alt="{{ slide.name }}"></div>
+  {% endfor %}
+</div>

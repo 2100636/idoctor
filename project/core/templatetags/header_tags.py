@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 from django import template
-from project.core.models import Menu, Slider
+from project.core.models import Menu, Slider, Price
 register = template.Library()
 
 
@@ -12,6 +12,17 @@ def slider_tag(context, request):
         'hello': 'hello'
     }
 register.inclusion_tag('core/tags/slider.html', takes_context=True)(slider_tag)
+
+
+# инфо в футере
+def footer_tag(context, request):
+    prices = Price.objects.all()
+    return {
+        'prices': prices,
+        'test': 'test'
+    }
+register.inclusion_tag('core/tags/footer.html', takes_context=True)(footer_tag)
+
 
 
 def top_menu(context, request):

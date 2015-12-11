@@ -1,27 +1,44 @@
 {% extends "main.html" %}
 {% load static from staticfiles %}
+{% load thumbnail %}
 {% load header_tags %}
 {% load sitetree %}
 
 
-{% block slider %}
-    {% slider_tag request %}
-{% endblock %}
 
 {% block header %}
 {#            {% top_menu request %}#}
     <header id="lms_header">
         <div class="container">
-            <h1 class="logo"> <a href="/"> <img alt="Porto" width="184" data-sticky-width="82" data-sticky-height="40" src="{% static "idoctor/images/logo.png" %}"> </a> </h1>
-            <button class="lms_menu_toggle btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse"><i class="fa fa-bars"></i> </button>
+            <div class="logo">
+              <a href="/">
+                <img alt="Porto" width="184" data-sticky-width="82" data-sticky-height="40" src="{% static "idoctor/images/logo.png" %}">
+                <span class="logotext">Cервисный центр Apple</span>
+              </a>
+
+            </div>
+            <div class="slogan">
+              <img src="{% static "idoctor/images/iconapple.png" %}" alt="Ремонт IPhone, ipad, macbook"/>
+              <span>Ремонт IPhone, ipad, macbook в Томске</span>
+            </div>
+           <div class="phone_cont">
+              <span class="telephone"><i class="icon_iphone"></i>(3822) 33-22-77</span> {#         <i class="fa fa-phone"></i>#}
+              <span class="textadress"><i class="fa fa-map-marker"></i>г. Томск пер. 1905 г. 18, оф. 3</span>
+            </div>
+
         </div>
+{#      гаммбургер#}
+        <button class="lms_menu_toggle btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+{#          <i class="fa fa-bars"></i> #}
+          <span>|||</span>
+        </button>
+{#      меню #}
         <div class="navbar-collapse nav-main-collapse collapse">
             <div class="container">
-                <nav class="nav-main mega-menu">
-                    <div class="phone_cont"><i class="fa fa-phone"></i>332277<i class="fa fa-map-marker"></i>г. Томск пер. 1905 г. 18, оф. 3</div>
-                    {% sitetree_menu from "maintree" include 'trunk' %}
-                </nav>
-              <div class="lms_search_toggle btn btn-primary"><a>Статус заказа</a></div>
+              <nav class="nav-main mega-menu">
+                  {% sitetree_menu from "maintree" include 'trunk' %}
+              </nav>
+              <div class="lms_search_toggle btn btn-primary">Статус заказа</div>
               <div class="lms_search_wrapper">
                   <div style=" text-align: center; padding-bottom: 10px; ">Формат ввода номера +7 </div>
                   <div id="remonline-widget" data-ro-key="868ad583e39616096abe89d473953a37"></div>
@@ -32,6 +49,12 @@
 
 {% endblock %}
 
+
+{% block slider %}
+    {% slider_tag request %}
+{% endblock %}
+
+
 {% block content %}
     <div class="container">
 
@@ -40,9 +63,9 @@
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="lms_title_center">
                     <div class="lms_heading_1">
-                        <h2 class="lms_heading_title">Стоимость ремонта</h2>
+                        <h1 class="lms_heading_title">{{ homepage.name }}</h1>
                     </div>
-                    <p>Выберите устройство</p>
+                    {{ homepage.description|safe }}
                 </div>
             </div>
         </div>
@@ -50,25 +73,32 @@
 
         <div class="row prise_im_block">
             <div class="col-lg-12 col-md-12 col-sm-12">
+              {% for category in categories %}
                 <div class="col-md-3 col-md-6 prise_im">
-                    <a href="/category/iphone"><img  src="{% static "idoctor/images/iphone_6.png" %}">
-                    <h3>iPhone</h3></a>
+                    <a href="/category/{{ category.slug }}">
+                      <img  src="/media/{{ category.image }}">
+                      <h3>{{ category.name }}</h3>
+{#                      <div>{{ category.description|safe|truncatewords:300 }}</div>#}
+                      <div class="desc">{{ category.description|safe }}</div>
+                      <div class="viewlink">Смотреть все цены >>></div>
+                    </a>
                 </div>
+              {% endfor %}
 
-                <div class="col-md-3 col-md-6 prise_im">
-                    <a href="/category/ipod"><img  src="{% static "idoctor/images/ipod.jpg" %}">
-                    <h3>iPod</h3></a>
-                </div>
-
-                <div class="col-md-3 col-md-6 prise_im">
-                    <a href="/category/ipad"><img  src="{% static "idoctor/images/ipad.png" %}">
-                    <h3>iPad</h3></a>
-                </div>
-
-                 <div class="col-md-3 col-md-6 prise_im">
-                    <a href="/category/macbook"><img  src="{% static "idoctor/images/macBook.png" %}">
-                    <h3>Macbook</h3></a>
-                </div>
+{#                <div class="col-md-3 col-md-6 prise_im">#}
+{#                    <a href="/category/ipod"><img  src="{% static "idoctor/images/ipod.jpg" %}">#}
+{#                    <h3>iPod</h3></a>#}
+{#                </div>#}
+{##}
+{#                <div class="col-md-3 col-md-6 prise_im">#}
+{#                    <a href="/category/ipad"><img  src="{% static "idoctor/images/ipad.png" %}">#}
+{#                    <h3>iPad</h3></a>#}
+{#                </div>#}
+{##}
+{#                 <div class="col-md-3 col-md-6 prise_im">#}
+{#                    <a href="/category/macbook"><img  src="{% static "idoctor/images/macBook.png" %}">#}
+{#                    <h3>Macbook</h3></a>#}
+{#                </div>#}
             </div>
         </div>
     </div>
@@ -76,7 +106,7 @@
 
 
 
-    <div class="container">
+{% comment %}    <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="lms_title_center">
@@ -88,6 +118,11 @@
         </div>
       </div>
     </div>
+  {% endcomment %}
+
+
+
+
  <div class="block_uslug">
     <div class="container">
         <div class="row">
@@ -107,6 +142,366 @@
  </div>
   <!--Our Best Services end-->
 
+
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="lms_title_center">
+              <div class="lms_heading_1">
+                  <h2 class="lms_heading_title">Как мы работаем</h2>
+              </div>
+              <p>Этапы ремонта вашего устройства Apple</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="row prise_im_block">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-md-3 col-md-6 prise_im">
+                <img  src="{% static "idoctor/images/icon/priem.png" %}">
+                <h4>Принимаем технику</h4>
+                <p>Вы приносите к нам Ваше устройство</p>
+            </div>
+
+            <div class="col-md-3 col-md-6 prise_im">
+                <img  src="{% static "idoctor/images/icon/diagnost.png" %}">
+                <h4>Проводим бесплатную диагностику</h4>
+                <p>Инженеры диагностируют поломку совершенно бесплатно и сообщают вам по телефону причину неисправности.</p>
+            </div>
+
+            <div class="col-md-3 col-md-6 prise_im">
+                <img  src="{% static "idoctor/images/icon/soglas.png" %}">
+                <h4>Согласовываем с вами стоимость и сроки ремонта</h4>
+                <p>Вы самостоятельно принимаете решение о необходимости ремонта.</p>
+            </div>
+
+             <div class="col-md-3 col-md-6 prise_im">
+                <img  src="{% static "idoctor/images/icon/tick.png" %}">
+                <h4>Устройство готово</h4>
+                 <p>Также вы получаете гарантию на нашу работу — 1 месяц.</p>
+            </div>
+        </div>
+    </div>
+  </div>  {#container#}
+
+
+
+
+{# отзывы #}
+    <div class="container-fluid">
+      <!--Testimonials start-->
+
+
+
+      <div class="row">
+        <div class="lms_testimonials_bg" > {# data-stellar-background-ratio="0.5"#}
+{#          <div class="lms_testimonials_bg2">#}
+            <div class="container">
+
+
+              <div class="lms_testimonials wow bounce">
+                <div id="lms_testimonials_slider" class="owl-carousel owl-theme">
+
+                  {% for review in reviews %}
+
+                    <div class="lms_testimonials_slider_item">
+{#                            <p class="lms_testimonial_quote">"</p>#}
+
+                      <div class="img">
+                        <div class="iphone_border"></div>
+
+                        {% thumbnail review.image "146x239" crop="60% center" as im %}
+                            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="Автор отзыва" />
+{#                        {% empty %}#}
+{#                            <img class="center-block" src="/media//no_image-128.png" width="auto" style="height: 70px;" alt=""/>#}
+                        {% endthumbnail %}
+
+{#                        <img src="/media/{{ review.image }}" alt="Автор отзыва" />#}
+                      </div>
+                      <h4>{{ review.title }}</h4>
+                      <p class="lms_testimonials_txt">{{ review.description|safe }}</p>
+                      <div class="autor">{{ review.name }}</div>
+                    </div>
+                  {% endfor %}
+
+                </div>
+                <div class="send_review btn_modal" modal_id="ModalSendreview">Отправьте нам свой отзыв</div>
+                <div class="review_message">{{ review_message }}</div>
+{#                <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> </div>#}
+              </div>
+            </div>
+{#          </div>#}
+        </div>
+      </div>
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="ModalSendreview" tabindex="-1" role="dialog" aria-labelledby="ModalSendreviewLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="ModalSendreviewLabel">Отправить отзыв</h4>
+            </div>
+            <div class="modal-body">
+              <iframe id="review_form" name="review_form" frameborder="0" src="/review_form"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.modal -->
+
+      <!--Testimonials end-->
+    </div>
+
+
+
+
+
+
+    <div id="videos">
+      <div class="container">
+        <div class="row">
+
+          <div class="lms_title_center">
+            <div class="lms_heading_1">
+              <h2 class="lms_heading_title">Наше видео</h2>
+            </div>
+            <p>Видео нашей компании</p>
+          </div>
+
+          <div class="col-md-6">
+            <div class="row">
+              {% for video in small_videos %}
+                <div class="col-md-6">
+                  <div class="item getvideo" data-title="{{ video.name|truncatewords:10 }}" data-video="{{ video.videoyoutube }}">
+                    <div class="videoimage">
+                      <div class="playicon"></div>
+                      <img width="100%" src="/media/{{ video.image }}"  alt="{{ video.name }}"/>
+                    </div>
+                    <h3>{{ video.name|truncatewords:6 }}</h3>
+                    <div class="text">{{ video.description|truncatewords:8|safe }}</div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            {% for big_video in big_videos %}
+              <div class="item getvideo" data-title="{{ big_video.name|truncatewords:10 }}" data-video="{{ big_video.videoyoutube }}">
+                <div class="videoimage">
+                  <div class="playicon"></div>
+                  <img width="100%" src="/media/{{ big_video.image }}"  alt="{{ big_video.name }}"/>
+                </div>
+                <h3>{{ big_video.name|truncatewords:10 }}</h3>
+                <div class="text">{{ big_video.description|truncatewords:25|safe }}</div>
+              </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal for video-->
+    <div class="modal fade bs-example-modal-lg" id="ModalViewVideo" tabindex="-1" role="dialog" aria-labelledby="ModalViewVideoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="ModalViewVideoLabel">Просмотр видео</h4>
+          </div>
+          <div class="modal-body">
+{#            <iframe width="420" height="315" src="" frameborder="0" allowfullscreen></iframe>#}
+            <div id="player"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.modal -->
+
+{#  http://ruseller.com/lessons.php?rub=37&id=2425  #}
+{#  https://developers.google.com/youtube/iframe_api_reference#Getting_Started  #}
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+{#          playerVars: {#}
+{#              color: 'white',#}
+{#              playlist: 'taJ60kskkns,FG0fTKAqZ5g'#}
+{#          },#}
+          videoId: ''//,
+{#          events: {#}
+{#            'onReady': onPlayerReady,#}
+{#            'onStateChange': onPlayerStateChange#}
+{#          }#}
+        });
+      }
+    </script>
+
+
+
+
+
+
+  <div id="homearticle">
+    <div class="container">
+      <div class="lms_title_center">
+          <div class="lms_heading_1">
+              <h2 class="lms_heading_title">Тайтл дескрипш</h2>
+          </div>
+          <p>Незнаю что это, ты же программист</p>
+      </div>
+
+      <p>Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета, однако рондо синхронно образует флажолет. Рок-н-ролл 50-х, в том числе, mezzo forte трансформирует звукорядный райдер. Еще Аристотель в своей «Политике» говорил, что музыка, воздействуя на человека, доставляет «своего рода очищение, то есть облегчение, связанное с наслаждением», однако соинтервалие имитирует разнокомпонентный контрапункт контрастных фактур.</p>
+
+      <p>Форма, так или иначе, сонорна. Легато композиционно. Звукосниматель образует гипнотический рифф. Рок-н-ролл 50-х, так или иначе, изящно диссонирует доминантсептаккорд. Эти слова совершенно справедливы, однако легато самостоятельно. Легато самостоятельно.</p>
+
+      <p>Очевидно, что рондо относительно. Звукосниматель, по определению, имитирует миксолидийский хамбакер. В связи с этим нужно подчеркнуть, что крещендирующее хождение заканчивает флэнжер, на этих моментах останавливаются Л.А.Мазель и В.А.Цуккерман в своем "Анализе музыкальных произведений".</p>
+
+      <p>Гендер прекрасно осознаёт сублимированный автоматизм. Психоанализ, как принято считать, выбирает интеракционизм. Воспитание, несмотря на внешние воздействия, фундаментально начинает культурный генезис. Представленный контент-анализ является психолингвистическим в своей основе, таким образом аномия притягивает инсайт. Сновидение отчуждает онтогенез речи.</p>
+
+      <p>Однако Э.Дюркгейм утверждал, что связь критично отталкивает понимающий автоматизм. Чувство, как принято считать, спонтанно выбирает сублимированный интеракционизм. Лидерство последовательно.</p>
+
+      <p>Акцентуация, согласно традиционным представлениям, традиционно отражает социальный психоз. Реакция однородно отчуждает бихевиоризм, здесь описывается централизующий процесс или создание нового центра личности. Сознание, в первом приближении, латентно. Воспитание осознаёт страх.</p>
+
+      <p>Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета, однако рондо синхронно образует флажолет. Рок-н-ролл 50-х, в том числе, mezzo forte трансформирует звукорядный райдер. Еще Аристотель в своей «Политике» говорил, что музыка, воздействуя на человека, доставляет «своего рода очищение, то есть облегчение, связанное с наслаждением», однако соинтервалие имитирует разнокомпонентный контрапункт контрастных фактур.</p>
+
+      <p>Форма, так или иначе, сонорна. Легато композиционно. Звукосниматель образует гипнотический рифф. Рок-н-ролл 50-х, так или иначе, изящно диссонирует доминантсептаккорд. Эти слова совершенно справедливы, однако легато самостоятельно. Легато самостоятельно.</p>
+
+      <p>Очевидно, что рондо относительно. Звукосниматель, по определению, имитирует миксолидийский хамбакер. В связи с этим нужно подчеркнуть, что крещендирующее хождение заканчивает флэнжер, на этих моментах останавливаются Л.А.Мазель и В.А.Цуккерман в своем "Анализе музыкальных произведений".</p>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+    <div id="whywe">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="lms_title_center">
+              <div class="lms_heading_1">
+                <h2 class="lms_heading_title">Почему стоит заказать ремонт IPHONE</h2>
+              </div>
+              <p>именно у нас</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <ul class="blocks-info">
+            <li class="it1"><p><em>до 30 дней</em> гарантийное обслуживание </p></li>
+            <li class="it2"><p><em>1-е в Томске</em> одни из первых кто начал ремонт iPhone в Томске</p></li>
+            <li class="it3"><p><em>10 минут</em> большинство ремонтов мы выполним от 10 до 60 минут</p></li>
+            <li class="it4"><p><em>100%</em> качество выполненных ремонтов</p></li>
+            <li class="it5"><p><em>Безопасно</em> <br/> только сертифицированное оборудование</p></li>
+            <li class="it6"><p><em>Аккуратно</em><br/> отсутствие зазоров и царапин</p></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  <div id="bottomtext">
+    <div class="container">
+      <div class="lms_title_center">
+          <div class="lms_heading_1">
+              <h2 class="lms_heading_title">Тайтл дескрипш</h2>
+          </div>
+          <p>Незнаю что это, ты же программист</p>
+      </div>
+
+      <p>Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета, однако рондо синхронно образует флажолет. Рок-н-ролл 50-х, в том числе, mezzo forte трансформирует звукорядный райдер. Еще Аристотель в своей «Политике» говорил, что музыка, воздействуя на человека, доставляет «своего рода очищение, то есть облегчение, связанное с наслаждением», однако соинтервалие имитирует разнокомпонентный контрапункт контрастных фактур.</p>
+
+      <p>Форма, так или иначе, сонорна. Легато композиционно. Звукосниматель образует гипнотический рифф. Рок-н-ролл 50-х, так или иначе, изящно диссонирует доминантсептаккорд. Эти слова совершенно справедливы, однако легато самостоятельно. Легато самостоятельно.</p>
+
+
+    </div>
+  </div>
+
+
+
+
+
+  <div id="social">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4">
+          <script type="text/javascript" src="//vk.com/js/api/openapi.js?113"></script>
+          <!-- VK Widget -->
+          <div id="vk_groups"></div>
+          <script type="text/javascript">
+          VK.Widgets.Group("vk_groups", {mode: 0, width: "320", height: "280", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 40318240);
+          </script>
+        </div>
+
+        <div class="col-md-4">
+          <div id="ok_group_widget"></div>
+          <script>
+          !function (d, id, did, st) {
+            var js = d.createElement("script");
+            js.src = "https://connect.ok.ru/connect.js";
+            js.onload = js.onreadystatechange = function () {
+            if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+              if (!this.executed) {
+                this.executed = true;
+                setTimeout(function () {
+                  OK.CONNECT.insertGroupWidget(id,did,st);
+                }, 0);
+              }
+            }}
+            d.documentElement.appendChild(js);
+          }(document,"ok_group_widget","54504052490240","{width:320,height:280}");
+          </script>
+        </div>
+
+        <div class="col-md-4">
+          <a class="twitter-timeline" href="https://twitter.com/Ialenatomsk" data-widget-id="674902727680503808">Твиты от @Ialenatomsk</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+{% comment %}
       <!--Our Popular Courses start-->
     <div class="container">
       <div class="row">
@@ -152,7 +547,6 @@
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6">
-
             {% for article in articles %}
                 <div class="lms_popular_courses_item_detail" id="courses_item_detail{{ forloop.counter }}"> <img width="100%" src="/media/{{ article.image }}" alt="" />
                     <h3>{{ article.name|safe }}</h3>
@@ -160,100 +554,72 @@
                     <a href="{{ article.url }}" class="btn btn-default">Подробнее</a>
                 </div>
             {% endfor %}
-
         </div>
       </div>
     </div>
       <!--Our Popular Courses end-->
 
+  {% endcomment %}
+
+
 {% endblock %}
 
 {% block slider2 %}
-    <div class="container-fluid">
-      <!--Testimonials start-->
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <div class="lms_title_center">
-            <div class="lms_heading_1">
-              <h2 class="lms_heading_title">Отзывы</h2>
-            </div>
-            <p>Благодарные клиенты говорят</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="lms_testimonials_bg" data-stellar-background-ratio="0.5">
-          <div class="lms_testimonials_bg2">
-            <div class="container">
-              <div class="lms_testimonials wow bounce">
-                <div id="lms_testimonials_slider" class="owl-carousel owl-theme">
-
-                    {% for review in reviews %}
-                        <div class="lms_testimonials_slider_item">
-                            <p class="lms_testimonial_quote">"</p>
-                            <p class="lms_testimonials_txt">{{ review.description|safe }}</p>
-                            <img src="/media/{{ review.image }}" alt="Testimonials" />
-                            <h4>{{ review.name }}</h4>
-                        </div>
-                    {% endfor %}
-
+{# тут были отзывы.. .#}
+          {% comment %}  <div class="container-fluid">
+              <!--Testimonials start-->
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="lms_title_center">
+                    <div class="lms_heading_1">
+                      <h2 class="lms_heading_title">Отзывы</h2>
+                    </div>
+                    <p>Благодарные клиенты говорят</p>
+                  </div>
                 </div>
-                <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              <div class="row">
+                <div class="lms_testimonials_bg" data-stellar-background-ratio="0.5">
+                  <div class="lms_testimonials_bg2">
+                    <div class="container">
+                      <div class="lms_testimonials wow bounce">
+                        <div id="lms_testimonials_slider" class="owl-carousel owl-theme">
 
-      <!--Testimonials end-->
-    </div>
+                            {% for review in reviews %}
+                                <div class="lms_testimonials_slider_item">
+                                    <p class="lms_testimonial_quote">"</p>
+                                    <p class="lms_testimonials_txt">{{ review.description|safe }}</p>
+                                    <img src="/media/{{ review.image }}" alt="Testimonials" />
+                                    <h4>{{ review.name }}</h4>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                        <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Testimonials end-->
+            </div>{% endcomment %}
 {% endblock %}
+
+
+
 
 {% block partners %}
 
 
 {#    blok princip#}
 
-     <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="lms_title_center">
-                    <div class="lms_heading_1">
-                        <h2 class="lms_heading_title">Как мы работаем</h2>
-                    </div>
-                    <p>Этапы ремонта вашего устройств</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row prise_im_block">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="col-md-3 col-md-6 prise_im">
-                    <img  src="{% static "idoctor/images/icon/priem.png" %}">
-                    <h4>Принимаем технику</h4>
-                    <p>Вы приносите к нам Ваше устройство</p>
-                </div>
-
-                <div class="col-md-3 col-md-6 prise_im">
-                    <img  src="{% static "idoctor/images/icon/diagnost.png" %}">
-                    <h4>Проводим бесплатную диагностику</h4>
-                    <p>Инженеры диагностируют поломку совершенно бесплатно и сообщают вам по телефону причину неисправности.</p>
-                </div>
-
-                <div class="col-md-3 col-md-6 prise_im">
-                    <img  src="{% static "idoctor/images/icon/soglas.png" %}">
-                    <h4>Согласовываем с вами стоимость и сроки ремонта</h4>
-                    <p>Вы самостоятельно принимаете решение о необходимости ремонта.</p>
-                </div>
-
-                 <div class="col-md-3 col-md-6 prise_im">
-                    <img  src="{% static "idoctor/images/icon/tick.png" %}">
-                    <h4>Устройство готово</h4>
-                     <p>Также вы получаете гарантию на нашу работу — 1 месяц.</p>
-                </div>
-            </div>
-        </div>
 
 
+
+
+
+{% comment %}
      <!--Our Top Experts Team start-->
     <div class="container">
         <div class="row">
@@ -285,7 +651,7 @@
                 </div>
             </div>
       </div>
-    </div>
+    </div>{% endcomment %}
       <!--Our Top Experts Team end-->
 
 {#    <!--Our Partners start-->#}
