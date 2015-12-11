@@ -12,10 +12,9 @@ from project import settings
 
 
 def indexView(request, template_name="core/index.html"):
-    # получим специальную главную страницу
     homepage = Page.objects.get(slug="home")
-    title = homepage.meta_title  #'Ремонт Iphone в Томске'
-    description = homepage.meta_description #'sfsfdsf';
+    title = homepage.meta_title
+    description = homepage.meta_description
     keywords = homepage.meta_keywords
 
     pages = Page.objects.all()
@@ -33,20 +32,6 @@ def indexView(request, template_name="core/index.html"):
     services = Service.objects.filter(main_check=True)[:6]
     categories = Category.objects.all()
 
-    # # работа с формой.
-    # # принимаем запрос с формы
-    # if request.POST:
-    #     review_form = ReviewForm(request.POST, request.FILES)
-    #     if review_form.is_valid():
-    #         new_review = review_form.save()
-    #         subject = u'id70.ru новый отзыв'
-    #         message = u'Имя: %s \n отзыв: %s \n' % (request.POST['name'], request.POST['description'])
-    #         send_mail(subject, message, '2100636@mail.ru', [ADMIN_EMAIL], fail_silently=False)
-    #         review_message = u"Спасибо, Ваш отзыв успешно отправлен"
-    #     else:
-    #         review_message = u"Ошибка при добавлении отзыва"
-    #
-    # review_form = ReviewForm
 
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
@@ -54,12 +39,10 @@ def indexView(request, template_name="core/index.html"):
 
 
 def reviewForm(request, template_name="core/review_form.html"):
-    # получим специальную главную страницу
+
     title = 'Отправьте нам свой отзыв'
     description = 'Напишите отзыв о нашей работе'
 
-    # работа с формой.
-    # принимаем запрос с формы
     if request.POST:
         review_form = ReviewForm(request.POST, request.FILES)
         if review_form.is_valid():
@@ -71,7 +54,6 @@ def reviewForm(request, template_name="core/review_form.html"):
         else:
             review_message = u"Ошибка при добавлении отзыва"
     else:
-        # форма
         review_form = ReviewForm
 
     return render_to_response(template_name, locals(),
@@ -106,7 +88,7 @@ def faqView(request, template_name="core/faq.html"):
                               context_instance=RequestContext(request))
 
 
-# Страница услуги
+
 def serviceView(request, slug, template_name="core/service.html"):
     user = request.user
     service = Service.objects.get(slug=slug)
@@ -155,7 +137,7 @@ def aboutView(request, template_name="core/about.html"):
                               context_instance=RequestContext(request))
 
 
-# Представление для просмотра конкретной категории
+
 def category_view(request, category_slug, template_name="category/category.html"):
     c = get_object_or_404(Category, slug=category_slug)
     title = c.name
