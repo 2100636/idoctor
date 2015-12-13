@@ -225,7 +225,12 @@ table.table.table-striped {
 width: 100%;
 height: auto;
 }
-
+.slider_text_wrap {
+position: absolute;
+top: 0;
+font-size: 50px;
+width: 100%;
+}
 
 
 
@@ -419,7 +424,12 @@ float: right;
 }
 
 .prise_im_block .prise_im img{
-   margin-bottom: 0;
+width: 125px;
+margin: 0 auto;
+display: block;
+}
+.prise_im_block .prise_im .desc{
+text-align: left;
 }
 .prise_im_block .prise_im .desc p{
    margin-bottom: 0;
@@ -681,17 +691,13 @@ font-size: 15px;
 width: 200px;
 text-transform: uppercase;
 text-align: center;
-margin-top: 19px;
+margin-top: 27px;
 float: none;
 position: absolute;
 left: 50%;
 margin-left: -100px;
 }
-.slogan img{
-width: 169px;
-display: block;
-margin: 0 auto;
-}
+
 
 
 /* Header Container */
@@ -2888,6 +2894,8 @@ margin-bottom: 15px;
 -o-transition: all 0.2s;
 margin-top: -46px;
 margin-right: 81px;
+position: relative;
+z-index: 11;
 }
 .send_review:hover{
 border-style: solid;
@@ -3034,14 +3042,23 @@ display: block;
 
 
 
-#homearticle{
+#home_block_text_1{
 background: #F2F2F2;
-padding-bottom: 50px;
-
 }
-
-#homearticle .lms_title_center p{
-    margin-bottom: 30px;
+.flatblock.block-home_block_text_1{
+padding-bottom: 50px;
+}
+#home_block_text_1 h2 {
+margin-top: 45px;
+font-weight: 400;
+position: relative;
+font-size: 34px;
+line-height: 40px;
+text-align: center;
+margin-bottom: 30px;
+}
+#home_block_text_1 p{
+margin-bottom: 30px;
 }
 
 
@@ -3122,13 +3139,32 @@ font-style: normal;
 
 
 
-#bottomtext{
+#home_block_text_2{
 background: #F2F2F2;
+}
+.flatblock.block-home_block_text_2{
 padding-bottom: 50px;
 }
-#bottomtext .lms_title_center p{
+#home_block_text_2 p{
 margin-bottom: 30px;
 }
+#home_block_text_2 h2 {
+margin-top: 45px;
+font-weight: 400;
+position: relative;
+font-size: 34px;
+line-height: 40px;
+text-align: center;
+margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -4690,7 +4726,7 @@ iframe {
 }
 .lms_page_title .lms_page_title_bg {
 	background: url(../images/bg/title.jpg);
-	min-height: 278px;
+	min-height: 191px;
 }
 .lms_page_title .lms_page_title_bg_overlay {
 	position: absolute;
@@ -4706,7 +4742,7 @@ iframe {
 	margin: 0px auto;
 	left: 0;
 	right: 0;
-	top: 58%;
+	top: 40%;
 }
 .lms_page_title .lms_page_title_bg_overlay > .container .lms_title {
 	color: #fff;
@@ -5315,7 +5351,9 @@ iframe {
 
 
 
-
+.cat_description {
+    padding: 70px 0;
+}
 
 
 

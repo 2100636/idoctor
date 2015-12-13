@@ -2,7 +2,7 @@
 #!/usr/bin/env python
 from django.contrib import admin
 from project.core.models import Page, PageImage, Article, ArticleImage, Faq, Review, Menu, Service, ServiceStep, \
-    ServiceStepImage, Category, Price, Slider, Video
+    ServiceStepImage, Category, Price, Slider, Video, ImagesContent
 from image_cropping import ImageCroppingMixin
 # from mptt_tree_editor.admin import TreeEditor
 
@@ -77,6 +77,15 @@ class VideoAdmin(admin.ModelAdmin):
     search_fields = ['description']
 
 
+
+class ImagesContentAdmin(admin.ModelAdmin):
+    model = ImagesContent
+    list_display = ('name', 'image_preview')
+    list_display_links = ('name',)
+    list_per_page = 50
+
+
+
 admin.site.register(Page, PageAdmin)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Faq)
@@ -87,6 +96,7 @@ admin.site.register(Service, ServiceAdmin)
 admin.site.register(Price, PriceAdmin)
 admin.site.register(Category)
 admin.site.register(Slider)
+admin.site.register(ImagesContent, ImagesContentAdmin)
 
 
 

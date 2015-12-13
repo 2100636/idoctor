@@ -3,10 +3,11 @@
 {% load thumbnail %}
 {% load header_tags %}
 {% load sitetree %}
-
-
+{% load flatblocks %}
 
 {% block header %}
+
+
 {#            {% top_menu request %}#}
     <header id="lms_header">
         <div class="container">
@@ -18,7 +19,6 @@
 
             </div>
             <div class="slogan">
-              <img src="{% static "idoctor/images/iconapple.png" %}" alt="Ремонт IPhone, ipad, macbook"/>
               <span>Ремонт IPhone, ipad, macbook в Томске</span>
             </div>
            <div class="phone_cont">
@@ -56,6 +56,9 @@
 
 
 {% block content %}
+
+
+
     <div class="container">
 
           <!--Prices-->
@@ -79,7 +82,7 @@
                       <img  src="/media/{{ category.image }}">
                       <h3>{{ category.name }}</h3>
 {#                      <div>{{ category.description|safe|truncatewords:300 }}</div>#}
-                      <div class="desc">{{ category.description|safe }}</div>
+                      <div class="desc">{{ category.small_description|safe }}</div>
                       <div class="viewlink">Смотреть все цены >>></div>
                     </a>
                 </div>
@@ -189,75 +192,72 @@
 
 
 
+  {% if reviews %}
+  {# отзывы #}
+      <div class="container-fluid">
+        <!--Testimonials start-->
 
-{# отзывы #}
-    <div class="container-fluid">
-      <!--Testimonials start-->
+        <div class="row">
+          <div class="lms_testimonials_bg" > {# data-stellar-background-ratio="0.5"#}
+  {#          <div class="lms_testimonials_bg2">#}
+              <div class="container">
 
+                <div class="lms_testimonials wow bounce">
+                  <div id="lms_testimonials_slider" class="owl-carousel owl-theme">
 
+                    {% for review in reviews %}
 
-      <div class="row">
-        <div class="lms_testimonials_bg" > {# data-stellar-background-ratio="0.5"#}
-{#          <div class="lms_testimonials_bg2">#}
-            <div class="container">
+                      <div class="lms_testimonials_slider_item">
+  {#                            <p class="lms_testimonial_quote">"</p>#}
+                        <div class="img">
+                          <div class="iphone_border"></div>
 
+                          {% thumbnail review.image "146x239" crop="60% center" as im %}
+                              <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="Автор отзыва" />
+  {#                        {% empty %}#}
+  {#                            <img class="center-block" src="/media//no_image-128.png" width="auto" style="height: 70px;" alt=""/>#}
+                          {% endthumbnail %}
 
-              <div class="lms_testimonials wow bounce">
-                <div id="lms_testimonials_slider" class="owl-carousel owl-theme">
-
-                  {% for review in reviews %}
-
-                    <div class="lms_testimonials_slider_item">
-{#                            <p class="lms_testimonial_quote">"</p>#}
-
-                      <div class="img">
-                        <div class="iphone_border"></div>
-
-                        {% thumbnail review.image "146x239" crop="60% center" as im %}
-                            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="Автор отзыва" />
-{#                        {% empty %}#}
-{#                            <img class="center-block" src="/media//no_image-128.png" width="auto" style="height: 70px;" alt=""/>#}
-                        {% endthumbnail %}
-
-{#                        <img src="/media/{{ review.image }}" alt="Автор отзыва" />#}
+  {#                        <img src="/media/{{ review.image }}" alt="Автор отзыва" />#}
+                        </div>
+                        <h4>{{ review.title }}</h4>
+                        <p class="lms_testimonials_txt">{{ review.description|safe }}</p>
+                        <div class="autor">{{ review.name }}</div>
                       </div>
-                      <h4>{{ review.title }}</h4>
-                      <p class="lms_testimonials_txt">{{ review.description|safe }}</p>
-                      <div class="autor">{{ review.name }}</div>
-                    </div>
-                  {% endfor %}
+                    {% endfor %}
 
+                  </div>
+                  <div class="send_review btn_modal" modal_id="ModalSendreview">Отправьте нам свой отзыв</div>
+                  <div class="review_message">{{ review_message }}</div>
+  {#                <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> </div>#}
                 </div>
-                <div class="send_review btn_modal" modal_id="ModalSendreview">Отправьте нам свой отзыв</div>
-                <div class="review_message">{{ review_message }}</div>
-{#                <div class="customNavigation"> <a class="lms_prev_next prev"><i class="fa fa-angle-left"></i></a> <a class="lms_prev_next next"><i class="fa fa-angle-right"></i></a> </div>#}
               </div>
-            </div>
-{#          </div>#}
+  {#          </div>#}
+          </div>
         </div>
-      </div>
 
 
 
-      <!-- Modal -->
-      <div class="modal fade" id="ModalSendreview" tabindex="-1" role="dialog" aria-labelledby="ModalSendreviewLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" id="ModalSendreviewLabel">Отправить отзыв</h4>
-            </div>
-            <div class="modal-body">
-              <iframe id="review_form" name="review_form" frameborder="0" src="/review_form"></iframe>
+        <!-- Modal -->
+        <div class="modal fade" id="ModalSendreview" tabindex="-1" role="dialog" aria-labelledby="ModalSendreviewLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="ModalSendreviewLabel">Отправить отзыв</h4>
+              </div>
+              <div class="modal-body">
+                <iframe id="review_form" name="review_form" frameborder="0" src="/review_form"></iframe>
+              </div>
             </div>
           </div>
         </div>
+        <!-- /.modal -->
+
+        <!--Testimonials end-->
       </div>
-      <!-- /.modal -->
 
-      <!--Testimonials end-->
-    </div>
-
+  {% endif %}
 
 
 
@@ -361,33 +361,9 @@
 
 
 
-  <div id="homearticle">
+  <div id="home_block_text_1">
     <div class="container">
-      <div class="lms_title_center">
-          <div class="lms_heading_1">
-              <h2 class="lms_heading_title">Тайтл дескрипш</h2>
-          </div>
-          <p>Незнаю что это, ты же программист</p>
-      </div>
-
-      <p>Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета, однако рондо синхронно образует флажолет. Рок-н-ролл 50-х, в том числе, mezzo forte трансформирует звукорядный райдер. Еще Аристотель в своей «Политике» говорил, что музыка, воздействуя на человека, доставляет «своего рода очищение, то есть облегчение, связанное с наслаждением», однако соинтервалие имитирует разнокомпонентный контрапункт контрастных фактур.</p>
-
-      <p>Форма, так или иначе, сонорна. Легато композиционно. Звукосниматель образует гипнотический рифф. Рок-н-ролл 50-х, так или иначе, изящно диссонирует доминантсептаккорд. Эти слова совершенно справедливы, однако легато самостоятельно. Легато самостоятельно.</p>
-
-      <p>Очевидно, что рондо относительно. Звукосниматель, по определению, имитирует миксолидийский хамбакер. В связи с этим нужно подчеркнуть, что крещендирующее хождение заканчивает флэнжер, на этих моментах останавливаются Л.А.Мазель и В.А.Цуккерман в своем "Анализе музыкальных произведений".</p>
-
-      <p>Гендер прекрасно осознаёт сублимированный автоматизм. Психоанализ, как принято считать, выбирает интеракционизм. Воспитание, несмотря на внешние воздействия, фундаментально начинает культурный генезис. Представленный контент-анализ является психолингвистическим в своей основе, таким образом аномия притягивает инсайт. Сновидение отчуждает онтогенез речи.</p>
-
-      <p>Однако Э.Дюркгейм утверждал, что связь критично отталкивает понимающий автоматизм. Чувство, как принято считать, спонтанно выбирает сублимированный интеракционизм. Лидерство последовательно.</p>
-
-      <p>Акцентуация, согласно традиционным представлениям, традиционно отражает социальный психоз. Реакция однородно отчуждает бихевиоризм, здесь описывается централизующий процесс или создание нового центра личности. Сознание, в первом приближении, латентно. Воспитание осознаёт страх.</p>
-
-      <p>Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета, однако рондо синхронно образует флажолет. Рок-н-ролл 50-х, в том числе, mezzo forte трансформирует звукорядный райдер. Еще Аристотель в своей «Политике» говорил, что музыка, воздействуя на человека, доставляет «своего рода очищение, то есть облегчение, связанное с наслаждением», однако соинтервалие имитирует разнокомпонентный контрапункт контрастных фактур.</p>
-
-      <p>Форма, так или иначе, сонорна. Легато композиционно. Звукосниматель образует гипнотический рифф. Рок-н-ролл 50-х, так или иначе, изящно диссонирует доминантсептаккорд. Эти слова совершенно справедливы, однако легато самостоятельно. Легато самостоятельно.</p>
-
-      <p>Очевидно, что рондо относительно. Звукосниматель, по определению, имитирует миксолидийский хамбакер. В связи с этим нужно подчеркнуть, что крещендирующее хождение заканчивает флэнжер, на этих моментах останавливаются Л.А.Мазель и В.А.Цуккерман в своем "Анализе музыкальных произведений".</p>
-
+      {% flatblock "home_block_text_1" %}
     </div>
   </div>
 
@@ -430,20 +406,9 @@
 
 
 
-  <div id="bottomtext">
+  <div id="home_block_text_2">
     <div class="container">
-      <div class="lms_title_center">
-          <div class="lms_heading_1">
-              <h2 class="lms_heading_title">Тайтл дескрипш</h2>
-          </div>
-          <p>Незнаю что это, ты же программист</p>
-      </div>
-
-      <p>Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета, однако рондо синхронно образует флажолет. Рок-н-ролл 50-х, в том числе, mezzo forte трансформирует звукорядный райдер. Еще Аристотель в своей «Политике» говорил, что музыка, воздействуя на человека, доставляет «своего рода очищение, то есть облегчение, связанное с наслаждением», однако соинтервалие имитирует разнокомпонентный контрапункт контрастных фактур.</p>
-
-      <p>Форма, так или иначе, сонорна. Легато композиционно. Звукосниматель образует гипнотический рифф. Рок-н-ролл 50-х, так или иначе, изящно диссонирует доминантсептаккорд. Эти слова совершенно справедливы, однако легато самостоятельно. Легато самостоятельно.</p>
-
-
+      {% flatblock "home_block_text_2" %}
     </div>
   </div>
 

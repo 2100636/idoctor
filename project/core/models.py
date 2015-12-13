@@ -193,7 +193,8 @@ class Category(MPTTModel):
     meta_keywords = models.CharField(verbose_name=u'Мета ключевые слова', max_length=255, blank=True)
     meta_description = models.CharField(verbose_name=u'Мета описание', max_length=255, help_text=u'Нужно для СЕО', blank=True)
     image = models.ImageField(verbose_name=u'Изображение категории', upload_to="category", blank=True)
-    description = RichTextField(verbose_name=u'Описание', default='')
+    small_description = RichTextField(verbose_name=u'Описание под изображением', default='', blank=True, null=True)
+    description = RichTextField(verbose_name=u'Описание на странице', default='', blank=True, null=True)
     parent = TreeForeignKey('self', verbose_name=u'Родительская категория',
                             related_name='children', blank=True,
                             help_text=u'Родительская категория для этой категории', null=True)
@@ -235,6 +236,7 @@ class Price(models.Model):
 class Slider(models.Model):
     name = models.CharField(verbose_name=u"Названия слайда", max_length=100)
     image = models.ImageField(verbose_name=u"Добавить изображение слайда", upload_to="slider")
+    description = RichTextField(verbose_name=u'Описание', default='', blank=True, null=True)
 
     class Meta:
         verbose_name = u'Слайд'
@@ -243,4 +245,21 @@ class Slider(models.Model):
     def __unicode__(self):
         return self.name
 
+
+
+
+class ImagesContent(models.Model):
+    name = models.CharField(verbose_name=u"Название", max_length=100)
+    image = models.ImageField(verbose_name=u"Изображение", upload_to="customimages")
+    def image_preview(self):
+        return "<a href='/media/%s'><img src='/media/%s'  width='100' alt=''/></a>" % (self.image, self.image)
+    image_preview.allow_tags = True
+    image_preview.short_description = 'Просмотр'
+
+    class Meta:
+        verbose_name = u'Пользовательское изображение'
+        verbose_name_plural = u'Пользовательские изображения'
+
+    def __unicode__(self):
+        return self.name
 
