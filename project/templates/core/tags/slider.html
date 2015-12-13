@@ -17,16 +17,17 @@
 {# </div>#}
 {#<!--slider end-->#}
 
+
 <div id="mainslider" class="owl-carousel">
   {% for slide in slider %}
     <div>
       <img src="/media/{{ slide.image }}"   alt="{{ slide.name }}">
-      <div class="slider_text_wrap">
-        <div class="container">
-          <div class="name">{{ slide.name }}</div>
-          <div class="description">{{ slide.description|safe }}</div>
-        </div>
-      </div>
+{#      <div class="slider_text_wrap">#}
+{#        <div class="container">#}
+{#          <div class="name">{{ slide.name }}</div>#}
+{#          <div class="description">{{ slide.description|safe }}</div>#}
+{#        </div>#}
+{#      </div>#}
     </div>
   {% endfor %}
 </div>
