@@ -79,7 +79,12 @@
               {% for category in categories %}
                 <div class="col-md-3 col-md-6 prise_im">
                     <a href="/category/{{ category.slug }}">
-                      <img  src="/media/{{ category.image }}">
+{#                      <img  src="/media/{{ category.image }}">#}
+                      {% thumbnail category.image "125x166" crop="60% center" as im %}
+                        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ service.name }}" />
+  {#                  {% empty %}#}
+  {#                     <img src="" alt=""/>#}
+                      {% endthumbnail %}
                       <h3>{{ category.name }}</h3>
 {#                      <div>{{ category.description|safe|truncatewords:300 }}</div>#}
                       <div class="desc">{{ category.small_description|safe }}</div>
@@ -430,23 +435,15 @@
         </div>
 
         <div class="col-md-4">
-          <div id="ok_group_widget"></div>
-          <script>
-          !function (d, id, did, st) {
-            var js = d.createElement("script");
-            js.src = "https://connect.ok.ru/connect.js";
-            js.onload = js.onreadystatechange = function () {
-            if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
-              if (!this.executed) {
-                this.executed = true;
-                setTimeout(function () {
-                  OK.CONNECT.insertGroupWidget(id,did,st);
-                }, 0);
-              }
-            }}
-            d.documentElement.appendChild(js);
-          }(document,"ok_group_widget","54504052490240","{width:320,height:280}");
-          </script>
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+          <div class="fb-page" data-href="https://www.facebook.com/idoctortomsk/" data-tabs="timeline" data-width="320" data-height="280" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/idoctortomsk/"><a href="https://www.facebook.com/idoctortomsk/">Сервисный центр по ремонту Apple - IDoctor ремонт Iphone, Ipad в Томске</a></blockquote></div></div>
         </div>
 
         <div class="col-md-4">
