@@ -574,7 +574,7 @@
 			[1400, 1],
 			[1600, 1]
 		  ],
-		  autoPlay : true,
+		  autoPlay : 15000,
 		  nav:false,
 		  pagination:true
 		});

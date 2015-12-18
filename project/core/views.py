@@ -40,8 +40,21 @@ def indexView(request, template_name="core/index.html"):
 
 
 
-def reviewForm(request, template_name="core/review_form.html"):
+def zakaz_zvonokForm(request, template_name="core/zakaz_zvonok_form.html"):
+    title = 'Заказать звонок'
+    description = 'Заказать звонок'
 
+    if 'phone' in request.POST:
+        if request.POST['phone'] != '':
+            subject = u'id70.ru Заказ на звонок'
+            message = u'Номер телефона: %s \n' % (request.POST['phone'])
+            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
+            zakaz_message = u"Спасибо, заявка принята"
+    return render_to_response(template_name, locals(),
+                              context_instance=RequestContext(request))
+
+
+def reviewForm(request, template_name="core/review_form.html"):
     title = 'Отправьте нам свой отзыв'
     description = 'Напишите отзыв о нашей работе'
 
@@ -51,7 +64,7 @@ def reviewForm(request, template_name="core/review_form.html"):
             new_review = review_form.save()
             subject = u'id70.ru новый отзыв'
             message = u'Имя: %s \n отзыв: %s \n' % (request.POST['name'], request.POST['description'])
-            send_mail(subject, message, '2100636@mail.ru', [ADMIN_EMAIL], fail_silently=False)
+            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
             review_message = u"Спасибо, Ваш отзыв успешно отправлен"
         else:
             review_message = u"Ошибка при добавлении отзыва"
@@ -99,7 +112,7 @@ def serviceView(request, slug, template_name="core/service.html"):
         if form.is_valid():
             subject = u'id70.ru форма'
             message = u'Имя: %s \n Телефон: %s \n Описание проблемы: %s' % (request.POST['name'], request.POST['phone'], request.POST['text'])
-            send_mail(subject, message, 'teamer777@gmail.com', [ADMIN_EMAIL], fail_silently=False)
+            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
             return redirect('/contacts')
         else:
             form = ContactForm(request.POST)
@@ -116,7 +129,8 @@ def contactView(request, template_name="core/contact.html"):
         if form.is_valid():
             subject = u'id70.ru форма'
             message = u'Имя: %s \n Телефон: %s \n Описание проблемы: %s' % (request.POST['name'], request.POST['phone'], request.POST['text'])
-            send_mail(subject, message, '2100636@mail.ru', [ADMIN_EMAIL], fail_silently=False)
+            # send_mail(subject, message, '2100636@mail.ru', [ADMIN_EMAIL], fail_silently=False)
+            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
             return redirect('/contacts')
         else:
             form = ContactForm(request.POST)
