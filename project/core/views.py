@@ -8,14 +8,18 @@ from django.template import RequestContext
 from project.core.models import Page, Service, Review, Article, Faq, Category, Price, Video
 from project.core.forms import ReviewForm, ContactForm
 from project.settings import ADMIN_EMAIL
+from django.core.exceptions import ObjectDoesNotExist
 from project import settings
 
 
 def indexView(request, template_name="core/index.html"):
-    homepage = Page.objects.get(slug="home")
-    title = homepage.meta_title
-    description = homepage.meta_description
-    keywords = homepage.meta_keywords
+    try:
+        homepage = Page.objects.get(slug="home")
+        title = homepage.meta_title
+        description = homepage.meta_description
+        keywords = homepage.meta_keywords
+    except ObjectDoesNotExist:
+        title = 'Главная'
 
     pages = Page.objects.all()
     reviews = Review.objects.filter(active=True)[:6]
@@ -31,8 +35,6 @@ def indexView(request, template_name="core/index.html"):
 
     services = Service.objects.filter(main_check=True)[:6]
     categories = Category.objects.all()
-
-
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
 
@@ -58,9 +60,6 @@ def reviewForm(request, template_name="core/review_form.html"):
 
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
-
-
-
 
 
 
@@ -131,7 +130,14 @@ def contactView(request, template_name="core/contact.html"):
 
 def aboutView(request, template_name="core/about.html"):
     user = request.user
-    title = 'О нас'
+    try:
+        about = Page.objects.get(slug="about")
+        title = about.meta_title
+        description = about.meta_description
+        keywords = about.meta_keywords
+    except ObjectDoesNotExist:
+        title = 'О нас'
+
     #service = Service.objects.get(slug=slug)
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))

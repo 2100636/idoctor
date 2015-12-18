@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'image_cropping',
     'easy_thumbnails',
+    'flatblocks',
 )
 
 MIDDLEWARE_CLASSES = (
