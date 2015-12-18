@@ -9,6 +9,10 @@ urlpatterns = patterns('project.core.views',
         {'template_name': 'core/index.html'},
         name='indexView'),
 
+    url(r'^zakaz_zvonok_form', 'zakaz_zvonokForm',
+        {'template_name': 'core/zakaz_zvonok_form.html'},
+        name='zakaz_zvonokForm'),
+
     url(r'^review_form$', 'reviewForm',
         {'template_name': 'core/review_form.html'},
         name='reviewForm'),

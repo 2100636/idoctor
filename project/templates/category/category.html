@@ -9,6 +9,7 @@
 
 {% block content %}
 <div class="container">
+
     <div class="row">
     <!--blog single page start-->
 
@@ -42,6 +43,21 @@
     <!--sidebar end-->
   </div>
 </div>
+
+
+{% if c.description %}
+  <div class="cat_description">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ c.description|safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
 
 {% endblock %}
 

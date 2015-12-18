@@ -17,8 +17,41 @@
 {# </div>#}
 {#<!--slider end-->#}
 
+
 <div id="mainslider" class="owl-carousel">
   {% for slide in slider %}
-    <div><img src="/media/{{ slide.image }}"   alt="{{ slide.name }}"></div>
+    <div>
+      <img src="/media/{{ slide.image }}"   alt="{{ slide.name }}">
+      <div class="slider_text_wrap">
+        <div class="container">
+          <div class="slider_text">
+            <div class="name">{{ slide.name }}</div>
+            <div class="description">{{ slide.description|safe }}</div>
+            <div class="zakaz_zvonok_wrap">
+              <a href="#" class="btn zakaz_zvonok"  data-toggle="modal"  data-target="#zakaz_zvonokModal">Заказать звонок</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   {% endfor %}
 </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="zakaz_zvonokModal" tabindex="-1" role="dialog" aria-labelledby="zakaz_zvonokModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="zakaz_zvonokModalLabel">Заказать обратный звонок</h4>
+      </div>
+      <div class="modal-body">
+        <iframe id="review_form" name="review_form" frameborder="0" src="/zakaz_zvonok_form"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.modal -->

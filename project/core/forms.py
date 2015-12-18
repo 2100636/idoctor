@@ -21,12 +21,13 @@ class ContactForm(forms.Form):
         'class': "form-control"
     }))
 
-# форма для отзывов на основании модели
+
+
 class ReviewForm(ModelForm):
     class Meta:
         model = Review
         # fields = "__all__"
-        exclude = ('active',)
+        exclude = ('active', 'title')
     def __init__(self, *args, **kwargs):
         super(ReviewForm, self).__init__(*args, **kwargs)
         # for field in self.fields:
@@ -39,7 +40,7 @@ class ReviewForm(ModelForm):
         self.fields['image'].widget.attrs = {'class': 'form-control'}
         self.fields['image'].label = 'Ваша фотография'
 
-        # пример фукнции map
+        #
         # def f(field):
         #     self.fields[field].widget.attrs = {'placeholder': self.fields[field].label, 'class': 'form-control'}
         # map(f, self.fields)

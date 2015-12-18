@@ -4,7 +4,7 @@
 <div class="row">
   {% for price in prices %}
     <div class="col-md-6">
-      <a href="{{ price.slug }}">{{ price.name }}</a>
+      <a href="/price/{{ price.slug }}">{{ price.name }}</a>
     </div>
   {% endfor %}
 </div>

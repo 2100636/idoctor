@@ -8,16 +8,19 @@ from django.template import RequestContext
 from project.core.models import Page, Service, Review, Article, Faq, Category, Price, Video
 from project.core.forms import ReviewForm, ContactForm
 from project.settings import ADMIN_EMAIL
+from django.core.exceptions import ObjectDoesNotExist
 from project import settings
 
 
 def indexView(request, template_name="core/index.html"):
-    # получим специальную главную страницу
-    homepage = Page.objects.get(slug="home")
-    title = homepage.meta_title  #'Ремонт Iphone в Томске'
-    description = homepage.meta_description #'sfsfdsf';
-    keywords = homepage.meta_keywords
-    # все страницы..
+    try:
+        homepage = Page.objects.get(slug="home")
+        title = homepage.meta_title
+        description = homepage.meta_description
+        keywords = homepage.meta_keywords
+    except ObjectDoesNotExist:
+        title = 'Главная'
+
     pages = Page.objects.all()
     reviews = Review.objects.filter(active=True)[:6]
     articles = Article.objects.all()[:6]
@@ -32,53 +35,44 @@ def indexView(request, template_name="core/index.html"):
 
     services = Service.objects.filter(main_check=True)[:6]
     categories = Category.objects.all()
-
-    # # работа с формой.
-    # # принимаем запрос с формы
-    # if request.POST:
-    #     review_form = ReviewForm(request.POST, request.FILES)
-    #     if review_form.is_valid():
-    #         new_review = review_form.save()
-    #         subject = u'id70.ru новый отзыв'
-    #         message = u'Имя: %s \n отзыв: %s \n' % (request.POST['name'], request.POST['description'])
-    #         send_mail(subject, message, '2100636@mail.ru', [ADMIN_EMAIL], fail_silently=False)
-    #         review_message = u"Спасибо, Ваш отзыв успешно отправлен"
-    #     else:
-    #         review_message = u"Ошибка при добавлении отзыва"
-    #
-    # review_form = ReviewForm
-
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
 
 
 
+def zakaz_zvonokForm(request, template_name="core/zakaz_zvonok_form.html"):
+    title = 'Заказать звонок'
+    description = 'Заказать звонок'
+
+    if 'phone' in request.POST:
+        if request.POST['phone'] != '':
+            subject = u'id70.ru Заказ на звонок'
+            message = u'Номер телефона: %s \n' % (request.POST['phone'])
+            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
+            zakaz_message = u"Спасибо, заявка принята"
+    return render_to_response(template_name, locals(),
+                              context_instance=RequestContext(request))
+
+
 def reviewForm(request, template_name="core/review_form.html"):
-    # получим специальную главную страницу
     title = 'Отправьте нам свой отзыв'
     description = 'Напишите отзыв о нашей работе'
 
-    # работа с формой.
-    # принимаем запрос с формы
     if request.POST:
         review_form = ReviewForm(request.POST, request.FILES)
         if review_form.is_valid():
             new_review = review_form.save()
             subject = u'id70.ru новый отзыв'
             message = u'Имя: %s \n отзыв: %s \n' % (request.POST['name'], request.POST['description'])
-            send_mail(subject, message, '2100636@mail.ru', [ADMIN_EMAIL], fail_silently=False)
+            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
             review_message = u"Спасибо, Ваш отзыв успешно отправлен"
         else:
             review_message = u"Ошибка при добавлении отзыва"
     else:
-        # форма
         review_form = ReviewForm
 
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
-
-
-
 
 
 
@@ -106,7 +100,7 @@ def faqView(request, template_name="core/faq.html"):
                               context_instance=RequestContext(request))
 
 
-# Страница услуги
+
 def serviceView(request, slug, template_name="core/service.html"):
     user = request.user
     service = Service.objects.get(slug=slug)
@@ -118,7 +112,7 @@ def serviceView(request, slug, template_name="core/service.html"):
         if form.is_valid():
             subject = u'id70.ru форма'
             message = u'Имя: %s \n Телефон: %s \n Описание проблемы: %s' % (request.POST['name'], request.POST['phone'], request.POST['text'])
-            send_mail(subject, message, 'teamer777@gmail.com', [ADMIN_EMAIL], fail_silently=False)
+            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
             return redirect('/contacts')
         else:
             form = ContactForm(request.POST)
@@ -135,7 +129,8 @@ def contactView(request, template_name="core/contact.html"):
         if form.is_valid():
             subject = u'id70.ru форма'
             message = u'Имя: %s \n Телефон: %s \n Описание проблемы: %s' % (request.POST['name'], request.POST['phone'], request.POST['text'])
-            send_mail(subject, message, '2100636@mail.ru', [ADMIN_EMAIL], fail_silently=False)
+            # send_mail(subject, message, '2100636@mail.ru', [ADMIN_EMAIL], fail_silently=False)
+            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
             return redirect('/contacts')
         else:
             form = ContactForm(request.POST)
@@ -149,13 +144,20 @@ def contactView(request, template_name="core/contact.html"):
 
 def aboutView(request, template_name="core/about.html"):
     user = request.user
-    title = 'О нас'
+    try:
+        about = Page.objects.get(slug="about")
+        title = about.meta_title
+        description = about.meta_description
+        keywords = about.meta_keywords
+    except ObjectDoesNotExist:
+        title = 'О нас'
+
     #service = Service.objects.get(slug=slug)
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
 
 
-# Представление для просмотра конкретной категории
+
 def category_view(request, category_slug, template_name="category/category.html"):
     c = get_object_or_404(Category, slug=category_slug)
     title = c.name
