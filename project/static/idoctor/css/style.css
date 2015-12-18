@@ -5363,7 +5363,6 @@ border: none;
 }
 
 
-
 /*Главный слайдер */
 /* новый слайдер */
 
@@ -5419,6 +5418,14 @@ border: 0;
 vertical-align: initial;
 border-radius: 7px;
 color: #fff;
+}
+
+
+@media (max-width: 1199) {
+  #mainslider{
+    display: none;
+  }
+
 }
 
 
