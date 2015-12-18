@@ -2920,6 +2920,15 @@ margin-top: 90px;
   .lms_testimonials_slider_item .lms_testimonials_txt:after {
     display: none;  
   } 
+  .send_review {
+    margin: 29px auto 0!important;
+    display: block!important;
+    float: none!important;
+    text-align: center!important;
+  }
+  .lms_testimonials_slider_item .autor{
+    margin: 10px auto!important;
+  }
 
 }
 
@@ -10885,14 +10894,25 @@ color: #fff;
 }
 
 
-@media (max-width: 1199) {
+@media (max-width: 1199px) {
   #mainslider{
-    display: none;
+    display: none!important;
   }
 
 }
 
 
+
+
+
+#vk_groups,
+.fb-page.fb_iframe_widget,
+.fb-page.fb_iframe_widget > span,
+iframe#twitter-widget-0{
+margin: 0 auto 15px!important;
+display: block!important;
+width: 320px!important;
+}
 
 
 
