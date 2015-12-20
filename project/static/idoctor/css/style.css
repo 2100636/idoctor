@@ -4481,6 +4481,11 @@ opacity:0;
 }
 .service-description {
   text-align: left;
+  margin-top: 40px;
+}
+.service-description p{
+font-size: 14px!important;
+margin-bottom: 20px!important;
 }
 .lms_right_tab .nav-tabs {
   float: right;
@@ -10854,7 +10859,7 @@ width: 100%;
 #mainslider .slider_text {
 width: 533px;
 float: right;
-margin: 35px 35px 42px 35px;
+margin: 35px 0px 42px 35px;
 height: 295px;
 position: relative;
 text-align: center;
@@ -10901,6 +10906,12 @@ color: #fff;
 
 }
 
+@media (max-width: 991px) {
+  .prise_im_block .prise_im .desc {
+    text-align: center;
+  }
+
+}
 
 
 
