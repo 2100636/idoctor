@@ -49,4 +49,9 @@ urlpatterns = patterns('project.core.views',
     url(r'^price/(?P<slug>[-\w]+)/$', 'price_view',
        {'template_name':'category/price.html'},
        name='price_view'),
+
+    # Страница
+    url(r'^page/(?P<slug>[-\w]+)/$', 'pageView',
+       {'template_name':'core/page.html'},
+       name='page_view'),
 )

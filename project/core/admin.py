@@ -27,6 +27,9 @@ class PageImagesInline(admin.StackedInline):
 class PageAdmin(admin.ModelAdmin):
     model = Page
     inlines = [PageImagesInline, ]
+    list_display = ('name_admin', 'name')
+    list_display_links = ('name_admin', 'name')
+    list_per_page = 50
 
 
 class ArticleImagesInline(admin.StackedInline):

@@ -1,3 +1,18 @@
+#shablon{
+/*display: none;  */
+/*opacity: 1;*/
+
+/*background: url(2_etap_SKUPKA_stranitsa.png) no-repeat;
+width: 100%;
+height: 100%;
+position: absolute;
+background-size: 108%;
+opacity: .8;
+left: -60px;
+z-index: 111111;*/
+
+}
+
 /* Copyright © 2015 Himanshu Softtech.
 ------------------------------------------------------------------
 [Table of contents]
@@ -4861,7 +4876,6 @@ iframe {
 #lms_footer {
   width: 100%;
   float: left;
-  margin-top: 50px;
   color: #A5A5A5;
 }
 #lms_footer h3 {
@@ -10322,12 +10336,8 @@ iframe {
 /*---------------------other end---------------------------*/
 
 /*---------------------footer start---------------------------*/
-#lms_footer {
-  width: 100%;
-  float: left;
-  margin-top: 50px;
-  color: #A5A5A5;
-}
+
+
 #lms_footer h3 {
   color: #fff;
   font-size: 22px;
@@ -10946,4 +10956,76 @@ margin-bottom: 5px;
 .info1 span {
 font-weight: 600;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Страница */
+.description0_wrap{
+margin-top: 23px;
+background: #0BBCEF;
+padding-top: 22px;
+padding-bottom: 25px;
+}
+.description0_wrap h1{
+color: #fff;
+font-size: 60px;
+}
+.description0_wrap h3{
+color: #fff;
+font-size: 44px;
+margin-bottom: 29px;
+}
+.description0_wrap p{
+color: #fff;
+font-size: 32px;
+}
+
+
+.description_wrap {
+padding: 40px 0 45px;
+}
+.description_wrap p{
+font-size: 27px;
+}
+
+
+
+.description2_wrap{
+background: #D5D6D6;
+font-size: 24px;
+padding: 50px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
