@@ -93,6 +93,21 @@ def articleView(request, slug, template_name="core/article.html"):
                               context_instance=RequestContext(request))
 
 
+def pageView(request, slug, template_name="core/page.html"):
+    user = request.user
+    page = Page.objects.get(slug=slug)
+    h1 = page.name
+    title = page.meta_title
+    description0 = page.description0
+    description = page.description
+    description2 = page.description2
+    keywords = page.meta_keywords
+
+
+    return render_to_response(template_name, locals(),
+                              context_instance=RequestContext(request))
+
+
 def faqView(request, template_name="core/faq.html"):
     title = 'faq'
     faqs = Faq.objects.all()

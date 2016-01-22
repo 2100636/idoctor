@@ -3,3 +3,11 @@ django-mptt==0.7.0
 django-mptt-tree-editor==0.1.2
 MySQL-python==1.2.5
 Pillow==2.8.1
+django-appconf==1.0.1
+django-ckeditor==4.5.1
+django-flatblocks==0.9.2
+django-image-cropping==1.0.2
+django-sitetree==1.5.0
+easy-thumbnails==2.2.1
+six==1.10.0
+sorl-thumbnail==12.3

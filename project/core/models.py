@@ -24,13 +24,16 @@ class Menu(MPTTModel):
 
 
 class Page(models.Model):
-    name = models.CharField(verbose_name=u'Название страницы', max_length=200)
+    name_admin = models.CharField(verbose_name=u'Название страницы в админке', max_length=200, default='')
+    name = models.CharField(verbose_name=u'Название страницы - заголовок h1', max_length=200)
     slug = models.SlugField(u'Ссылка', max_length=50, unique=True)
     meta_title = models.CharField(verbose_name=u'Заголовок', max_length=255, help_text=u'<title>Заголовок</title>', blank=True)
     meta_keywords = models.CharField(verbose_name=u'Мета ключевые слова', max_length=255, blank=True)
     meta_description = models.CharField(verbose_name=u'Мета описание', max_length=255, help_text=u'Нужно для СЕО', blank=True)
-    description = RichTextField(verbose_name=u'Описание')
-    image = models.ImageField(verbose_name=u'Изображение', upload_to='pages')
+    description0 = models.TextField(verbose_name=u'Синий фон', blank=True, default='')
+    description = models.TextField(verbose_name=u'Белый фон', blank=True, default='')
+    description2 = models.TextField(verbose_name=u'Серый фон', blank=True, default='')
+    image = models.ImageField(verbose_name=u'Изображение', upload_to='pages', blank=True)
 
     class Meta:
         verbose_name = u'Страница'
