@@ -6146,13 +6146,13 @@ position: relative;
   width: 250px;
 }
 #lms_header .logo .logotext{
-    display: block;
-    position: absolute;
-    top: 29px;
-    font-size: 12px;
-    left: 73px;
-    letter-spacing: 2px;
-    width: 295px;
+display: block;
+position: absolute;
+top: 24px;
+font-size: 12px;
+left: 73px;
+letter-spacing: 2px;
+width: 295px;
 }
 
 
