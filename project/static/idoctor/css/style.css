@@ -5449,13 +5449,23 @@ color: #fff;
 }
 
 
-@media (max-width: 1199) {
+@media (max-width: 1199px) {
   #mainslider{
-    display: none;
+    display: none!important;
   }
-
 }
-
+#mainbanner{
+display: none;
+}
+#mainbanner img{
+width: 100%;
+height: auto;
+}
+@media (max-width: 991px) {
+  #mainbanner{
+    display: block;
+  }
+}
 
 
 
@@ -6428,16 +6438,38 @@ right: 15px;
 
 }
 
-@media (max-width: 400px) {
 
-  .telephone {
-    display: none;
+
+
+@media (max-width: 400px) {
+  #lms_header div.logo{
+    margin: -21px auto 0;
+    float: none;
+    width: 100%;
+    text-align: center;
+    height: 65px;
+  }
+  #lms_header .phone_cont {
+    float: right;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    float: none;
   }
   .lms_menu_toggle{
-    top: 19px;
+    top: 40px;
   }
 
 }
+
+
+
+
+
+
+
+
 
 
 /* Header Mega Menu */
@@ -10841,7 +10873,7 @@ margin-top: 50px;
 #send_zakaz_zvonok_form .box-footer{
 text-align: center;
 }
-button#zakaz_zvonok_submit {
+button.zakaz_zvonok_submit {
 margin: 28px auto;
 font-size: 17px;
 padding: 12px 51px;
@@ -10909,12 +10941,6 @@ color: #fff;
 }
 
 
-@media (max-width: 1199px) {
-  #mainslider{
-    display: none!important;
-  }
-
-}
 
 @media (max-width: 991px) {
   .prise_im_block .prise_im .desc {
@@ -11014,19 +11040,31 @@ color: #fff;
 }
 
 
+
 .description_wrap {
 padding: 40px 0 45px;
 }
-.description_wrap p{
-font-size: 27px;
+.description_wrap p,
+.description_wrap ul,
+.description_wrap ol{
+font-size: 18px;
+line-height: 30px;
 }
 
 
 
 .description2_wrap{
-background: #D5D6D6;
-font-size: 24px;
+background: #F5F5F5;
+font-size: 18px;
 padding: 50px 0;
+line-height: 30px;
+}
+
+.description_wrap h2,
+.description2_wrap h2{
+text-align: center;
+margin-bottom: 25px;
+line-height: 40px;
 }
 
 
@@ -11077,5 +11115,7 @@ padding: 6px 0px;
 
 
 
-
+#vk_comments, #vk_comments iframe {
+width: 100%!important;
+}
 

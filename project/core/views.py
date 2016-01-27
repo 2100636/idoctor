@@ -39,6 +39,23 @@ def indexView(request, template_name="core/index.html"):
                               context_instance=RequestContext(request))
 
 
+# форма для заявки обсуждения условий доставки
+def uslov_dost_obsuditForm(request, template_name="core/uslov_dost_obsudit_form.html"):
+    title = 'Условия доставки для сервисных центров'
+    description = 'Условия доставки для сервисных центров'
+
+    if 'phone' in request.POST:
+        if request.POST['phone'] != '':
+            subject = u'id70.ru Заказ на звонок'
+            message = u'Имя: %s \nНомер телефона: %s \nГород: %s \n' % \
+                      (request.POST['name'], request.POST['phone'], request.POST['city'])
+            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
+            zakaz_message = u"Спасибо, заявка принята"
+    return render_to_response(template_name, locals(),
+                              context_instance=RequestContext(request))
+
+
+
 
 def zakaz_zvonokForm(request, template_name="core/zakaz_zvonok_form.html"):
     title = 'Заказать звонок'
