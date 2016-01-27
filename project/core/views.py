@@ -95,14 +95,27 @@ def articleView(request, slug, template_name="core/article.html"):
 
 def pageView(request, slug, template_name="core/page.html"):
     user = request.user
-    page = Page.objects.get(slug=slug)
-    h1 = page.name
-    title = page.meta_title
-    description0 = page.description0
-    description = page.description
-    description2 = page.description2
-    keywords = page.meta_keywords
+    try:
+        page = Page.objects.get(slug=slug)
+        h1 = page.name
+        title = page.meta_title
+        description0 = page.description0
+        description = page.description
+        description2 = page.description2
+        keywords = page.meta_keywords
 
+        if request.method == "POST":
+            if 'phone' in request.POST:
+                if request.POST['phone'] != '':
+                    subject = u'id70.ru заказ на выкуп дисплеев'
+                    message = u'Имя: %s \nТелефон: %s \nСообщение: %s' % (request.POST['name'], request.POST['phone'], request.POST['message'])
+                    send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
+                    message_after_submit = 'Спасибо! Ваша заявка принята, с вами свяжутся наши специалисты'
+
+        #### если страница - скупка дисплеев, то надо добавить форму заявки
+        ## if page.slug == 'kupim_prodam_display_iphone_remont':
+    except ObjectDoesNotExist:
+        raise Http404
 
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))

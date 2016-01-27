@@ -23,9 +23,48 @@
       <div class="description0_wrap">
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
-              {{ description0|safe }}
-            </div>
+
+            {% if page.slug == 'kupim_prodam_display_iphone_remont' %}
+              <div class="col-md-8">
+                {{ description0|safe }}
+              </div>
+              <div class="col-md-4">
+                <div id="form_zakaz_display_wrap">
+                  {% if message_after_submit %}
+                    <p>{{ message_after_submit }}</p>
+                  {% else %}
+                    <div class="title">Оставьте заявку на выкуп</div>
+                    <p>Наш специалист перезвонит вам в течении 10 минут!</p>
+                    <form id="send_zakaz_display_form" action="" method="post" enctype="multipart/form-data" >
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="" required >
+                      </div>
+
+                      <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="" required >
+                      </div>
+
+                      <div class="form-group">
+                        <label for="message">Количество и модели дисплеев:</label>
+                        <textarea class="form-control" rows="3" id="message" name="message" required></textarea>
+                      </div>
+
+                      <div class="box-footer">
+                        <button type="submit" id="zakaz_display_submit" class="btn btn-primary">ПРОДАТЬ ДИСПЛЕИ</button>
+                      </div>
+                    {% endif %}
+                  </form>
+                </div>
+              </div>
+            {% else  %}
+              <div class="col-md-12">
+                {{ description0|safe }}
+              </div>
+            {% endif %}
+
           </div>
         </div>
       </div>
