@@ -342,6 +342,11 @@ color:#fff;
   background: rgba(240, 240, 240, 1);
   min-width: 248px;
 }
+.lms_search_wrapper .lms_search_toggle{
+    display: block;
+    margin: 0 auto;
+    float: none;
+}
 .lms_search_wrapper input {
   border: 1px solid #9EA6B0;
   height: 40px;
@@ -457,6 +462,11 @@ font-size: 34px;
 font-family: 'Roboto';
 letter-spacing: -1px;
 }
+.telephone > span{
+position: relative;
+top: -1px;
+font-size: 31px;
+}
 .phone_cont i.fa.fa-map-marker {
   padding: 0px 6px 0px 10px;
 }
@@ -471,7 +481,7 @@ top: 5px;
 left: -1px;
 }
 .phone_cont .textadress {
-    letter-spacing: 1px;
+letter-spacing: 0.9px;
 }
 .mega-menu > .lms_search_toggle{
 position: static;
@@ -713,8 +723,26 @@ right: 15px;
 
 @media (max-width: 991px) {
   .lms_search_toggle {
-    display: none;
+    float: none;
+    margin: 5px auto 20px;
+    display: block;
   }
+  .lms_search_wrapper {
+    position: relative;
+    top: 0px;
+    left: auto;
+    right: auto;
+    width: 100%;
+    margin-top: 0px;
+    min-width: 248px;
+    margin-bottom: 25px;
+  }
+  .lms_search_wrapper iframe{
+    display: block;
+    margin: 0 auto;
+  }
+
+
 
   .slogan{
   display: none;
@@ -752,9 +780,7 @@ right: 15px;
   }
   #lms_header .nav-main-collapse.in {
     width: 100%;
-    overflow: hidden;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: visible;
     display: block !important;
   }
   #lms_header .nav-main {
@@ -922,6 +948,20 @@ right: 15px;
 }
 
 
+@media (max-width: 470px) {
+  .lms_search_wrapper {
+    left: -15px;
+    position: absolute;
+    top: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: auto;
+    right: -15px;
+  }
+
+}
+
+
 
 @media (max-width: 767px) {
   #lms_header > .container {
@@ -939,6 +979,10 @@ right: 15px;
   }
   .telephone .icon_iphone{
   display: none;
+  }
+  .telephone > span {
+    top: -1px;
+    font-size: 26px;
   }
   .textadress{
     display: none;
