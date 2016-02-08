@@ -77,11 +77,17 @@
                     {{ form.text }}
                 </div>
             </div>
-            <input type="submit" id="em_sub" class="btn btn-default pull-right" value="Отправить"/>
+            <div class="col-xs-12">
+              <input type="submit" id="em_sub" class="btn btn-default pull-right" value="Отправить"/>
+            </div>
+
         </div>
     </form>
 
 </div>
+
+
+
 
 {% endblock %}
 
@@ -89,4 +95,15 @@
 {% endblock %}
 
 {% block partners %}
+{% endblock %}
+
+
+
+{% block page_js %}
+
+  <script>
+  		// tooltip
+		$('[data-toggle="tooltip"]').tooltip();
+  </script>
+
 {% endblock %}

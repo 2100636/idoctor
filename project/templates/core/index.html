@@ -441,8 +441,9 @@
         </div>
 
         <div class="col-md-8">
-          <!-- Put this script tag to the <head> of your page -->
-          <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+{#          <!-- Put this script tag to the <head> of your page -->#}
+{#          этот скрипт уже выше подключен #}
+{#          <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>#}
           <script type="text/javascript">
             VK.init({apiId: 4364173, onlyWidgets: true});
           </script>
@@ -703,3 +704,68 @@
 {#    </div>#}
 {#    <!--Our Partners end-->#}
 {% endblock %}
+
+
+
+{% block page_js %}
+  <script type="text/javascript" src="{% static "idoctor/js/plugin/owl-carousel/owl.carousel.js" %}"></script>
+
+
+  <script>
+    $(document).ready(function() {
+
+
+        $("#mainslider").owlCarousel({
+          slideSpeed : 300,
+          autoPlay : 7000,
+          paginationSpeed : 400,
+          singleItem:true
+        });
+
+
+        $("#lms_testimonials_slider").owlCarousel({
+          //navigation : true, // Show next and prev buttons
+          slideSpeed : 300,
+          autoPlay : 7000,
+          paginationSpeed : 400,
+          singleItem:true
+        });
+
+
+
+        /* запуск модального окна.  */
+        $('.btn_modal').click(function(){
+          var modal_id = $(this).attr('modal_id');
+          $('#'+modal_id).modal();
+          return false;
+        });
+
+
+        /* запуск модального окна для просмотра видео  */
+        $('.getvideo').click(function(){
+          var videoyoutube = $(this).attr('data-video');
+          $('#ModalViewVideoLabel').text($(this).attr('data-title'));
+          //$('#ModalViewVideo iframe').attr('src','https://www.youtube.com/embed/'+videoyoutube);
+          player.cueVideoById(videoyoutube);
+          player.playVideo();
+          $('#ModalViewVideo').modal();
+          return false;
+        });
+        // закрытие модального окна
+        $('#ModalViewVideo').on('hidden.bs.modal', function () {
+          player.stopVideo();
+        })
+
+
+    });
+
+  </script>
+{% endblock %}
+
+
+
+
+
+
+
+
