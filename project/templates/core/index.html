@@ -22,7 +22,7 @@
               <span>Ремонт IPhone, ipad, macbook в Томске</span>
             </div>
            <div class="phone_cont">
-              <span class="telephone"><i class="icon_iphone"></i>(3822) 33-22-77</span> {#         <i class="fa fa-phone"></i>#}
+              <span class="telephone"><i class="icon_iphone"></i>8<span>(3822)</span>33-22-77</span> {#         <i class="fa fa-phone"></i>#}
               <span class="textadress"><i class="fa fa-map-marker"></i>г. Томск пер. 1905 г. 18, оф. 3</span>
             </div>
 
@@ -40,8 +40,9 @@
               </nav>
               <div class="lms_search_toggle btn btn-primary">Статус заказа</div>
               <div class="lms_search_wrapper">
-                  <div style=" text-align: center; padding-bottom: 10px; ">Формат ввода номера +7 </div>
-                  <div id="remonline-widget" data-ro-key="868ad583e39616096abe89d473953a37"></div>
+                <div style=" text-align: center; padding-bottom: 10px; ">Формат ввода номера +7 </div>
+                <div id="remonline-widget" data-ro-key="868ad583e39616096abe89d473953a37"></div>
+                <div class="lms_search_toggle btn btn-primary">Закрыть форму</div>
               </div>
             </div>
         </div>
@@ -169,25 +170,29 @@
     <div class="row prise_im_block">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="col-md-3 col-md-6 prise_im">
-                <img  src="{% static "idoctor/images/icon/priem.png" %}">
+{#                <img  src="{% static "idoctor/images/icon/priem.png" %}">#}
+                <div class="icon_etap etap_priem"></div>
                 <h4>Принимаем технику</h4>
                 <p>Вы приносите к нам Ваше устройство</p>
             </div>
 
             <div class="col-md-3 col-md-6 prise_im">
-                <img  src="{% static "idoctor/images/icon/diagnost.png" %}">
+{#                <img  src="{% static "idoctor/images/icon/diagnost.png" %}">#}
+                <div class="icon_etap etap_diagnost"></div>
                 <h4>Проводим точную диагностику</h4>
                 <p>Инженеры диагностируют поломку совершенно бесплатно и сообщают вам по телефону причину неисправности.</p>
             </div>
 
             <div class="col-md-3 col-md-6 prise_im">
-                <img  src="{% static "idoctor/images/icon/soglas.png" %}">
+{#                <img  src="{% static "idoctor/images/icon/soglas.png" %}">#}
+                <div class="icon_etap etap_soglas"></div>
                 <h4>Согласовываем с вами стоимость и сроки ремонта</h4>
                 <p>Вы самостоятельно принимаете решение о необходимости ремонта.</p>
             </div>
 
              <div class="col-md-3 col-md-6 prise_im">
-                <img  src="{% static "idoctor/images/icon/tick.png" %}">
+{#                <img  src="{% static "idoctor/images/icon/tick.png" %}">#}
+                <div class="icon_etap etap_trick"></div>
                 <h4>Устройство готово</h4>
                  <p>Также вы получаете гарантию на нашу работу — 1 месяц.</p>
             </div>
@@ -396,12 +401,12 @@
 
         <div>
           <ul class="blocks-info">
-            <li class="it1"><p><em>до 30 дней</em> гарантийное обслуживание </p></li>
-            <li class="it2"><p><em>1-е в Томске</em> одни из первых кто начал ремонт iPhone в Томске</p></li>
-            <li class="it3"><p><em>10 минут</em> большинство ремонтов мы выполним от 10 до 60 минут</p></li>
-            <li class="it4"><p><em>100%</em> качество выполненных ремонтов</p></li>
-            <li class="it5"><p><em>Безопасно</em> <br/> только сертифицированное оборудование</p></li>
-            <li class="it6"><p><em>Аккуратно</em><br/> отсутствие зазоров и царапин</p></li>
+            <li class="it1"><div class="icon_whywe"></div><p><em>до 30 дней</em> гарантийное обслуживание </p></li>
+            <li class="it2"><div class="icon_whywe"></div><p><em>1-е в Томске</em> одни из первых кто начал ремонт iPhone в Томске</p></li>
+            <li class="it3"><div class="icon_whywe"></div><p><em>10 минут</em> большинство ремонтов мы выполним от 10 до 60 минут</p></li>
+            <li class="it4"><div class="icon_whywe"></div><p><em>100%</em> качество выполненных ремонтов</p></li>
+            <li class="it5"><div class="icon_whywe"></div><p><em>Безопасно</em> <br/> только сертифицированное оборудование</p></li>
+            <li class="it6"><div class="icon_whywe"></div><p><em>Аккуратно</em><br/> отсутствие зазоров и царапин</p></li>
           </ul>
         </div>
 
@@ -436,19 +441,17 @@
         </div>
 
         <div class="col-md-8">
-
-
-<script type="text/javascript">
-  VK.init({apiId: 5246621, onlyWidgets: true});
-</script>
-
-<!-- Put this div tag to the place, where the Comments block will be -->
-<div id="vk_comments"></div>
-<script type="text/javascript">
-VK.Widgets.Comments("vk_comments", {limit: 15, width: "665", attach: "*"});
-</script>
-
-
+{#          <!-- Put this script tag to the <head> of your page -->#}
+{#          этот скрипт уже выше подключен #}
+{#          <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>#}
+          <script type="text/javascript">
+            VK.init({apiId: 4364173, onlyWidgets: true});
+          </script>
+          <!-- Put this div tag to the place, where the Comments block will be -->
+          <div id="vk_comments"></div>
+          <script type="text/javascript">
+            VK.Widgets.Comments("vk_comments", {limit: 10, width: "665", attach: "*"});
+          </script>
         </div>
 
 {% comment %}
@@ -701,3 +704,68 @@ VK.Widgets.Comments("vk_comments", {limit: 15, width: "665", attach: "*"});
 {#    </div>#}
 {#    <!--Our Partners end-->#}
 {% endblock %}
+
+
+
+{% block page_js %}
+  <script type="text/javascript" src="{% static "idoctor/js/plugin/owl-carousel/owl.carousel.js" %}"></script>
+
+
+  <script>
+    $(document).ready(function() {
+
+
+        $("#mainslider").owlCarousel({
+          slideSpeed : 300,
+          autoPlay : 7000,
+          paginationSpeed : 400,
+          singleItem:true
+        });
+
+
+        $("#lms_testimonials_slider").owlCarousel({
+          //navigation : true, // Show next and prev buttons
+          slideSpeed : 300,
+          autoPlay : 7000,
+          paginationSpeed : 400,
+          singleItem:true
+        });
+
+
+
+        /* запуск модального окна.  */
+        $('.btn_modal').click(function(){
+          var modal_id = $(this).attr('modal_id');
+          $('#'+modal_id).modal();
+          return false;
+        });
+
+
+        /* запуск модального окна для просмотра видео  */
+        $('.getvideo').click(function(){
+          var videoyoutube = $(this).attr('data-video');
+          $('#ModalViewVideoLabel').text($(this).attr('data-title'));
+          //$('#ModalViewVideo iframe').attr('src','https://www.youtube.com/embed/'+videoyoutube);
+          player.cueVideoById(videoyoutube);
+          player.playVideo();
+          $('#ModalViewVideo').modal();
+          return false;
+        });
+        // закрытие модального окна
+        $('#ModalViewVideo').on('hidden.bs.modal', function () {
+          player.stopVideo();
+        })
+
+
+    });
+
+  </script>
+{% endblock %}
+
+
+
+
+
+
+
+

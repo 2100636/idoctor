@@ -427,8 +427,8 @@
 			}
 
 			return;
-
 		});
+		
 
 		// Mobile Redirect
 		$(".mobile-redirect").on("click", function() {

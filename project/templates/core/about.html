@@ -187,3 +187,29 @@
 
 {% block partners %}
 {% endblock %}
+
+{% block page_js %}
+  <script type="text/javascript" src="{% static "idoctor/js/plugin/appear/jquery.appear.js" %}"></script>
+  <script type="text/javascript" src="{% static "idoctor/js/plugin/count/jquery.countTo.js" %}"></script>
+  <script type="text/javascript" src="{% static "idoctor/js/plugin/parallax/jquery.stellar.js" %}"></script>
+
+  <script>
+
+  		//Our Success in Numbers count
+		$('.appear-count').appear(function(){
+			$('.count').countTo();
+		});
+
+
+		// parallax effect
+		$(function () {
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: -300
+			});
+		});
+
+
+  </script>
+
+{% endblock %}

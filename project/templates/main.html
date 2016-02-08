@@ -8,7 +8,7 @@
 
 {% block header %}
 {#            {% top_menu request %}#}
-    <header id="lms_header">
+     <header id="lms_header">
         <div class="container">
             <div class="logo">
               <a href="/">
@@ -21,13 +21,16 @@
               <span>Ремонт IPhone, ipad, macbook в Томске</span>
             </div>
            <div class="phone_cont">
-              <span class="telephone"><i class="icon_iphone"></i>(3822) 33-22-77</span> {#         <i class="fa fa-phone"></i>#}
+              <span class="telephone"><i class="icon_iphone"></i>8<span>(3822)</span>33-22-77</span> {#         <i class="fa fa-phone"></i>#}
               <span class="textadress"><i class="fa fa-map-marker"></i>г. Томск пер. 1905 г. 18, оф. 3</span>
             </div>
 
         </div>
 {#      гаммбургер#}
-        <button class="lms_menu_toggle btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse"><i class="fa fa-bars"></i> </button>
+        <button class="lms_menu_toggle btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+{#          <i class="fa fa-bars"></i> #}
+          <span>|||</span>
+        </button>
 {#      меню #}
         <div class="navbar-collapse nav-main-collapse collapse">
             <div class="container">
@@ -36,8 +39,9 @@
               </nav>
               <div class="lms_search_toggle btn btn-primary">Статус заказа</div>
               <div class="lms_search_wrapper">
-                  <div style=" text-align: center; padding-bottom: 10px; ">Формат ввода номера +7 </div>
-                  <div id="remonline-widget" data-ro-key="868ad583e39616096abe89d473953a37"></div>
+                <div style=" text-align: center; padding-bottom: 10px; ">Формат ввода номера +7 </div>
+                <div id="remonline-widget" data-ro-key="868ad583e39616096abe89d473953a37"></div>
+                <div class="lms_search_toggle btn btn-primary">Закрыть форму</div>
               </div>
             </div>
         </div>
@@ -96,20 +100,6 @@
 
             <div class="col-md-4">
               <div>
-{% comment %}                
-                <!--noindex-->
-                <script type="text/javascript">(function() {
-                if (window.pluso)if (typeof window.pluso.start == "function") return;
-                if (window.ifpluso==undefined) { window.ifpluso = 1;
-                  var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                  s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-                  s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-                  var h=d[g]('body')[0];
-                  h.appendChild(s);
-                }})();</script>
-                <div class="pluso" data-background="#2D2D2D" data-options="medium,square,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,livejournal,yandex"></div>
-                <!--/noindex-->
-{% endcomment %}
                 <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
                 <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
                 <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter"></div>
@@ -134,7 +124,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="copyright">
-                <p>Copyright © 2015 iDoctor</p>
+                <p>© 2015-2016 iDoctor</p>
               </div>
             </div>
             <div class="col-md-9">

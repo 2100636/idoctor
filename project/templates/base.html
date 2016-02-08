@@ -9,26 +9,30 @@
     <meta name="MobileOptimized" content="320">
     <link rel="shortcut icon" href="{% static "idoctor/images/p6.png" %}" type="image/png" />
     <!-- main css -->
-    <link rel="stylesheet" href="{% static "idoctor/css/bootstrap.css" %}" media="screen"/>
-    <link rel="stylesheet" href="{% static "idoctor/css/font-awesome.css" %}" media="screen"/>
+    <link rel="stylesheet" href="{% static "idoctor/css/bootstrap.min.css" %}" media="screen"/>
+{#    <link rel="stylesheet" href="{% static "idoctor/css/font-awesome.css" %}" media="screen"/>#}
     <link rel="stylesheet" href="{% static "idoctor/css/animate.css" %}" media="screen"/>
-    <link rel="stylesheet" href="{% static "idoctor/css/swiper.min.css" %}" media="screen"/>
+
 {#    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>#}
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&amp;subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
     {% block head %}
       <title>{{ title }}</title>
       <meta name="description"  content="{{ description }}"/>
       <meta name="keywords" content="{{ keywords }}">
     {% endblock %}
+
     {% block page_css %}
-      <link rel="stylesheet" href="{% static "idoctor/js/plugin/revslider/css/settings.css" %}" media="screen"/>
+
+{#  Ненужные стили  #}
+{#      <link rel="stylesheet" href="{% static "idoctor/js/plugin/revslider/css/settings.css" %}" media="screen"/>#}
+{#      <link rel="stylesheet" href="{% static "idoctor/js/plugin/mediaelement/mediaelementplayer.css" %}" media="screen"/>#}
       <link rel="stylesheet" href="{% static "idoctor/js/plugin/owl-carousel/owl.carousel.css" %}" media="screen"/>
-      <link rel="stylesheet" href="{% static "idoctor/js/plugin/owl-carousel/owl.theme.css" %}" media="screen"/>
-      <link rel="stylesheet" href="{% static "idoctor/js/plugin/mediaelement/mediaelementplayer.css" %}" media="screen"/>
-      <link rel="stylesheet" href="{% static "idoctor/js/plugin/prettyphoto/css/prettyPhoto.css" %}" media="screen"/>
+{#      <link rel="stylesheet" href="{% static "idoctor/js/plugin/owl-carousel/owl.theme.css" %}" media="screen"/>#}
+
     {% endblock %}
 
     <link rel="stylesheet" href="{% static "idoctor/css/style.css" %}" media="screen"/>
@@ -75,94 +79,100 @@
 
     <script type="text/javascript" src="{% static "idoctor/js/jquery-1.11.1.js" %}"></script>
     <script type="text/javascript" src="{% static "idoctor/js/bootstrap.js" %}"></script>
+
+
     {% block page_js %}
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/appear/jquery.appear.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/count/jquery.countTo.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/mediaelement/mediaelement-and-player.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/mixitup/jquery.mixitup.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/modernizr/modernizr.custom.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/owl-carousel/owl.carousel.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/parallax/jquery.stellar.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/prettyphoto/js/jquery.prettyPhoto.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/revslider/js/jquery.themepunch.plugins.min.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/revslider/js/jquery.themepunch.revolution.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/single/single.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/plugin/wow/wow.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/grid-gallery.js" %}"></script>
-      <script type="text/javascript" src="{% static "idoctor/js/custom.js" %}"></script>
-{#      <script  type="text/javascript" src="{% static "idoctor/js/swiper.min.js" %}"></script>#}
-      <script>$('.dropdown-toggle').dropdown()</script>
-{#      <script>#}
-{#        var swiper = new Swiper('.swiper-container', {#}
-{#          pagination: '.swiper-pagination',#}
-{#          nextButton: '.swiper-button-next',#}
-{#          prevButton: '.swiper-button-prev',#}
-{#          paginationClickable: true,#}
-{#          spaceBetween: 50,#}
-{#          centeredSlides: true,#}
-{#          autoplay: 8500,#}
-{#          autoplayDisableOnInteraction: false#}
-{#        });#}
-{#      </script>#}
+{# Вроде как не нужные скрипты #}
+{#      <script type="text/javascript" src="{% static "idoctor/js/plugin/mediaelement/mediaelement-and-player.js" %}"></script>#}
+{#      <script type="text/javascript" src="{% static "idoctor/js/plugin/mixitup/jquery.mixitup.js" %}"></script>#}
+{#      <script type="text/javascript" src="{% static "idoctor/js/plugin/modernizr/modernizr.custom.js" %}"></script>#}
+{#      <script type="text/javascript" src="{% static "idoctor/js/plugin/revslider/js/jquery.themepunch.plugins.min.js" %}"></script>#}
+{#      <script type="text/javascript" src="{% static "idoctor/js/plugin/revslider/js/jquery.themepunch.revolution.js" %}"></script>#}
+{#      <script type="text/javascript" src="{% static "idoctor/js/plugin/single/single.js" %}"></script>#}
+{#      <script type="text/javascript" src="{% static "idoctor/js/plugin/wow/wow.js" %}"></script>#}
+{#      <script type="text/javascript" src="{% static "idoctor/js/grid-gallery.js" %}"></script>#}
+{#      <script type="text/javascript" src="{% static "idoctor/js/custom.js" %}"></script>#}
+
     {% endblock %}
 
+
+  <script>$('.dropdown-toggle').dropdown()</script>
+
     <script type="text/javascript">
-      (function() {
-        var script = document.createElement('script');
-        script.type = 'text/javascript'; script.async = true;
-        script.src = '//remonline.ru/static/js/remonline-widget.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-      })();
+      $(document).ready(function() {
+
+        var $this = $(window);
+
+      	// search toggle
+        $('.lms_search_toggle').on("click",function(){
+          $('.lms_search_wrapper').slideToggle(200);
+        });
+
+        // menu toggle
+        $('.lms_menu_toggle a').on("click",function(){
+          $('.lms_menu').slideToggle(200);
+        });
+
+        // Submenu Check Visible Space
+        $("#mainMenu li.dropdown-submenu").on('hover',function() {
+          if($this.width() < 767) { return ;  }
+          var subMenu = $(this).find("ul.dropdown-menu");
+          if(!subMenu.get(0)) { return ;  }
+          var screenWidth = $this.width(),
+            subMenuOffset = subMenu.offset(),
+            subMenuWidth = subMenu.width(),
+            subMenuParentWidth = subMenu.parents("ul.dropdown-menu").width(),
+            subMenuPosRight = subMenu.offset().left + subMenu.width();
+
+          if(subMenuPosRight > screenWidth) {
+            subMenu.css("margin-left", "-" + (subMenuParentWidth + subMenuWidth + 10) + "px");
+          } else {
+            subMenu.css("margin-left", 0);
+          }
+        });
+
+        // Responsive Menu Events
+        var addActiveClass = false;
+        $("#mainMenu li.dropdown > a, #mainMenu li.dropdown-submenu > a").on("click", function(e) {
+          if($this.width() > 979)  { return ;  }
+          e.preventDefault();
+          addActiveClass = $(this).parent().hasClass("resp-active");
+          $("#mainMenu").find(".resp-active").removeClass("resp-active");
+          if(!addActiveClass) {
+            $(this).parents("li").addClass("resp-active");
+          }
+
+          return;
+        });
+
+
+
+
+      });
+
     </script>
 
 
 
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        (function() {
+          var script = document.createElement('script');
+          script.type = 'text/javascript'; script.async = true;
+          script.src = '//remonline.ru/static/js/remonline-widget.js';
+          document.getElementsByTagName('head')[0].appendChild(script);
+        })();
+
+      });
+
+    </script>
 
 
 
 {#  <script  type="text/javascript" src="{% static "idoctor/js/jquery.cookie.js" %}"></script>#}
-  <script>
-
-    $(document).ready(function() {
-
-        $(document).ready(function() {
-          $("#mainslider").owlCarousel({
-            //navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            autoPlay : 7000,
-            paginationSpeed : 400,
-            singleItem:true
-          });
-        });
 
 
-        /* запуск модального окна.  */
-        $('.btn_modal').click(function(){
-          var modal_id = $(this).attr('modal_id');
-          $('#'+modal_id).modal();
-          return false;
-        });
-
-
-        /* запуск модального окна для просмотра видео  */
-        $('.getvideo').click(function(){
-          var videoyoutube = $(this).attr('data-video');
-          $('#ModalViewVideoLabel').text($(this).attr('data-title'));
-          //$('#ModalViewVideo iframe').attr('src','https://www.youtube.com/embed/'+videoyoutube);
-          player.cueVideoById(videoyoutube);
-          player.playVideo();
-          $('#ModalViewVideo').modal();
-          return false;
-        });
-        // закрытие модального окна
-        $('#ModalViewVideo').on('hidden.bs.modal', function () {
-          player.stopVideo();
-        })
-
-
-    });
-
-  </script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
