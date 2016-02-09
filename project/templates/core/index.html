@@ -82,7 +82,7 @@
                     <a href="/category/{{ category.slug }}">
 {#                      <img  src="/media/{{ category.image }}">#}
                       {% thumbnail category.image "125x166" crop="60% center" as im %}
-                        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ service.name }}" />
+                        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ category.name }}" />
   {#                  {% empty %}#}
   {#                     <img src="" alt=""/>#}
                       {% endthumbnail %}
@@ -138,7 +138,12 @@
         {% for service in services %}
             <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="lms_service_1">
-                <div class="lms_service_icon"><img src="{{ service.get_icon }}" alt="service icon"/></div>
+                <div class="lms_service_icon">
+                  {% thumbnail service.image "78x78" crop="60% center" format="PNG" as im %}
+                    <img src="{{ im.url }}"  alt="{{ service.name }}" />
+                  {% endthumbnail %}
+{#                  <img src="{{ service.get_icon }}" alt="service icon"/>#}
+                </div>
                 <a href="{{ service.get_url }}">
                 <h3 class="lms_service_title">{{ service.name }}</h3>
                 </a>
@@ -291,7 +296,10 @@
                   <div class="item getvideo" data-title="{{ video.name|truncatewords:10 }}" data-video="{{ video.videoyoutube }}">
                     <div class="videoimage">
                       <div class="playicon"></div>
-                      <img width="100%" src="/media/{{ video.image }}"  alt="{{ video.name }}"/>
+                        {% thumbnail video.image "263x148" crop="60% center" quality=85 as im %}
+                            <img src="{{ im.url }}" width="100%"  alt="{{ video.name }}" />
+                        {% endthumbnail %}
+{#                      <img width="100%" src="/media/{{ video.image }}"  alt="{{ video.name }}"/>#}
                     </div>
                     <h3>{{ video.name|truncatewords:6 }}</h3>
                     <div class="text">{{ video.description|truncatewords:8|safe }}</div>
@@ -306,7 +314,10 @@
               <div class="item getvideo" data-title="{{ big_video.name|truncatewords:10 }}" data-video="{{ big_video.videoyoutube }}">
                 <div class="videoimage">
                   <div class="playicon"></div>
-                  <img width="100%" src="/media/{{ big_video.image }}"  alt="{{ big_video.name }}"/>
+                  {% thumbnail big_video.image "555x312" crop="60% center" quality=80 as im %}
+                      <img src="{{ im.url }}" width="100%"  alt="{{ big_video.name }}" />
+                  {% endthumbnail %}
+{#                  <img width="100%" src="/media/{{ big_video.image }}"  alt="{{ big_video.name }}"/>#}
                 </div>
                 <h3>{{ big_video.name|truncatewords:10 }}</h3>
                 <div class="text">{{ big_video.description|truncatewords:25|safe }}</div>
