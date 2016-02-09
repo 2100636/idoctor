@@ -5,6 +5,10 @@
 {% load sitetree %}
 {% load flatblocks %}
 
+{% block page_css %}
+  <link rel="stylesheet" href="{% static "idoctor/js/plugin/owl-carousel/owl.carousel.css" %}" media="screen"/>
+{% endblock %}
+
 {% block header %}
 
 
@@ -719,7 +723,7 @@
 
 
 {% block page_js %}
-  <script type="text/javascript" src="{% static "idoctor/js/plugin/owl-carousel/owl.carousel.js" %}"></script>
+  <script type="text/javascript" src="{% static "idoctor/js/plugin/owl-carousel/owl.carousel.min.js" %}"></script>
 
 
   <script>
