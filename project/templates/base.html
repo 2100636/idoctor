@@ -221,5 +221,24 @@
 
     </script>
 
+
+    <script type="text/javascript">
+      /* init Call Service */
+      var CallSiteId = '897004946e226dc44ce9225156fa7991';
+      var CallBaseUrl = '//uptocall.com';
+      (function() {
+          var lt = document.createElement('script');
+          lt.type ='text/javascript';
+          lt.charset = 'utf-8';
+          lt.async = true;
+          lt.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + CallBaseUrl + '/widget/client.js?rnd='+Math.floor(Math.random(0,1000)*1000);
+          var sc = document.getElementsByTagName('script')[0];
+          if (sc) sc.parentNode.insertBefore(lt, sc);
+          else document.documentElement.firstChild.appendChild(lt);
+      })();
+    </script>
+
+
+
   </body>
 </html>
