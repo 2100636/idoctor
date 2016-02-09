@@ -1,5 +1,6 @@
 {#{% load menu_tags %}#}
 {% load static from staticfiles %}
+{% load thumbnail %}
 
 {#<!--slider start-->#}
 {# <div class="swiper-container">#}
@@ -21,7 +22,10 @@
 <div id="mainslider" class="owl-carousel">
   {% for slide in slider %}
     <div>
-      <img src="/media/{{ slide.image }}"   alt="{{ slide.name }}">
+{#      <img src="/media/{{ slide.image }}"   alt="{{ slide.name }}">#}
+      {% thumbnail slide.image "1623x470" crop="60% center" quality=95 as im %}
+        <img src="{{ im.url }}"  alt="{{ slide.name }}" />
+      {% endthumbnail %}
       <div class="slider_text_wrap">
         <div class="container">
           <div class="slider_text">
