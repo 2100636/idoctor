@@ -65,13 +65,13 @@ z-index: 111111;*/
 /*---------------------google web fonts start---------------------------*/
 
 
-@font-face {
+/*@font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
-
+*/
 /*---------------------google web fonts end---------------------------*/
 
 
@@ -1089,15 +1089,21 @@ right: 15px;
   #lms_header .phone_cont {
     float: right;
     padding: 0;
-    margin: 0 auto;
+    margin: 8px auto 0;
     text-align: center;
     width: 100%;
     float: none;
   }
   .lms_menu_toggle{
-    top: 40px;
+    top: 48px;
+    right: 10px;
   }
-
+  #lms_header nav.mega-menu .dropdown-menu > li{
+    margin-bottom: 5px;
+  }
+  .prise_im_block .prise_im {
+    margin-bottom: 10px;
+  }
 }
 
 
