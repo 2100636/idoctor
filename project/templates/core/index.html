@@ -89,7 +89,7 @@
                 <div class="col-md-3 col-md-6 prise_im">
                     <a href="/category/{{ category.slug }}">
 {#                      <img  src="/media/{{ category.image }}">#}
-                      {% thumbnail category.image "125x166" crop="60% center" as im %}
+                      {% thumbnail category.image "125x166" crop="60% center" quality=95 as im %}
                         <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ category.name }}" />
   {#                  {% empty %}#}
   {#                     <img src="" alt=""/>#}
@@ -147,10 +147,10 @@
             <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="lms_service_1">
                 <div class="lms_service_icon">
-                  {% thumbnail service.image "78x78" crop="60% center" format="PNG" as im %}
+                  {% thumbnail service.image "78x78" crop="60% center" quality=95 format="PNG" as im %}
                     <img src="{{ im.url }}"  alt="{{ service.name }}" />
-                  {% endthumbnail %}
-{#                  <img src="{{ service.get_icon }}" alt="service icon"/>#}
+                  {% endthumbnail %}                                                             
+{#                 <img src="{{ service.get_icon }}" alt="service icon"/> #}
                 </div>
                 <a href="{{ service.get_url }}">
                 <h3 class="lms_service_title">{{ service.name }}</h3>
