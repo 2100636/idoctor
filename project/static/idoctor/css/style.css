@@ -528,13 +528,16 @@ font-size: 34px;
 font-family: 'Roboto';
 letter-spacing: -1px;
 }
-.telephone > span{
+.telephone a{
+display: inline-block;
+}
+.telephone a span{
 position: relative;
 top: -1px;
 font-size: 30px;
 }
 .phone_cont i.fa.fa-map-marker {
-  padding: 0px 6px 0px 10px;
+padding: 0px 6px 0px 10px;
 }
 .phone_cont .icon_iphone {
 background: url(../images/iphone-portrait.png);
@@ -544,7 +547,7 @@ display: inline-block;
 background-size: 100%;
 position: relative;
 top: 5px;
-left: -1px;
+left: 4px;
 }
 .phone_cont .textadress {
 letter-spacing: 0.8px;
