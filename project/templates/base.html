@@ -72,6 +72,19 @@
     {% endblock %}
 
 
+
+    <script type="text/javascript">
+
+        (function() {
+          var script = document.createElement('script');
+          script.type = 'text/javascript'; script.async = true;
+          script.src = '//remonline.ru/static/js/remonline-widget.js';
+          document.getElementsByTagName('head')[0].appendChild(script);
+        })();
+
+    </script>
+
+
   <link rel="stylesheet" href="{% static "idoctor/css/animate.css" %}" media="screen"/>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -160,19 +173,6 @@
 
 
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        (function() {
-          var script = document.createElement('script');
-          script.type = 'text/javascript'; script.async = true;
-          script.src = '//remonline.ru/static/js/remonline-widget.js';
-          document.getElementsByTagName('head')[0].appendChild(script);
-        })();
-
-      });
-
-    </script>
 
 
 
