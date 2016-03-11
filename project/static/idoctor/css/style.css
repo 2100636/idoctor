@@ -530,27 +530,24 @@ letter-spacing: -1px;
 }
 .telephone a{
 display: inline-block;
+font-size: 28px;
 }
-.telephone a span{
-position: relative;
-top: -1px;
-font-size: 30px;
-}
+
 .phone_cont i.fa.fa-map-marker {
 padding: 0px 6px 0px 10px;
 }
 .phone_cont .icon_iphone {
 background: url(../images/iphone-portrait.png);
-width: 32px;
-height: 32px;
+width: 27px;
+height: 23px;
 display: inline-block;
-background-size: 100%;
+background-size: 88%;
 position: relative;
-top: 5px;
-left: 4px;
+top: 2px;
+left: 8px;
 }
 .phone_cont .textadress {
-letter-spacing: 0.8px;
+letter-spacing: 0;
 }
 .mega-menu > .lms_search_toggle{
 position: static;
@@ -1060,7 +1057,8 @@ right: 15px;
   }
 
   .telephone {
-    font-size: 28px;
+    font-size: 24px;
+    margin-top: 10px;
   }
   .telephone .icon_iphone{
   display: none;
