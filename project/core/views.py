@@ -116,8 +116,9 @@ def pageView(request, slug, template_name="core/page.html"):
         page = Page.objects.get(slug=slug)
         h1 = page.name
         title = page.meta_title
+        description = page.meta_description
         description0 = page.description0
-        description = page.description
+        description1 = page.description
         description2 = page.description2
         keywords = page.meta_keywords
 
