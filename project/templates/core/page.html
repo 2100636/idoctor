@@ -105,3 +105,16 @@
 
 {% block partners %}
 {% endblock %}
+
+
+{% block page_js %}
+    <link rel="stylesheet" href="/static/idoctor/js/plugin/fancyapps-fancyBox-18d1712/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="/static/idoctor/js/plugin/fancyapps-fancyBox-18d1712/source/jquery.fancybox.pack.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+		    $(".fancybox").fancybox();
+	    });
+    </script>
+{% endblock %}
+

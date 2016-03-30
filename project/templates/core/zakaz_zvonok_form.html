@@ -16,9 +16,14 @@
     <meta name="keywords" content="{{ keywords }}">
 
 
-    <link rel="stylesheet" href="{% static "idoctor/css/style.min.css" %}" media="screen"/>
+{#    <link rel="stylesheet" href="{% static "idoctor/css/style.min.css" %}" media="screen"/>#}
+    <link rel="stylesheet" href="{% static "idoctor/css/style.css" %}" media="screen"/>
   </head>
-  <body>
+  {% if request.GET.styles %}
+  <body class="{{ request.GET.styles }}">
+  {% else %}
+    <body>
+  {% endif %}
 
     {% if zakaz_message %}
       <div class="review_message">
@@ -27,9 +32,18 @@
     {% else %}
       <form id="send_zakaz_zvonok_form" action="" method="post" enctype="multipart/form-data" >
         {% csrf_token %}
-        <input class="form-control" id="phone" name="phone" placeholder="Ваш номер телефона" type="text" required />
+          <div class="form-group">
+            <input class="form-control" id="name" name="name" placeholder="Ваше имя" type="text" required />
+          </div>
+          <div class="form-group">
+            <input class="form-control" id="phone" name="phone" placeholder="Ваш номер телефона" type="text" required />
+          </div>
         <div class="box-footer">
-          <button type="submit" id="zakaz_zvonok_submit" class="btn btn-primary zakaz_zvonok_submit">Отправить</button>
+            {% if request.GET.submittext %}
+                <button type="submit" id="zakaz_zvonok_submit" class="btn btn-primary zakaz_zvonok_submit">{{ request.GET.submittext }}</button>
+            {% else %}
+                <button type="submit" id="zakaz_zvonok_submit" class="btn btn-primary zakaz_zvonok_submit">Отправить</button>
+            {% endif %}
         </div>
       </form>
     {% endif %}
