@@ -96,6 +96,10 @@ padding-left: 0px;
 list-style: none;
 }
 
+.review_message {
+text-align: center;
+}
+
 .breadcrumb {
 margin: 5px auto;
 border-radius: 0;
@@ -5571,7 +5575,7 @@ text-align: center;
 }
 
 #send_zakaz_zvonok_form{
-margin-top: 50px;
+margin-top: 20px;
 }
 #send_zakaz_zvonok_form .box-footer{
 text-align: center;
@@ -5811,7 +5815,7 @@ line-height: 40px;
 /* Страница восстановление переклейка  дисплеев */
 .pd_formtext{
 position: relative;
-margin-bottom: -25px;
+margin-bottom: 0px;
 margin-top: 24px;
 text-align: center;
 font-size: 27px;

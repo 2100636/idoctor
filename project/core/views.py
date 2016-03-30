@@ -62,9 +62,13 @@ def zakaz_zvonokForm(request, template_name="core/zakaz_zvonok_form.html"):
     description = 'Заказать звонок'
 
     if 'phone' in request.POST:
-        if request.POST['phone'] != '':
+        if request.POST['phone'] != '' and request.POST['name'] != '':
             subject = u'id70.ru Заказ на звонок'
-            message = u'Имя: %s \nНомер телефона: %s \n' % (request.POST['name'], request.POST['phone'])
+            if 'formtype' in request.POST:
+                message = u'Имя: %s \nНомер телефона: %s \nФорма: %s' % (request.POST['name'],
+                                                                         request.POST['phone'], request.POST['formtype'])
+            else:
+                message = u'Имя: %s \nНомер телефона: %s \n' % (request.POST['name'], request.POST['phone'])
             send_mail(subject, message, '2100636@mail.ru', [ADMIN_EMAIL], fail_silently=False)
             zakaz_message = u"Спасибо, заявка принята"
     return render_to_response(template_name, locals(),

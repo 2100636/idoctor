@@ -38,6 +38,10 @@
           <div class="form-group">
             <input class="form-control" id="phone" name="phone" placeholder="Ваш номер телефона" type="text" required />
           </div>
+        {% if request.GET.formtype %}
+             <input id="formtype" name="formtype" type="hidden" value="{{ request.GET.formtype }}" />
+        {% endif %}
+
         <div class="box-footer">
             {% if request.GET.submittext %}
                 <button type="submit" id="zakaz_zvonok_submit" class="btn btn-primary zakaz_zvonok_submit">{{ request.GET.submittext }}</button>
