@@ -26,8 +26,7 @@ SECRET_KEY = '7j09%e0uap(m5o=3967!k7$vp*kvg7-vr8jmslft_53g$5i@%+'
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = False
 DEBUG = True
-# ADMIN_EMAIL = 'idoctor70@yandex.ru'
-ADMIN_EMAIL = '2100636@mail.ru'
+ADMIN_EMAIL = 'idoctor70@yandex.ru'
 ALLOWED_HOSTS = []
 #ALLOWED_HOSTS = ['*']
 
