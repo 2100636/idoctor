@@ -16,8 +16,8 @@
     <meta name="keywords" content="{{ keywords }}">
 
 
-{#    <link rel="stylesheet" href="{% static "idoctor/css/style.min.css" %}" media="screen"/>#}
-    <link rel="stylesheet" href="{% static "idoctor/css/style.css" %}" media="screen"/>
+    <link rel="stylesheet" href="{% static "idoctor/css/style.min.css" %}?v=2" media="screen"/>
+{#    <link rel="stylesheet" href="{% static "idoctor/css/style.css" %}" media="screen"/>#}
   </head>
   {% if request.GET.styles %}
   <body class="{{ request.GET.styles }}">
