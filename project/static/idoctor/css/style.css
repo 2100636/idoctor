@@ -487,10 +487,11 @@ right: 0px;
 
 #lms_footer .wv {
 position: relative;
-margin: 10px 0;
+margin: 20px 0;
 float: right;
 border: 0;
 display: block;
+left: auto;
 }
 
 
