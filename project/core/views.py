@@ -34,7 +34,7 @@ def indexView(request, template_name="core/index.html"):
             small_videos.append(video)
 
     services = Service.objects.filter(main_check=True)[:6]
-    categories = Category.objects.all()
+    categories = Category.objects.filter(active=True)
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
 

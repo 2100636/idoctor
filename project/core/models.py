@@ -195,6 +195,7 @@ class Category(MPTTModel):
     slug = models.SlugField(verbose_name=u'Ссылка', max_length=50, unique=True)
     meta_keywords = models.CharField(verbose_name=u'Мета ключевые слова', max_length=255, blank=True)
     meta_description = models.CharField(verbose_name=u'Мета описание', max_length=255, help_text=u'Нужно для СЕО', blank=True)
+    active = models.BooleanField(verbose_name=u'Выводить на главной', default=True)
     image = models.ImageField(verbose_name=u'Изображение категории', upload_to="category", blank=True)
     small_description = RichTextField(verbose_name=u'Описание под изображением', default='', blank=True, null=True)
     description = RichTextField(verbose_name=u'Описание на странице', default='', blank=True, null=True)

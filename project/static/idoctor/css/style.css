@@ -495,9 +495,10 @@ width: 125px;
 }
 .prise_im_block .prise_im .desc{
 text-align: left;
+font-size: 12px;
 }
 .prise_im_block .prise_im .desc p{
-   margin-bottom: 0;
+margin-bottom: 0;
 }
 .viewlink{
 color: #1593d1;
@@ -507,7 +508,8 @@ a:hover .viewlink {
 color: #FD8F15;
 }
 .prise_im_block .prise_im h3{
-    font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 21px;
 }
 
 
@@ -5848,7 +5850,10 @@ display: block;
 padding-left: 5px;
 position: relative;
 }
-
+.text {
+margin: 134px 10px 0;
+text-align: center;
+}
 .img_wrap {
 width: 32%;
 float: left;
