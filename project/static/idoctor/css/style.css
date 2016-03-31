@@ -5982,6 +5982,7 @@ color: #fff;
 width: 32%;
 float: left;
 margin-right: 2%;
+overflow: hidden;
 }
 .img_wrap:nth-child(3n) {
 margin-right: 0;
