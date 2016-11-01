@@ -22,7 +22,7 @@ def indexView(request, template_name="core/index.html"):
         title = 'Главная'
 
     pages = Page.objects.all()
-    reviews = Review.objects.filter(active=True).order_by('-id')[:7]
+    reviews = Review.objects.filter(active=True)[:7]
     articles = Article.objects.all()[:6]
     videos = Video.objects.all()
     small_videos = []
