@@ -22,7 +22,7 @@ def indexView(request, template_name="core/index.html"):
         title = 'Главная'
 
     pages = Page.objects.all()
-    reviews = Review.objects.filter(active=True)[:6]
+    reviews = Review.objects.filter(active=True).order_by('-id')[:7]
     articles = Article.objects.all()[:6]
     videos = Video.objects.all()
     small_videos = []
@@ -69,7 +69,7 @@ def zakaz_zvonokForm(request, template_name="core/zakaz_zvonok_form.html"):
                                                                          request.POST['phone'], request.POST['formtype'])
             else:
                 message = u'Имя: %s \nНомер телефона: %s \n' % (request.POST['name'], request.POST['phone'])
-            send_mail(subject, message, 'idoctor70@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
+            send_mail(subject, message, 'onpixru@yandex.ru', [ADMIN_EMAIL], fail_silently=False)
             zakaz_message = u"Спасибо, заявка принята"
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))

@@ -162,6 +162,6 @@ THUMBNAIL_PROCESSORS = (
 ) + thumbnail_settings.THUMBNAIL_PROCESSORS
 
 try:
-    from settings_local import *
+    from 'settings_local' import *
 except ImportError:
     pass
