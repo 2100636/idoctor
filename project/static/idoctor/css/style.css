@@ -599,6 +599,10 @@ left: 8px;
 }
 .phone_cont .textadress {
 letter-spacing: 0;
+font-size: 13px;
+width: 241px;
+line-height: 12px;
+display: inline-block;
 }
 .mega-menu > .lms_search_toggle{
 position: static;
