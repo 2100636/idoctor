@@ -33,6 +33,57 @@
 
 	{% endfor %}
 </ul>
+<div class="magazin">
+  <a href="http://айдоктор.рф" target="_blank">Магазин запчастей</a>
+</div>
+
+
+<style>
+.magazin{
+  float: left;
+}
+.magazin a{
+  color: #1D1D1D;
+  font-size: 17px;
+  line-height: 20px;
+  margin-left: 15px;
+  margin-right: 3px;
+  margin-bottom: 8px;
+  padding: 12px 13px 7px;
+  border-bottom: 3px solid rgba(255,255,255,0);
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  position: relative;
+  display: block;
+}
+.magazin a:hover {
+  border-bottom: 2px solid #1593d1;
+}
+@media (max-width: 991px){
+  .magazin{
+    float: none;
+    margin-left: -15px;
+    margin-bottom: 13px;
+  }
+  .magazin a{
+    padding: 9px 8px;
+    border: 0;
+    border-top: 0;
+    margin: 0;
+    border-bottom: none!important;
+    font-size: 21px;
+    font-weight: 100;
+    border-top: 1px solid #2a2a2a;  
+  }
+  .magazin a:hover{
+    color: #1593d1;
+  }
+}
+</style>
+
+
 {#<ul>#}
 {#	{% for item in sitetree_items %}#}
 {#	<li>#}
