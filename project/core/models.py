@@ -230,6 +230,9 @@ class Price(models.Model):
     def __unicode__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return "/price/%s" % self.slug
+
     def image_url(self):
         return "/media/%s" % self.image
 
