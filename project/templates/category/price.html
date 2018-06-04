@@ -23,7 +23,11 @@
         <div class="col-sm-12">
             <div class="prices">
               {% for price in prices2 %} 
-                <a href="/price/{{ price.slug }}">{{ price.name }}</a>
+                {% if request.path == "/price/{{ price.slug }} '%}
+                    <a href="/price/{{ price.slug }}" class="active">{{ price.name }}</a>
+                {% else %}
+                    <a href="/price/{{ price.slug }}">{{ price.name }}</a>
+                {% endif %}
               {% endfor %}
             </div>
         </div>
