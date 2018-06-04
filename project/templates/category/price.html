@@ -23,7 +23,7 @@
         <div class="col-sm-12">
             <div class="prices">
               {% for price in prices2 %} 
-                {% if request.path == price.get_absolute_url '%}
+                {% if request.path == price.get_absolute_url %}
                     <a href="/price/{{ price.slug }}" class="active">{{ price.name }}</a>
                 {% else %}
                     <a href="/price/{{ price.slug }}">{{ price.name }}</a>
