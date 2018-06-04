@@ -20,6 +20,17 @@
         </div>
         <!--blog single page end-->
 
+
+        <div class="row">
+          {% for price in prices %}
+            <div class="col-md-6">
+              <a href="/price/{{ price.slug }}">{{ price.name }}</a>
+            </div>
+          {% endfor %}
+        </div>
+
+
+
         <!--sidebar start-->
 {#        <div class="col-lg-4 col-md-4 col-sm-5">#}
 {#          <div class="lms_sidebar_item">#}
