@@ -231,7 +231,7 @@ class Price(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return "/price/%s" % self.slug
+        return "/price/%s/" % self.slug
 
     def image_url(self):
         return "/media/%s" % self.image
