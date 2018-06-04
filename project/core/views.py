@@ -231,7 +231,7 @@ def price_view(request, slug, template_name="category/price.html"):
 
     prices2 = []
     for price in prices:
-        if price.name.lower().startswith('ремонт'):
+        if price.name.lower().startswith(u'ремонт'):
             price.name = price.name[6:].strip()
             prices2.append(price)
 
