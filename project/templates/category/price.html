@@ -20,11 +20,9 @@
         </div>
         <!--blog single page end-->
 
-{{ request.path }}
-{{ request.get_full_path }}
         <div class="col-sm-12">
             <div class="prices">
-              {% for price in prices %} 
+              {% for price in prices2 %} 
                 <a href="/price/{{ price.slug }}">{{ price.name }}</a>
               {% endfor %}
             </div>
