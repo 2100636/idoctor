@@ -21,12 +21,12 @@
         <!--blog single page end-->
 
 
-        <div class="row">
-          {% for price in prices %}
-            <div class="col-md-6">
-              <a href="/price/{{ price.slug }}">{{ price.name }}</a>
+        <div class="col-sm-12 prise_page">
+            <div class="prices">
+              {% for price in prices %}
+                <a href="/price/{{ price.slug }}">{{ price.name }}</a>
+              {% endfor %}
             </div>
-          {% endfor %}
         </div>
 
 

@@ -226,6 +226,7 @@ def category_view(request, category_slug, template_name="category/category.html"
 
 
 def price_view(request, slug, template_name="category/price.html"):
+    prices = Price.objects.all()
     price = Price.objects.get(slug=slug)
     title = price.name
     description = price.meta_description
