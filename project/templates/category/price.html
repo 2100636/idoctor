@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row">
     <!--blog single page start-->
-{{ price.name }}
+{{ price.category }}
         <div class="col-lg-12 col-md-12 col-sm-12 prise_page">
             <div>
                 <h3>{{ price.name }}</h3>
@@ -25,13 +25,15 @@
 
         <div class="col-sm-12">
             <div class="prices">
-              {% for price in prices2 %} 
-                {% if request.path == price.get_absolute_url %}
-                    <a href="/price/{{ price.slug }}" class="active">{{ price.name }}</a>
-                {% else %}
-                    <a href="/price/{{ price.slug }}">{{ price.name }}</a>
+              {% for price_ in prices2 %} 
+                {% if price_.category == price.category %}
+                    {% if request.path == price_.get_absolute_url %}
+                        <a href="/price/{{ price.slug }}" class="active">{{ price_.name }}</a>
+                    {% else %}
+                        <a href="/price/{{ price.slug }}">{{ price_.name }}</a>
+                    {% endif %}
                 {% endif %}
-                {{ price.category }} <br>
+                {{ price_.category }} <br>
               {% endfor %}
             </div>
         </div>
