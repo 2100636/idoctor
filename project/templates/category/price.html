@@ -18,7 +18,7 @@
                 {% for price_ in prices2 %} 
                   {% if price_.category == price.category %}
                     {% if request.path == price_.get_absolute_url %}
-                        <li class="active">{{ price_.name }}</li>
+                        <li class="active"><a href="/price/{{ price.slug }}">{{ price_.name }}</a></li>
                     {% else %}
                         <li><a href="/price/{{ price.slug }}">{{ price_.name }}</a></li>
                     {% endif %}
