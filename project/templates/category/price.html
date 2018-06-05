@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row">
     <!--blog single page start-->
-
+{{ price.name }}
         <div class="col-lg-12 col-md-12 col-sm-12 prise_page">
             <div>
                 <h3>{{ price.name }}</h3>
@@ -21,7 +21,8 @@
         <!-- blog single page end-->
 
 
-<!--
+<!-- -->
+
         <div class="col-sm-12">
             <div class="prices">
               {% for price in prices2 %} 
@@ -30,10 +31,11 @@
                 {% else %}
                     <a href="/price/{{ price.slug }}">{{ price.name }}</a>
                 {% endif %}
+                {{ price.category }} <br>
               {% endfor %}
             </div>
         </div>
--->
+
 
 
         <!--sidebar start-->
