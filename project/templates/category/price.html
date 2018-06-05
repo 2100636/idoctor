@@ -11,20 +11,20 @@
 <div class="container">
     <div class="row">
     <!--blog single page start-->
-    
+
         <div class="col-lg-12 col-md-12 col-sm-12 prise_page">
             <div class="prices">
-              {% for price_ in prices2 %} 
-                {% if price_.category == price.category %}
-                <ul class="menu_price nav nav-tabs">
+              <ul class="menu_price nav nav-tabs">
+                {% for price_ in prices2 %} 
+                  {% if price_.category == price.category %}
                     {% if request.path == price_.get_absolute_url %}
                         <li class="active">{{ price_.name }}</li>
                     {% else %}
                         <li><a href="/price/{{ price.slug }}">{{ price_.name }}</a></li>
                     {% endif %}
-                </ul>
-                {% endif %}
-              {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
             </div>
             <div>
                 <h3>{{ price.name }}</h3>
