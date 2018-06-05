@@ -11,8 +11,21 @@
 <div class="container">
     <div class="row">
     <!--blog single page start-->
-{{ price.category }}
+    
         <div class="col-lg-12 col-md-12 col-sm-12 prise_page">
+            <div class="prices">
+              {% for price_ in prices2 %} 
+                {% if price_.category == price.category %}
+                <ul class="menu_price nav nav-tabs">
+                    {% if request.path == price_.get_absolute_url %}
+                        <li class="active">{{ price_.name }}</li>
+                    {% else %}
+                        <li><a href="/price/{{ price.slug }}">{{ price_.name }}</a></li>
+                    {% endif %}
+                </ul>
+                {% endif %}
+              {% endfor %}
+            </div>
             <div>
                 <h3>{{ price.name }}</h3>
                 <p>{{ price.description | safe }}</p>
@@ -23,20 +36,7 @@
 
 <!-- -->
 
-        <div class="col-sm-12">
-            <div class="prices">
-              {% for price_ in prices2 %} 
-                {% if price_.category == price.category %}
-                    {% if request.path == price_.get_absolute_url %}
-                        <a href="/price/{{ price.slug }}" class="active">{{ price_.name }}</a>
-                    {% else %}
-                        <a href="/price/{{ price.slug }}">{{ price_.name }}</a>
-                    {% endif %}
-                {% endif %}
-                {{ price_.category }} <br>
-              {% endfor %}
-            </div>
-        </div>
+
 
 
 
